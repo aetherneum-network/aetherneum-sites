@@ -1,0 +1,573 @@
+/* Aetherneum University — shared stylesheet
+   Coherent visual language with aetherneum.com root.
+   Black + cyan + off-white only. Serif manifesto + mono markers. */
+
+:root {
+  --bg: #000000;
+  --bg-soft: #0a0e14;
+  --bg-panel: rgba(10, 14, 20, 0.6);
+  --ink: #f8fafc;
+  --ink-muted: #94a3b8;
+  --ink-faint: #475569;
+  --ink-deeper: #334155;
+  --cyan: #22d3ee;
+  --cyan-glow: #67e8f9;
+  --cyan-deep: #0e7490;
+  --cyan-line: rgba(34, 211, 238, 0.18);
+  --cyan-line-soft: rgba(34, 211, 238, 0.08);
+  --serif: 'EB Garamond', Georgia, serif;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+body {
+  background: radial-gradient(ellipse at center top, #0a0e14 0%, #000 70%);
+}
+
+#hero-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.32;
+}
+.vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.85) 100%);
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+}
+
+/* ───── Navigation ───── */
+nav.top {
+  padding: 1.75rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border-bottom: 1px solid var(--cyan-line-soft);
+}
+nav.top a { color: var(--ink-faint); text-decoration: none; transition: color 0.3s; }
+nav.top a:hover { color: var(--cyan); }
+nav.top .brand {
+  color: var(--cyan);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+nav.top .brand .sub {
+  color: var(--ink-faint);
+  margin-left: 0.5em;
+}
+nav.top .links { display: flex; gap: 1.5rem; }
+
+@media (max-width: 720px) {
+  nav.top { padding: 1.25rem; flex-wrap: wrap; gap: 1rem; }
+  nav.top .links { flex-wrap: wrap; gap: 0.75rem; font-size: 0.65rem; }
+}
+
+/* ───── Hero / titles ───── */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cyan-deep);
+  margin-bottom: 1.25rem;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.hero h1 .ae { color: var(--cyan-glow); }
+.hero .tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  color: var(--ink-muted);
+  letter-spacing: 0.01em;
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+/* ───── Sections ───── */
+section.block {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  border-top: 1px solid var(--cyan-line-soft);
+}
+section.block.first { border-top: none; }
+section.block h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.85rem, 3.3vw, 2.6rem);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+section.block .lede {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  color: var(--ink-muted);
+  margin-bottom: 2.5rem;
+  max-width: 38rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+section.block h3 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin: 2.75rem 0 0.85rem;
+  color: var(--ink);
+}
+section.block p {
+  font-family: var(--serif);
+  font-size: 1.18rem;
+  line-height: 1.75;
+  color: var(--ink-muted);
+  margin-bottom: 1.15rem;
+  max-width: 42rem;
+}
+section.block p strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+section.block p em {
+  color: var(--cyan-glow);
+  font-style: italic;
+}
+section.block ul, section.block ol {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--ink-muted);
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 42rem;
+}
+section.block li { margin-bottom: 0.6rem; }
+section.block li::marker { color: var(--cyan-deep); }
+
+/* ───── Roster grid ───── */
+.roster {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.alumnus-card {
+  border: 1px solid var(--cyan-line);
+  background: var(--bg-panel);
+  backdrop-filter: blur(2px);
+  padding: 1.75rem 1.5rem;
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.alumnus-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  transition: left 0.8s ease;
+}
+.alumnus-card:hover {
+  border-color: rgba(34, 211, 238, 0.5);
+  background: rgba(34, 211, 238, 0.04);
+  transform: translateY(-2px);
+}
+.alumnus-card:hover::before { left: 100%; }
+
+.alumnus-card .avatar-frame {
+  width: 4rem; height: 4rem;
+  border: 1px solid var(--cyan-line);
+  background: rgba(34, 211, 238, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  color: var(--cyan-glow);
+  letter-spacing: 0.05em;
+  position: relative;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.alumnus-card .num {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--cyan-deep);
+}
+.alumnus-card .name {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+.alumnus-card .role {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-muted);
+}
+.alumnus-card .placement {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--cyan-deep);
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* ───── Tables ───── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  margin: 1.5rem 0;
+}
+table th, table td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--cyan-line-soft);
+}
+table th {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cyan-deep);
+  font-weight: 500;
+}
+table td { color: var(--ink-muted); }
+table td strong { color: var(--ink); font-weight: 500; }
+table td .mono { font-family: var(--mono); font-size: 0.85rem; color: var(--ink-faint); }
+
+/* ───── Code / diploma ───── */
+.diploma {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--cyan-glow);
+  background: rgba(10, 14, 20, 0.6);
+  border: 1px solid var(--cyan-line);
+  padding: 2rem 1.5rem;
+  white-space: pre;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  letter-spacing: 0.01em;
+  text-shadow: 0 0 12px rgba(34, 211, 238, 0.25);
+  max-width: 36rem;
+}
+
+/* ───── Alumnus profile (full page) ───── */
+.profile-hero {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  max-width: 44rem;
+  margin: 0 auto;
+}
+.profile-hero .avatar-large {
+  width: 8rem; height: 8rem;
+  border: 1px solid var(--cyan-line);
+  background: rgba(34, 211, 238, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  color: var(--cyan-glow);
+  letter-spacing: 0.05em;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  text-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+}
+.profile-hero .role-line {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--cyan-deep);
+  margin-bottom: 1rem;
+}
+.profile-hero h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5.2vw, 3.8rem);
+  margin-bottom: 0.7rem;
+  line-height: 1.1;
+}
+.profile-hero .position {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+}
+.profile-hero .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+.profile-hero .badge {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid var(--cyan-line);
+  background: rgba(34, 211, 238, 0.04);
+  padding: 0.4rem 0.8rem;
+  color: var(--cyan-glow);
+}
+
+.profile-meta {
+  max-width: 44rem;
+  margin: 2rem auto 0;
+  padding: 0 2rem;
+}
+.profile-meta dl {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 0.85rem 1.5rem;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+}
+.profile-meta dt {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cyan-deep);
+  align-self: start;
+  padding-top: 0.25rem;
+}
+.profile-meta dd {
+  color: var(--ink-muted);
+}
+.profile-meta dd strong { color: var(--ink); font-weight: 500; }
+.profile-meta dd code {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--cyan-glow);
+}
+
+@media (max-width: 600px) {
+  .profile-meta dl { grid-template-columns: 1fr; gap: 0.25rem 0; }
+  .profile-meta dt { padding-top: 0.75rem; }
+}
+
+.profile-section {
+  max-width: 44rem;
+  margin: 3rem auto 0;
+  padding: 0 2rem;
+}
+.profile-section h3 {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cyan-deep);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--cyan-line-soft);
+}
+.profile-section .thesis {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  border-left: 2px solid var(--cyan);
+  padding-left: 1.75rem;
+}
+.profile-section p {
+  font-family: var(--serif);
+  font-size: 1.18rem;
+  line-height: 1.8;
+  color: var(--ink-muted);
+  margin-bottom: 1.15rem;
+}
+.profile-section p strong { color: var(--ink); font-weight: 500; }
+.profile-section ul {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: var(--ink-muted);
+  padding-left: 1.5rem;
+}
+.profile-section ul li { margin-bottom: 0.5rem; }
+.profile-section ul li::marker { color: var(--cyan-deep); }
+
+.profile-section .quote-bio {
+  font-family: var(--serif);
+  font-size: 1.22rem;
+  line-height: 1.85;
+  color: var(--ink);
+  font-style: italic;
+}
+.profile-section .quote-bio.en {
+  color: var(--ink-muted);
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--cyan-line-soft);
+  font-size: 1.18rem;
+}
+
+.alumnus-nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 44rem;
+  margin: 4rem auto 0;
+  padding: 2rem 2rem 0;
+  border-top: 1px solid var(--cyan-line-soft);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.alumnus-nav a { color: var(--ink-faint); text-decoration: none; transition: color 0.3s; }
+.alumnus-nav a:hover { color: var(--cyan); }
+
+/* ───── Footer ───── */
+footer {
+  margin-top: 5rem;
+  padding: 3rem 3rem 2rem;
+  border-top: 1px solid var(--cyan-line-soft);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-align: center;
+}
+footer .motto {
+  font-family: var(--serif);
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.85rem;
+}
+footer a { color: var(--cyan-deep); text-decoration: none; }
+footer a:hover { color: var(--cyan); }
+
+/* ───── Reveal animation ───── */
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: reveal 1.2s ease-out forwards;
+}
+.reveal.d1 { animation-delay: 0.15s; }
+.reveal.d2 { animation-delay: 0.5s; }
+.reveal.d3 { animation-delay: 0.9s; }
+.reveal.d4 { animation-delay: 1.4s; }
+@keyframes reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.core-glow {
+  position: fixed;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px; height: 6px;
+  background: var(--cyan);
+  border-radius: 50%;
+  box-shadow:
+    0 0 16px var(--cyan),
+    0 0 48px var(--cyan-glow),
+    0 0 96px rgba(34, 211, 238, 0.35);
+  animation: pulse 4s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+@keyframes pulse {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+  50% { transform: translateX(-50%) scale(1.4); opacity: 0.9; }
+}
+
+/* ───── Manifesto inline (re-used on charter) ───── */
+.manifesto-block {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  line-height: 1.7;
+  max-width: 36rem;
+  margin: 2rem auto;
+  text-align: center;
+  color: var(--ink);
+}
+.manifesto-block p { margin: 1.2rem 0; }
+.manifesto-block em { color: var(--cyan-glow); font-style: italic; }
+
+/* ───── Avatar img fits ───── */
+.alumnus-card img.avatar-frame, img.avatar-frame {
+  width: 4rem; height: 4rem;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  border: 1px solid var(--cyan-line);
+  display: block;
+  
+  filter: contrast(1.05) saturate(0.95);
+}
+.profile-hero img.avatar-large, img.avatar-large {
+  width: 8rem; height: 8rem;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  border: 1px solid var(--cyan-line);
+  display: block;
+  
+  filter: contrast(1.05) saturate(0.95);
+}

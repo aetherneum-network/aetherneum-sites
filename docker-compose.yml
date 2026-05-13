@@ -1,0 +1,27 @@
+version: "3.8"
+
+# Static site server for the Aetherneum brand pillar
+# Serves: aetherneum.com (root) + university.aetherneum.com
+# Routed by Traefik (see /opt/aetherneum/infra/traefik/dynamic/aetherneum-sites.yml)
+# Sites live read-only at /opt/aetherneum/sites/{aetherneum-com,university-aetherneum-com}/
+
+services:
+  aetherneum-sites:
+    image: nginx:1.27-alpine
+    container_name: aetherneum-sites
+    restart: unless-stopped
+    networks:
+      - aetherneum-proxy
+    volumes:
+      - /opt/aetherneum/sites/aetherneum-com:/usr/share/nginx/sites/aetherneum-com:ro
+      - /opt/aetherneum/sites/university-aetherneum-com:/usr/share/nginx/sites/university-aetherneum-com:ro
+      - /opt/aetherneum/sites/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/_health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+networks:
+  aetherneum-proxy:
+    external: true
