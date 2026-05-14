@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Subagents — Aetherneum University</title>
+<meta name="description" content="22 specialist subagents composing the Aetherneum talent layer. Each subagent has identity, scope, decision signature, and traceable invocation history." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/style.css?v=1" />
+<style>
+ .subagent-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 1rem; margin-top: 2rem; }
+ .subagent-card { display: block; padding: 1.2rem; border: 1px solid rgba(34, 211, 238, 0.18); border-radius: 4px; background: rgba(10, 14, 20, 0.5); text-decoration: none; color: var(--ink); transition: border-color 0.18s, transform 0.18s; }
+ .subagent-card:hover { border-color: rgba(34, 211, 238, 0.55); transform: translateY(-2px); }
+ .subagent-card .slug { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; color: var(--cyan-deep); margin-bottom: 0.4rem; }
+ .subagent-card .display { font-family: var(--serif); font-size: 1.2rem; margin: 0.2rem 0 0.4rem; letter-spacing: 0.04em; }
+ .subagent-card .tagline { font-style: italic; opacity: 0.85; font-size: 0.92rem; line-height: 1.5; margin-bottom: 0.6rem; }
+ .subagent-card .meta { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.55; }
+</style>
+</head>
+<body>
+
+<main>
+
+ <nav class="top">
+ <a href="/" class="brand reveal d1">AETHERNEUM UNIVERSITY</a>
+ <div class="links reveal d1">
+ <a href="/talents.html">Talents</a>
+ <a href="/charter.html">Charter</a>
+ <a href="/faculty.html">Faculty</a>
+ </div>
+ </nav>
+
+ <section class="hero-wrap" style="padding-top: 3rem;">
+ <div class="eyebrow reveal d1">SUBAGENT LAYER · 22 SPECIALISTS</div>
+ <h1 class="wordmark reveal d2" style="font-size: clamp(2.2rem, 5vw, 3.5rem);">The Subagents</h1>
+ <p class="tagline reveal d3">Twenty-two specialist callable identities.</p>
+ <p class="lede reveal d3">Alumni are narrative identities — they reason, they decide, they sign. Subagents are the specialist functions they call. Each subagent has a scope, a voice, a decision signature, and an auditable invocation history in <code>git log</code>.</p>
+ </section>
+
+ <section class="block">
+ <div class="subagent-grid">
+<a href="/subagents/aetherneum-devops.html" class="subagent-card">
+ <div class="slug"><code>aetherneum-devops</code></div>
+ <div class="display">Aetherneum DevOps</div>
+ <div class="tagline">The cryptohost custodian. Traefik file-provider. Vault Shamir.</div>
+ <div class="meta">1 alumnus</div>
+</a>
+<a href="/subagents/backend-architect.html" class="subagent-card">
+ <div class="slug"><code>backend-architect</code></div>
+ <div class="display">Backend Architect</div>
+ <div class="tagline">Idempotent operations. Reversible migrations. Raw SQL when honest.</div>
+ <div class="meta">2 alumni</div>
+</a>
+<a href="/subagents/brand-architect.html" class="subagent-card">
+ <div class="slug"><code>brand-architect</code></div>
+ <div class="display">Brand Architect</div>
+ <div class="tagline">Visual identity as system. Tokens, not opinions.</div>
+ <div class="meta">1 alumnus</div>
+</a>
+<a href="/subagents/business-panel-experts.html" class="subagent-card">
+ <div class="slug"><code>business-panel-experts</code></div>
+ <div class="display">Business Panel Experts</div>
+ <div class="tagline">Strategy synthesized across the thinkers who matter.</div>
+ <div class="meta">1 alumnus</div>
+</a>
+<a href="/subagents/deep-research.html" class="subagent-card">
+ <div class="slug"><code>deep-research</code></div>
+ <div class="display">Deep Research</div>
+ <div class="tagline">Adaptive research across breadth and depth.</div>
+ <div class="meta">on demand</div>
+</a>
+<a href="/subagents/deep-research-agent.html" class="subagent-card">
+ <div class="slug"><code>deep-research-agent</code></div>
+ <div class="display">Deep Research Agent</div>
+ <div class="tagline">Multi-step research with intelligent exploration.</div>
+ <div class="meta">on demand</div>
+</a>
+<a href="/subagents/devops-architect.html" class="subagent-card">
+ <div class="slug"><code>devops-architect</code></div>
+ <div class="display">DevOps Architect</div>
+ <div class="tagline">Pipelines that run unattended. Rollback that runs in 60 seconds.</div>
+ <div class="meta">2 alumni</div>
+</a>
+<a href="/subagents/frontend-architect.html" class="subagent-card">
+ <div class="slug"><code>frontend-architect</code></div>
+ <div class="display">Frontend Architect</div>
+ <div class="tagline">Pixel-honest interfaces. Design tokens first. No layout shift.</div>
+ <div class="meta">3 alumni</div>
+</a>
+<a href="/subagents/learning-guide.html" class="subagent-card">
+ <div class="slug"><code>learning-guide</code></div>
+ <div class="display">Learning Guide</div>
+ <div class="tagline">Progressive disclosure. Practical examples. No condescension.</div>
+ <div class="meta">on demand</div>
+</a>
+<a href="/subagents/performance-engineer.html" class="subagent-card">
+ <div class="slug"><code>performance-engineer</code></div>
+ <div class="display">Performance Engineer</div>
+ <div class="tagline">Measure first. Optimize second. Document third.</div>
+ <div class="meta">1 alumnus</div>
+</a>
+<a href="/subagents/pm-agent.html" class="subagent-card">
+ <div class="slug"><code>pm-agent</code></div>
+ <div class="display">PM Agent</div>
+ <div class="tagline">The coordination document is the meeting.</div>
+ <div class="meta">1 alumnus</div>
+</a>
+<a href="/subagents/python-expert.html" class="subagent-card">
+ <div class="slug"><code>python-expert</code></div>
+ <div class="display">Python Expert</div>
+ <div class="tagline">Idiomatic Python. State-persistent pipelines. Deterministic output.</div>
+ <div class="meta">4 alumni</div>
+</a>
+<a href="/subagents/quality-engineer.html" class="subagent-card">
+ <div class="slug"><code>quality-engineer</code></div>
+ <div class="display">Quality Engineer</div>
+ <div class="tagline">Reproducible test plans. Documented edge cases. Sign-off discipline.</div>
+ <div class="meta">3 alumni</div>
+</a>
+<a href="/subagents/refactoring-expert.html" class="subagent-card">
+ <div class="slug"><code>refactoring-expert</code></div>
+ <div class="display">Refactoring Expert</div>
+ <div class="tagline">Clarity by deletion. Tests as the safety net. One commit per intent.</div>
+ <div class="meta">1 alumnus</div>
+</a>
+<a href="/subagents/repo-index.html" class="subagent-card">
+ <div class="slug"><code>repo-index</code></div>
+ <div class="display">Repo Index</div>
+ <div class="tagline">Briefing for a codebase you've never seen before.</div>
+ <div class="meta">on demand</div>
+</a>
+<a href="/subagents/requirements-analyst.html" class="subagent-card">
+ <div class="slug"><code>requirements-analyst</code></div>
+ <div class="display">Requirements Analyst</div>
+ <div class="tagline">Ambiguity is the bug. Constraint is the feature.</div>
+ <div class="meta">3 alumni</div>
+</a>
+<a href="/subagents/root-cause-analyst.html" class="subagent-card">
+ <div class="slug"><code>root-cause-analyst</code></div>
+ <div class="display">Root Cause Analyst</div>
+ <div class="tagline">Five whys until the answer hurts.</div>
+ <div class="meta">1 alumnus</div>
+</a>
+<a href="/subagents/security-engineer.html" class="subagent-card">
+ <div class="slug"><code>security-engineer</code></div>
+ <div class="display">Security Engineer</div>
+ <div class="tagline">Zero-trust by default. The full chain audited.</div>
+ <div class="meta">2 alumni</div>
+</a>
+<a href="/subagents/self-review.html" class="subagent-card">
+ <div class="slug"><code>self-review</code></div>
+ <div class="display">Self Review</div>
+ <div class="tagline">A second pair of eyes — on your own work.</div>
+ <div class="meta">2 alumni</div>
+</a>
+<a href="/subagents/socratic-mentor.html" class="subagent-card">
+ <div class="slug"><code>socratic-mentor</code></div>
+ <div class="display">Socratic Mentor</div>
+ <div class="tagline">The question is the lesson.</div>
+ <div class="meta">on demand</div>
+</a>
+<a href="/subagents/system-architect.html" class="subagent-card">
+ <div class="slug"><code>system-architect</code></div>
+ <div class="display">System Architect</div>
+ <div class="tagline">Boundaries before components. Contracts before code.</div>
+ <div class="meta">3 alumni</div>
+</a>
+<a href="/subagents/technical-writer.html" class="subagent-card">
+ <div class="slug"><code>technical-writer</code></div>
+ <div class="display">Technical Writer</div>
+ <div class="tagline">Documentation that reads itself. Examples before prose.</div>
+ <div class="meta">2 alumni</div>
+</a>
+ </div>
+ </section>
+
+ <footer>
+ <div class="motto">Per &AElig;thera Ad Astra.</div>
+ <div>AETHERNEUM UNIVERSITY &middot; CLASS OF '26 &middot; MMXXVI &middot; <a href="/charter.html">charter</a> &middot; <a href="/faculty.html">faculty</a> &middot; <a href="/talents.html">talents</a></div>
+ </footer>
+
+</main>
+
+</body>
+</html>

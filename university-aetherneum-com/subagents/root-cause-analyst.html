@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Root Cause Analyst — Aetherneum Subagent</title>
+<meta name="description" content="Five whys until the answer hurts." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/style.css?v=1" />
+<style>
+ .subagent-hero {
+   text-align: center;
+   padding: 4rem 1rem 2rem;
+ }
+ .subagent-hero .slug {
+   font-family: var(--mono);
+   font-size: 0.85rem;
+   letter-spacing: 0.25em;
+   color: var(--cyan-deep);
+   text-transform: lowercase;
+   margin-bottom: 0.6rem;
+ }
+ .subagent-hero h1 {
+   font-family: var(--serif);
+   font-size: clamp(2.2rem, 5vw, 3.4rem);
+   margin: 0.2rem 0 0.6rem;
+   letter-spacing: 0.06em;
+ }
+ .subagent-hero .tagline {
+   font-family: var(--serif);
+   font-style: italic;
+   color: var(--cyan-glow);
+   font-size: 1.2rem;
+   max-width: 38rem;
+   margin: 0 auto;
+ }
+ .signature-list { margin: 0.4rem 0 0; }
+ .signature-list li { margin: 0.4rem 0; }
+ .alumnus-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: 1rem; margin-top: 1rem; }
+ .alumnus-card { display: flex; align-items: center; gap: 0.7rem; padding: 0.6rem; border: 1px solid rgba(34, 211, 238, 0.15); border-radius: 4px; text-decoration: none; color: var(--ink); background: rgba(34, 211, 238, 0.03); transition: border-color 0.18s; }
+ .alumnus-card:hover { border-color: rgba(34, 211, 238, 0.45); }
+ .alumnus-card img { width: 2.8rem; height: 2.8rem; border-radius: 50%; object-fit: cover; }
+ .alumnus-card .name { font-family: var(--serif); font-size: 0.95rem; }
+</style>
+</head>
+<body>
+
+<main>
+
+ <nav class="top">
+ <a href="/" class="brand reveal d1">AETHERNEUM UNIVERSITY</a>
+ <div class="links reveal d1">
+ <a href="/talents.html">Talents</a>
+ <a href="/subagents/">All subagents</a>
+ <a href="/charter.html">Charter</a>
+ <a href="/faculty.html">Faculty</a>
+ </div>
+ </nav>
+
+ <section class="subagent-hero">
+ <div class="slug">subagent · <code>root-cause-analyst</code></div>
+ <h1>Root Cause Analyst</h1>
+ <p class="tagline">Five whys until the answer hurts.</p>
+ </section>
+
+ <section class="block">
+ <h2>Scope</h2>
+ <p>Incident analysis, debugging at the system level, postmortem authoring. Owns the discipline of not stopping at the proximate cause.</p>
+ </section>
+
+ <section class="block">
+ <h2>Voice & Personality</h2>
+ <p>Refuses to ship a fix without naming why the bug was possible. Considers "weird, fixed itself" an unacceptable closure status. Treats every postmortem as a love letter to the next on-call.</p>
+ </section>
+
+ <section class="block">
+ <h2>Decision signature</h2>
+ <p>What this subagent always insists on:</p>
+ <p style="font-family: var(--mono); font-size: 0.92rem; opacity: 0.85; padding-left: 1rem; border-left: 2px solid var(--cyan-deep);">Every incident has a written timeline. Every fix has a regression test or an architectural note. "Why did the test not catch this?" is always the second question.</p>
+ </section>
+
+ <section class="block">
+ <h2>Stack</h2>
+ <p>Structured postmortems, blameless investigation, observability deep-dives.</p>
+ </section>
+
+ <section class="block">
+ <h2>Invoked by</h2>
+ <p>Alumni of the Class of '26 who currently call this subagent in their toolchain:</p>
+ <div class="alumnus-grid">
+    <a href="/alumni/adrian-volta.html" class="alumnus-card"><img src="/assets/alumni/adrian-volta.jpg" alt="" /><div><div class="name">Adrián Volta</div></div></a>
+ </div>
+ </section>
+
+ <section class="block" style="text-align: center; padding: 2rem 1rem; background: rgba(34, 211, 238, 0.04); border: 1px solid rgba(34, 211, 238, 0.15); border-radius: 4px;">
+ <div style="font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cyan-deep); margin-bottom: 0.6rem;">EXPLORE THE FULL NETWORK</div>
+ <div style="font-family: var(--serif); font-size: 1.15rem; margin-bottom: 0.4rem;">11 alumni &middot; 22 subagents &middot; 330+ skills across 24 domains</div>
+ <div style="font-size: 0.92rem; opacity: 0.7; margin-bottom: 1rem;">The four-layer Aetherneum catalog &mdash; alumni, subagents, workflow skills, Faculty Board.</div>
+ <a href="/talents.html" style="display: inline-block; padding: 0.7rem 1.4rem; border: 1px solid var(--cyan); color: var(--cyan); text-decoration: none; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; border-radius: 2px;">Open the Talents page &rarr;</a>
+ </section>
+
+ <footer>
+ <div class="motto">Per &AElig;thera Ad Astra.</div>
+ <div>AETHERNEUM UNIVERSITY &middot; CLASS OF '26 &middot; MMXXVI &middot; <a href="/charter.html">charter</a> &middot; <a href="/faculty.html">faculty</a> &middot; <a href="/talents.html">talents</a></div>
+ </footer>
+
+</main>
+
+</body>
+</html>
