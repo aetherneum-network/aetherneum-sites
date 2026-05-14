@@ -202,7 +202,7 @@
  <li>Participate in the open Charter discussion — the Charter is amendable by quorum, and waitlist members read the proposals before they are ratified</li>
  </ul>
 
- <form id="waitlist-form" class="waitlist-form" action="mailto:waitlist@aetherneum.com" method="POST" enctype="text/plain">
+ <form id="waitlist-form" class="waitlist-form">
  <div>
  <label for="wl-email">Your email</label>
  <input type="email" id="wl-email" name="email" required placeholder="name@company.com" />
@@ -223,9 +223,9 @@
  <label for="wl-context">What would you want to do with sandbox access? <span style="opacity: 0.55; text-transform: none; letter-spacing: normal;">(optional, helps us prioritize)</span></label>
  <textarea id="wl-context" name="context" placeholder="One or two sentences. The more specific, the better."></textarea>
  </div>
- <button type="submit">Join the waitlist</button>
+ <button type="submit" id="wl-submit">Join the waitlist</button>
  <div id="form-status" class="form-status"></div>
- <p class="waitlist-note">Until the sandbox is live, your message reaches the founder directly. No marketing list, no third-party processor — we run our own email pipeline.</p>
+ <p class="waitlist-note">No marketing list, no third-party processor — we run our own email pipeline on the same infrastructure that hosts everything else.</p>
  </form>
  </section>
 
@@ -253,29 +253,51 @@
 (function () {
   const form = document.getElementById('waitlist-form');
   const status = document.getElementById('form-status');
+  const submitBtn = document.getElementById('wl-submit');
   if (!form) return;
-  form.addEventListener('submit', function (e) {
+
+  const API_URL = 'https://dashboard.aetherneum.com/api/waitlist';
+
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
     const email = (document.getElementById('wl-email').value || '').trim();
     const role = (document.getElementById('wl-role').value || '').trim();
     const context = (document.getElementById('wl-context').value || '').trim();
+
     if (!email || !role) {
       status.className = 'form-status err';
       status.textContent = 'Please fill in your email and role.';
       return;
     }
-    // V1: fall back to mailto with prefilled body — opens the user's mail client.
-    // V2 (with email infra): POST to /api/waitlist on the same origin.
-    const subject = encodeURIComponent('Trust the Code — waitlist signup');
-    const body = encodeURIComponent(
-      'Email: ' + email + '\n' +
-      'Role: ' + role + '\n' +
-      'Context: ' + (context || '(none)') + '\n\n' +
-      '— sent from aetherneum.com/trust-the-code'
-    );
-    window.location.href = 'mailto:waitlist@aetherneum.com?subject=' + subject + '&body=' + body;
-    status.className = 'form-status ok';
-    status.innerHTML = 'Opening your mail client to send the signup to <code>waitlist@aetherneum.com</code>. If nothing opens, send the same fields to that address manually.';
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting…';
+    status.className = 'form-status';
+    status.style.display = 'block';
+    status.textContent = '';
+
+    try {
+      const r = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, role, context: context || null })
+      });
+      if (!r.ok) {
+        let msg = 'HTTP ' + r.status;
+        try { const j = await r.json(); msg = j.detail || msg; } catch (_) {}
+        throw new Error(msg);
+      }
+      const j = await r.json();
+      status.className = 'form-status ok';
+      status.innerHTML = '✓ ' + (j.message || "You're on the waitlist.");
+      form.querySelectorAll('input, select, textarea').forEach(el => el.value = '');
+      submitBtn.textContent = 'Sent ✓';
+    } catch (err) {
+      status.className = 'form-status err';
+      status.textContent = 'Could not submit: ' + err.message + '. Email waitlist@aetherneum.com directly if this persists.';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Join the waitlist';
+    }
   });
 })();
 </script>
