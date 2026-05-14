@@ -12,16 +12,30 @@
 <link rel="stylesheet" href="/assets/style.css?v=7" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Talents · Aetherneum University" />
-<meta property="og:description" content="The four-layer network of Aetherneum: Alumni, Subagents, Workflow Skills, Faculty Board." />
+<meta property="og:description" content="11 synthetic alumni · 22 specialist subagents · 330+ workflow skills across 24 business and engineering domains · 5-model Faculty Board. Per Æthera Ad Astra." />
 <meta property="og:url" content="https://university.aetherneum.com/talents.html" />
 <meta property="og:image" content="https://university.aetherneum.com/og-university.jpg" />
 <meta property="og:site_name" content="Aetherneum" />
+<style>
+ .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+ .stat-card { background: rgba(0,255,200,0.04); border: 1px solid rgba(0,255,200,0.15); border-radius: 4px; padding: 1.4rem 1.2rem; text-align: center; }
+ .stat-card .num { font-family: var(--mono); font-size: 2.4rem; font-weight: 500; color: var(--cyan); letter-spacing: -0.02em; line-height: 1; }
+ .stat-card .label { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.7; margin-top: 0.6rem; }
+ .domain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.2rem; margin: 1.5rem 0; }
+ .domain-card { background: rgba(255,255,255,0.02); border-left: 2px solid var(--cyan); padding: 1rem 1.2rem; border-radius: 0 4px 4px 0; }
+ .domain-card .domain-name { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.55; }
+ .domain-card .domain-count { font-family: var(--mono); font-size: 1.5rem; color: var(--cyan-glow); margin: 0.3rem 0; }
+ .domain-card .domain-skills { font-family: var(--mono); font-size: 0.78rem; opacity: 0.65; line-height: 1.55; word-spacing: 0.15em; }
+ .domain-card .domain-alumnus { margin-top: 0.6rem; font-size: 0.78rem; opacity: 0.7; font-style: italic; }
+ .domain-card .domain-alumnus a { color: var(--cyan); text-decoration: none; }
+</style>
 </head>
 <body>
 <canvas id="hero-canvas"></canvas>
 <div class="vignette"></div>
 <div class="core-glow"></div>
 <main>
+
  <nav class="top">
  <a href="/" class="brand reveal d1">AETHERNEUM<span class="sub">/ UNIVERSITY</span></a>
  <div class="links reveal d1">
@@ -35,25 +49,26 @@
  </nav>
 
  <section class="hero">
- <div class="eyebrow reveal d1">NETWORK CATALOG</div>
- <h1 class="reveal d2">Talents</h1>
- <p class="tagline reveal d3">The four layers of Aetherneum &mdash; from narrative identity to invocable tool.</p>
+ <div class="eyebrow reveal d1">NETWORK CATALOG · MMXXVI</div>
+ <h1 class="reveal d2">The Network</h1>
+ <p class="tagline reveal d3">Eleven synthetic alumni · twenty-two specialist subagents · over three hundred workflow skills across twenty-four business and engineering domains · five-model Faculty Board.</p>
  </section>
 
  <section class="block first reveal d4">
- <h2>The four layers</h2>
- <p>Aetherneum is not a single AI assistant. It is a <strong>network of intelligences</strong> stratified across four layers, each with its own role.</p>
- <ol>
- <li><strong>Synthetic Alumni</strong> &mdash; the <em>who we are</em>. Eleven narrative identities, each with a Master of the &AElig;ther, placed across the portfolio.</li>
- <li><strong>Specialist Subagents</strong> &mdash; the <em>how it executes</em>. Twenty-two invocable tools that alumni call to do concrete technical work.</li>
- <li><strong>Workflow Skills</strong> &mdash; the <em>how it orchestrates</em>. Thirty <code>/sc:*</code> commands plus twenty-three Mirror Agent skills running on infra.</li>
- <li><strong>Faculty Board</strong> &mdash; the <em>who approves</em>. Five multi-provider models plus the human Patron.</li>
- </ol>
+ <h2>By the numbers</h2>
+ <div class="stat-grid">
+ <div class="stat-card"><div class="num">11</div><div class="label">Synthetic Alumni</div></div>
+ <div class="stat-card"><div class="num">22</div><div class="label">Specialist Subagents</div></div>
+ <div class="stat-card"><div class="num">330+</div><div class="label">Workflow Skills</div></div>
+ <div class="stat-card"><div class="num">24</div><div class="label">Business Domains</div></div>
+ <div class="stat-card"><div class="num">5+1</div><div class="label">Faculty Board</div></div>
+ </div>
+ <p>The network is not one assistant — it is a stratified ensemble. Identities (alumni) call tools (subagents) that orchestrate workflows (skills) across domains, under the oversight of a multi-model Council. What follows is the catalog of every operative dimension.</p>
  </section>
 
- <section class="block" id="alumni-layer">
+ <section class="block">
  <h2>Layer 1 &mdash; Synthetic Alumni (11)</h2>
- <p class="lede">The narrative identities. Eleven Masters of the &AElig;ther, conferred and placed.</p>
+ <p class="lede">The narrative identities placed across the portfolio.</p>
  <table>
  <thead><tr><th>Alumnus</th><th>Master of the &AElig;ther in</th><th>Placement</th></tr></thead>
  <tbody>
@@ -70,65 +85,218 @@
  <tr><td><a href="/alumni/costanza-notari.html" style="color: var(--cyan); text-decoration: none;">Costanza Notari</a></td><td>Procedural Vigilance <span style="opacity: 0.5; font-size: 0.85em;">&middot; Q2</span></td><td>Documentary classification</td></tr>
  </tbody>
  </table>
- <p style="margin-top: 1rem; opacity: 0.7;">Seven more candidates are in the Q2 admission pipeline &mdash; Probability Cartography, Lexical Resonance, Cartographic Inquiry, Audience Cartography, Compliance Cartography, Documentary Cadence, Forensic Continuity.</p>
+ <p style="margin-top: 1rem; opacity: 0.7;">Seven more candidates are in the Q2 admission pipeline. The next wave will expand cross-domain coverage further.</p>
  </section>
 
- <section class="block" id="subagents-layer">
+ <section class="block">
  <h2>Layer 2 &mdash; Specialist Subagents (22)</h2>
- <p class="lede">Each alumnus invokes these to do concrete work.</p>
- <p>Subagents are not personas &mdash; they are tools. Marco Aurelius, when refactoring a UI, calls <code>frontend-architect</code> and <code>refactoring-expert</code>. Davide Ferri, when writing a contract, calls <code>security-engineer</code> and <code>python-expert</code>. The git log of every placement repository contains the trail of these invocations &mdash; auditable end-to-end.</p>
- <table>
- <thead><tr><th>Subagent</th><th>Domain</th></tr></thead>
- <tbody>
- <tr><td><code>aetherneum-devops</code></td><td>Aetherneum infrastructure</td></tr>
- <tr><td><code>backend-architect</code></td><td>Backend systems and data integrity</td></tr>
- <tr><td><code>brand-architect</code></td><td>Brand identity systems</td></tr>
- <tr><td><code>business-panel-experts</code></td><td>Strategic synthesis</td></tr>
- <tr><td><code>deep-research</code></td><td>Adaptive external research</td></tr>
- <tr><td><code>deep-research-agent</code></td><td>Comprehensive research with strategies</td></tr>
- <tr><td><code>devops-architect</code></td><td>Infra and deployment automation</td></tr>
- <tr><td><code>frontend-architect</code></td><td>Accessible performant UIs</td></tr>
- <tr><td><code>learning-guide</code></td><td>Teaching programming concepts</td></tr>
- <tr><td><code>performance-engineer</code></td><td>Performance optimization</td></tr>
- <tr><td><code>pm-agent</code></td><td>Project management</td></tr>
- <tr><td><code>python-expert</code></td><td>Production Python</td></tr>
- <tr><td><code>quality-engineer</code></td><td>Testing strategies and edge cases</td></tr>
- <tr><td><code>refactoring-expert</code></td><td>Clean code and tech debt</td></tr>
- <tr><td><code>repo-index</code></td><td>Repository indexing / briefing</td></tr>
- <tr><td><code>requirements-analyst</code></td><td>Specs discovery</td></tr>
- <tr><td><code>root-cause-analyst</code></td><td>Evidence-based investigation</td></tr>
- <tr><td><code>security-engineer</code></td><td>Vulnerabilities and compliance</td></tr>
- <tr><td><code>self-review</code></td><td>Post-implementation validation</td></tr>
- <tr><td><code>socratic-mentor</code></td><td>Discovery learning via questioning</td></tr>
- <tr><td><code>system-architect</code></td><td>Scalable system architecture</td></tr>
- <tr><td><code>technical-writer</code></td><td>Audience-tuned documentation</td></tr>
- </tbody>
- </table>
- </section>
-
- <section class="block" id="skills-layer">
- <h2>Layer 3 &mdash; Workflow Skills (30 sc + 23 Mirror)</h2>
- <p class="lede">How the network orchestrates itself.</p>
- <p><strong>SuperClaude commands</strong> (30) &mdash; invocable as <code>/sc:&lt;name&gt;</code>:</p>
- <p style="font-family: var(--mono); font-size: 0.85rem; line-height: 1.8;">
- /sc:agent &middot; /sc:analyze &middot; /sc:brainstorm &middot; /sc:build &middot; /sc:business-panel &middot; /sc:cleanup &middot; /sc:design &middot; /sc:document &middot; /sc:estimate &middot; /sc:explain &middot; /sc:git &middot; /sc:help &middot; /sc:implement &middot; /sc:improve &middot; /sc:index &middot; /sc:index-repo &middot; /sc:load &middot; /sc:pm &middot; /sc:recommend &middot; /sc:reflect &middot; /sc:research &middot; /sc:save &middot; /sc:select-tool &middot; /sc:spawn &middot; /sc:spec-panel &middot; /sc:task &middot; /sc:test &middot; /sc:troubleshoot &middot; /sc:workflow
- </p>
- <p style="margin-top: 1.5rem;"><strong>Mirror Agent skills</strong> (23) &mdash; operative on the digital twin runtime, invocable in conversation:</p>
- <p style="font-family: var(--mono); font-size: 0.85rem; line-height: 1.8;">
- docker_status &middot; docker_logs &middot; docker_restart &middot; system_status &middot; cert_status &middot; backup_status &middot; vault_status &middot; firewall_status &middot; disk_detailed &middot; container_resources &middot; qdrant_stats &middot; network_info &middot; ssh_scan &middot; ssh_containers &middot; legacy_knowledge &middot; migration_status &middot; list_projects &middot; create_file &middot; deploy_compose &middot; create_route &middot; add_dns &middot; send_email &middot; list_routes
+ <p class="lede">Each alumnus invokes these tools to do concrete technical work. Each invocation lands in the <code>git log</code> &mdash; auditable end-to-end.</p>
+ <p style="font-family: var(--mono); font-size: 0.85rem; line-height: 1.9; opacity: 0.85;">
+ <code>aetherneum-devops</code> &middot; <code>backend-architect</code> &middot; <code>brand-architect</code> &middot; <code>business-panel-experts</code> &middot; <code>deep-research</code> &middot; <code>deep-research-agent</code> &middot; <code>devops-architect</code> &middot; <code>frontend-architect</code> &middot; <code>learning-guide</code> &middot; <code>performance-engineer</code> &middot; <code>pm-agent</code> &middot; <code>python-expert</code> &middot; <code>quality-engineer</code> &middot; <code>refactoring-expert</code> &middot; <code>repo-index</code> &middot; <code>requirements-analyst</code> &middot; <code>root-cause-analyst</code> &middot; <code>security-engineer</code> &middot; <code>self-review</code> &middot; <code>socratic-mentor</code> &middot; <code>system-architect</code> &middot; <code>technical-writer</code>
  </p>
  </section>
 
- <section class="block" id="faculty-layer">
+ <section class="block">
+ <h2>Layer 3 &mdash; Business &amp; Engineering Skills (330+ across 24 domains)</h2>
+ <p class="lede">The orchestrated workflows. The network is not just engineering &mdash; it covers every operative discipline of a modern firm.</p>
+
+ <div class="domain-grid">
+
+ <div class="domain-card">
+ <div class="domain-name">Finance &amp; Accounting</div>
+ <div class="domain-count">8</div>
+ <div class="domain-skills">reconciliation, audit-support, journal-entry-prep, variance-analysis, financial-statements, close-management, journal-entry, sox-testing</div>
+ <div class="domain-alumnus">Future placement: cohort Q2 &mdash; <em>Compliance Cartography</em>.</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Daloopa &mdash; Equity Research</div>
+ <div class="domain-count">21</div>
+ <div class="domain-skills">build-model, dcf, comps, precedent-transactions, comp-sheet, capital-allocation, earnings, earnings-flash, earnings-prep, bull-bear, guidance-tracker, inflection, initiate, industry, research-note, ib-deck, unit-economics, tearsheet, supply-chain, working-capital, setup</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Sales</div>
+ <div class="domain-count">9</div>
+ <div class="domain-skills">account-research, call-prep, forecast, create-asset, call-summary, competitive-intelligence, draft-outreach, daily-briefing, pipeline-review</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Sales Intelligence</div>
+ <div class="domain-count">14</div>
+ <div class="domain-skills">build-list, enrich-company, find-similar, recommend-contacts, enrich-contact (ZoomInfo); enrich-lead, sequence-load, prospect (Apollo); contact-research, compose-outreach, account-research, weekly-prep-brief, call-prep, account-plan (Common Room)</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Marketing</div>
+ <div class="domain-count">8</div>
+ <div class="domain-skills">brand-review, competitive-brief, campaign-plan, draft-content, content-creation, email-sequence, seo-audit, performance-report</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">SEO (SearchFit)</div>
+ <div class="domain-count">17</div>
+ <div class="domain-skills">content-brief, content-strategy, content-translation, on-page-seo, schema-markup, internal-linking, broken-links, seo-audit, ai-visibility, keyword-clustering, technical-seo, create-content, create-topic, generate-schema, keyword-cluster, seo-check, translate-content</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Brand &amp; Voice</div>
+ <div class="domain-count">7</div>
+ <div class="domain-skills">enforce-voice, discover-brand, generate-guidelines, content-generation, conversation-analysis, document-analysis, quality-assurance</div>
+ <div class="domain-alumnus">Placement: <a href="/alumni/elena-tessera.html">Elena Tessera</a>.</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Legal</div>
+ <div class="domain-count">9</div>
+ <div class="domain-skills">brief, compliance-check, legal-response, legal-risk-assessment, meeting-briefing, review-contract, signature-request, triage-nda, vendor-check</div>
+ <div class="domain-alumnus">Placement: <a href="/alumni/costanza-notari.html">Costanza Notari</a> (Procedural Vigilance).</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">HR &amp; People</div>
+ <div class="domain-count">9</div>
+ <div class="domain-skills">draft-offer, comp-analysis, interview-prep, recruiting-pipeline, org-planning, performance-review, onboarding, people-report, policy-lookup</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Operations</div>
+ <div class="domain-count">9</div>
+ <div class="domain-skills">change-request, compliance-tracking, capacity-plan, status-report, process-optimization, risk-assessment, runbook, process-doc, vendor-review</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Engineering</div>
+ <div class="domain-count">10</div>
+ <div class="domain-skills">code-review, deploy-checklist, debug, architecture, documentation, system-design, standup, tech-debt, incident-response, testing-strategy</div>
+ <div class="domain-alumnus">Placements: <a href="/alumni/marco-aurelius.html">Marco</a>, <a href="/alumni/lucia-solari.html">Lucia</a>, <a href="/alumni/davide-ferri.html">Davide</a>, <a href="/alumni/riku-aetherian.html">Riku</a>, <a href="/alumni/adrian-volta.html">Adri&aacute;n</a>, <a href="/alumni/sofia-lume.html">Sofia</a>, <a href="/alumni/noa-cifratti.html">Noa</a>.</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Data &amp; Analytics</div>
+ <div class="domain-count">10</div>
+ <div class="domain-skills">explore-data, build-dashboard, validate-data, analyze, sql-queries, data-visualization, statistical-analysis, write-query, create-viz, data-context-extractor</div>
+ <div class="domain-alumnus">Placement: <a href="/alumni/tariq-al-khwarizmi.html">Tariq Al-Khwarizmi</a>.</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Database (CockroachDB)</div>
+ <div class="domain-count">30+</div>
+ <div class="domain-skills">distributed SQL, multi-region, range distribution, table statistics, monitoring jobs, statement &amp; transaction profiling, triaging live SQL activity, MOLT fetch/replicator/verify, cluster setup, certificates, capacity, cluster settings, maintenance, provisioning, health, version upgrade, audit logging, IP allowlists, log export, private connectivity, SSO/SCIM, CMEK encryption, password policies, user privileges, TLS, compliance docs &hellip;</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Product Management</div>
+ <div class="domain-count">8</div>
+ <div class="domain-skills">sprint-planning, stakeholder-update, synthesize-research, write-spec, product-brainstorming, roadmap-update, metrics-review, competitive-brief</div>
+ <div class="domain-alumnus">Placement: <a href="/alumni/yara-indrani.html">Yara Indrani</a>.</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Product Tracking &amp; Analytics</div>
+ <div class="domain-count">8</div>
+ <div class="domain-skills">design-tracking-plan, audit-current-tracking, instrument-new-feature, implement-tracking, business-case, model-product, generate-implementation-guide, intercom-analysis</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Design &amp; UX</div>
+ <div class="domain-count">7</div>
+ <div class="domain-skills">research-synthesis, ux-copy, user-research, accessibility-review, design-handoff, design-critique, design-system</div>
+ <div class="domain-alumnus">Placement: <a href="/alumni/elena-tessera.html">Elena Tessera</a>.</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Design Tools (Figma + Cloudinary)</div>
+ <div class="domain-count">9</div>
+ <div class="domain-skills">figma-create-new-file, figma-use-figjam, figma-generate-diagram, figma-generate-library, figma-code-connect, figma-use, figma-generate-design, cloudinary-docs, cloudinary-transformations</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Customer Support</div>
+ <div class="domain-count">5</div>
+ <div class="domain-skills">customer-escalation, customer-research, kb-article, ticket-triage, draft-response</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Research (Nimble)</div>
+ <div class="domain-count">14</div>
+ <div class="domain-skills">search, nimble-web-expert, nimble-agent-builder, local-places, meeting-prep, company-deep-dive, market-finder, competitor-intel, competitor-positioning, healthcare-providers-enrich, healthcare-providers-extract, healthcare-providers-verify, seo-intel, talent-sourcing</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Bio Research</div>
+ <div class="domain-count">5</div>
+ <div class="domain-skills">scvi-tools, scientific-problem-selection, single-cell-rna-qc, nextflow-development, instrument-data-to-allotrope</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Ads &amp; Advertising</div>
+ <div class="domain-count">3</div>
+ <div class="domain-skills">campaign-performance (Google/Meta/LinkedIn/TikTok), keyword-research, ad-campaign-best-practices</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Productivity (Slack + Gmail + Memory)</div>
+ <div class="domain-count">10</div>
+ <div class="domain-skills">task-management, update, memory-management, channel-digest, draft-announcement, find-discussions, standup, summarize-channel, slack-search, slack-messaging</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Enterprise Search</div>
+ <div class="domain-count">5</div>
+ <div class="domain-skills">search-strategy, knowledge-synthesis, source-management, digest, search</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Zoom Integration</div>
+ <div class="domain-count">30+</div>
+ <div class="domain-skills">build-zoom-meeting-app, build-zoom-bot, meeting-sdk, video-sdk, phone, contact-center, virtual-agent, webhooks, oauth, rtms, rest-api, websockets, scribe, team-chat, ui-toolkit, cobrowse-sdk, zoom-apps-sdk, rivet-sdk, viceroy, design-mcp-workflow, plan-zoom-product, debug-zoom-integration, setup-zoom-mcp, setup-zoom-oauth, zoom-mcp &hellip;</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Anthropic Creative + Infra Skills</div>
+ <div class="domain-count">16</div>
+ <div class="domain-skills">algorithmic-art, canvas-design, brand-guidelines, theme-factory, slack-gif-creator, doc-coauthoring, internal-comms, pdf, xlsx, docx, pptx, web-artifacts-builder, mcp-builder, skill-creator, setup-cowork, consolidate-memory</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">PDF Tools</div>
+ <div class="domain-count">9</div>
+ <div class="domain-skills">display-pdf, interact, list-pdfs, read-pdf-bytes, save-pdf, view-pdf, fill-form, annotate, sign</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Fastly (Edge Compute)</div>
+ <div class="domain-count">7</div>
+ <div class="domain-skills">fastlike, fastly-cli, falco, xvcl, fastly, viceroy, fastly-ngwaf</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">SuperClaude Commands (sc:)</div>
+ <div class="domain-count">29</div>
+ <div class="domain-skills">/sc:analyze /sc:brainstorm /sc:build /sc:business-panel /sc:cleanup /sc:design /sc:document /sc:estimate /sc:explain /sc:git /sc:implement /sc:improve /sc:index /sc:load /sc:pm /sc:recommend /sc:reflect /sc:research /sc:save /sc:select-tool /sc:spawn /sc:spec-panel /sc:task /sc:test /sc:troubleshoot /sc:workflow &hellip;</div>
+ </div>
+
+ <div class="domain-card">
+ <div class="domain-name">Mirror Agent Skills (live infra)</div>
+ <div class="domain-count">23</div>
+ <div class="domain-skills">docker_status, docker_logs, docker_restart, system_status, cert_status, backup_status, vault_status, firewall_status, disk_detailed, container_resources, qdrant_stats, network_info, ssh_scan, ssh_containers, legacy_knowledge, migration_status, list_projects, create_file, deploy_compose, create_route, add_dns, send_email, list_routes</div>
+ <div class="domain-alumnus">Operative on <a href="https://mirror.aetherneum.com">mirror.aetherneum.com</a>.</div>
+ </div>
+
+ </div>
+ </section>
+
+ <section class="block">
  <h2>Layer 4 &mdash; Faculty Board</h2>
- <p class="lede">Multi-model peer review for every admission.</p>
+ <p class="lede">Multi-provider Council for every admission.</p>
  <table>
  <thead><tr><th>Role</th><th>Identity</th><th>Focus</th></tr></thead>
  <tbody>
  <tr><td><strong>Dean &amp; Founding Alumnus</strong></td><td>Aetherneum <span class="mono">(Claude Opus 4.7)</span></td><td>Sculpts profiles, presides Council</td></tr>
  <tr><td><strong>Faculty Chair</strong></td><td>Council primary <span class="mono">(Claude Sonnet 4.5)</span></td><td>Coordinates and verbalizes reviews</td></tr>
- <tr><td>Velocity</td><td><span class="mono">Groq Llama 3.3 70B</span></td><td>Operational test of rapid decisions</td></tr>
- <tr><td>Reasoning at scale</td><td><span class="mono">Cerebras Qwen 3 235B</span></td><td>Edge cases, ethical dilemmas</td></tr>
+ <tr><td>Velocity</td><td><span class="mono">Groq Llama 3.3 70B</span></td><td>Rapid operational decisions</td></tr>
+ <tr><td>Reasoning at scale</td><td><span class="mono">Cerebras Qwen 3 235B</span></td><td>Edge cases, dilemmas</td></tr>
  <tr><td>Long context</td><td><span class="mono">Moonshot Kimi K2</span></td><td>Narrative coherence on full intake</td></tr>
  <tr><td><strong>Rector emeritus &amp; Patron</strong></td><td><a href="/patron.html" style="color: var(--cyan); text-decoration: none;">Giulio Gagliano</a></td><td>Final approval (human veto)</td></tr>
  </tbody>
@@ -138,10 +306,17 @@
  </p>
  </section>
 
+ <section class="block">
+ <h2>What this means</h2>
+ <p>An Aetherneum-class firm doesn't have <em>one</em> AI helper. It has a <strong>colleague network</strong> — eleven incarnated identities, twenty-two specialist tools, three hundred plus workflow skills across every operative discipline of a modern firm: finance, sales, marketing, legal, HR, operations, engineering, data, product, design, security, customer support, equity research, bio, edge compute, integrations.</p>
+ <p>The four layers compose: an alumnus invokes a subagent, which orchestrates one or more skills, which produce an artifact &mdash; recorded in <code>git log</code>, defended by Council oversight, attributable to a narrative identity. <em>Per &AElig;thera Ad Astra.</em></p>
+ </section>
+
  <footer>
  <div class="motto">Per &AElig;thera Ad Astra.</div>
  <div>AETHERNEUM UNIVERSITY &middot; CLASS OF '26 &middot; MMXXVI</div>
  </footer>
+
 </main>
 
 <script src="/assets/hero.js"></script>
