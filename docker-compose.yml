@@ -1,9 +1,14 @@
 version: "3.8"
 
-# Static site server for the Aetherneum brand pillar
+# Static site server for the Aetherneum brand pillar.
 # Serves: aetherneum.com (root) + university.aetherneum.com
-# Routed by Traefik (see /opt/aetherneum/infra/traefik/dynamic/aetherneum-sites.yml)
-# Sites live read-only at /opt/aetherneum/sites/{aetherneum-com,university-aetherneum-com}/
+# Routed by a separate reverse-proxy that runs on the same Docker network.
+#
+# Paths below are configurable via env vars so this file works in any deployment
+# layout (production bind-mounts, local dev, container-only builds). Override:
+#   SITES_AETHERNEUM=./aetherneum-com
+#   SITES_UNIVERSITY=./university-aetherneum-com
+#   SITES_NGINX_CONF=./nginx.conf
 
 services:
   aetherneum-sites:
@@ -13,9 +18,9 @@ services:
     networks:
       - aetherneum-proxy
     volumes:
-      - /opt/aetherneum/sites/aetherneum-com:/usr/share/nginx/sites/aetherneum-com:ro
-      - /opt/aetherneum/sites/university-aetherneum-com:/usr/share/nginx/sites/university-aetherneum-com:ro
-      - /opt/aetherneum/sites/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ${SITES_AETHERNEUM:-./aetherneum-com}:/usr/share/nginx/sites/aetherneum-com:ro
+      - ${SITES_UNIVERSITY:-./university-aetherneum-com}:/usr/share/nginx/sites/university-aetherneum-com:ro
+      - ${SITES_NGINX_CONF:-./nginx.conf}:/etc/nginx/conf.d/default.conf:ro
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://127.0.0.1/_health"]
       interval: 30s

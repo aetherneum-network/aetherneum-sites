@@ -4,7 +4,7 @@ update-activity.py — Live Activity feed generator for university.aetherneum.co
 
 Fetches the most recent public commits across aetherneum-network/* repositories,
 maps each commit author to an alumnus profile (via email <first>.<last>@aetherneum.com),
-and rewrites the ACTIVITY_FEED block of /opt/aetherneum/sites/university-aetherneum-com/index.html.
+and rewrites the ACTIVITY_FEED block of the served `index.html`.
 
 Run by cron every ~10 minutes. Idempotent: if no new commit since last run, file is
 left untouched (mtime preserved).
@@ -14,8 +14,13 @@ Auth: anonymous (60 req/h cap), sufficient for 10-minute cadence.
 Failure policy: if the GitHub API is unreachable or the response is malformed, the
 script logs the error and EXITS WITHOUT TOUCHING THE FILE. Never replaces real content
 with a "site temporarily unavailable" placeholder.
+
+Configuration via env vars (path-aware, deployment-agnostic):
+  INDEX_HTML       — path to the index.html to rewrite (default: ./university-aetherneum-com/index.html)
+  ACTIVITY_LOG     — path to the run log (default: ./activity.log)
 """
 import json
+import os
 import re
 import sys
 import urllib.request
@@ -25,8 +30,8 @@ from html import escape
 from pathlib import Path
 
 ORG = "aetherneum-network"
-INDEX_HTML = Path("/opt/aetherneum/sites/university-aetherneum-com/index.html")
-LOG_FILE = Path("/var/log/aetherneum-activity.log")
+INDEX_HTML = Path(os.environ.get("INDEX_HTML", "./university-aetherneum-com/index.html"))
+LOG_FILE = Path(os.environ.get("ACTIVITY_LOG", "./activity.log"))
 MAX_ITEMS = 12
 COMMITS_PER_REPO = 6
 USER_AGENT = "aetherneum-university-activity/1.0"

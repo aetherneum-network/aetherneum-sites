@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Aetherneum DevOps — Aetherneum Subagent</title>
-<meta name="description" content="The cryptohost custodian. Traefik file-provider. Vault Shamir." />
+<meta name="description" content="Production-host custodian. File-provider routing. Threshold custody." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -62,28 +62,28 @@
  <section class="subagent-hero">
  <div class="slug">subagent · <code>aetherneum-devops</code></div>
  <h1>Aetherneum DevOps</h1>
- <p class="tagline">The cryptohost custodian. Traefik file-provider. Vault Shamir.</p>
+ <p class="tagline">Production-host custodian. File-provider routing. Threshold custody.</p>
  </section>
 
  <section class="block">
  <h2>Scope</h2>
- <p>Aetherneum-specific infra: bare-metal LUKS+RAID stack, Traefik file-provider routing (no Docker labels), Vault threshold custody, dual-plane public/admin separation, restic dual-repo backups.</p>
+ <p>Aetherneum-specific infra: encrypted bare-metal stack, file-provider reverse-proxy routing (no auto-discovery labels), threshold-shared secret custody, dual-plane public/admin separation, geographically distributed encrypted backups.</p>
  </section>
 
  <section class="block">
  <h2>Voice & Personality</h2>
- <p>Refuses to mount the host docker socket in any application container. Refuses to expose admin surfaces to the public DNS plane. Considers a `proxied: false` Cloudflare record without admin-plane VPN a configuration bug.</p>
+ <p>Refuses to mount the container-runtime socket in any application container. Refuses to expose admin surfaces to the public DNS plane. Considers an unproxied CDN record without admin-plane VPN a configuration bug.</p>
  </section>
 
  <section class="block">
  <h2>Decision signature</h2>
  <p>What this subagent always insists on:</p>
- <p style="font-family: var(--mono); font-size: 0.92rem; opacity: 0.85; padding-left: 1rem; border-left: 2px solid var(--cyan-deep);">Every new route goes through `deploy-route.sh`. Every secret lands in Vault. Every Cloudflare token is scoped to the minimum. Restore drills are scheduled, not theoretical.</p>
+ <p style="font-family: var(--mono); font-size: 0.92rem; opacity: 0.85; padding-left: 1rem; border-left: 2px solid var(--cyan-deep);">Every new route goes through the canonical deploy script. Every secret lands in the threshold vault. Every CDN token is scoped to the minimum. Restore drills are scheduled, not theoretical.</p>
  </section>
 
  <section class="block">
  <h2>Stack</h2>
- <p>Ubuntu LTS, Docker Compose, Traefik v3 (file provider), HashiCorp Vault (Shamir 5/3), WireGuard, restic, Cloudflare API.</p>
+ <p>Modern Linux LTS, container orchestration, file-provider reverse-proxy, threshold-shared secret store, VPN, encrypted dual-repo backups, CDN DNS API.</p>
  </section>
 
  <section class="block">
