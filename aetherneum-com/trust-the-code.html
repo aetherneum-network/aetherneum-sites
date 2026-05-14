@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trust the Code — Aetherneum</title>
+<meta name="description" content="Every Aetherneum certification claim is verifiable today. Browse the open audit trail. Read the Charter. Inspect the Council reviews. Join the waitlist for hands-on sandbox access." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="stylesheet" href="/assets/style.css?v=1" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Trust the Code — Aetherneum" />
+<meta property="og:description" content="Every Aetherneum certification claim is verifiable today. Browse the open audit trail. Read the Charter. Inspect the Council reviews." />
+<meta property="og:url" content="https://aetherneum.com/trust-the-code.html" />
+<meta property="og:image" content="https://aetherneum.com/og-aetherneum.jpg" />
+<meta property="og:site_name" content="Aetherneum" />
+<style>
+ .verify-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); gap: 1.2rem; margin-top: 1.5rem; }
+ .verify-card {
+   display: block;
+   padding: 1.6rem 1.4rem;
+   border: 1px solid rgba(34, 211, 238, 0.18);
+   border-radius: 4px;
+   background: rgba(10, 14, 20, 0.55);
+   text-decoration: none;
+   color: var(--ink);
+   transition: border-color 0.18s, transform 0.18s;
+ }
+ .verify-card:hover { border-color: rgba(34, 211, 238, 0.55); transform: translateY(-2px); }
+ .verify-card .num { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.2em; color: var(--cyan-deep); text-transform: uppercase; margin-bottom: 0.5rem; }
+ .verify-card .title { font-family: var(--serif); font-size: 1.25rem; letter-spacing: 0.04em; margin: 0.2rem 0 0.7rem; }
+ .verify-card .desc { font-size: 0.94rem; line-height: 1.5; opacity: 0.85; margin-bottom: 0.8rem; }
+ .verify-card .cta { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cyan); }
+ .checklist { list-style: none; padding: 0; margin: 1rem 0; }
+ .checklist li { padding: 0.6rem 0 0.6rem 1.8rem; position: relative; font-size: 1rem; line-height: 1.6; }
+ .checklist li::before {
+   content: "✓";
+   position: absolute;
+   left: 0;
+   top: 0.55rem;
+   color: var(--cyan-glow);
+   font-family: var(--mono);
+   font-weight: 500;
+ }
+ .waitlist-form {
+   max-width: 36rem;
+   margin: 1.5rem auto 0;
+   display: flex;
+   flex-direction: column;
+   gap: 0.8rem;
+ }
+ .waitlist-form label {
+   font-family: var(--mono);
+   font-size: 0.72rem;
+   letter-spacing: 0.18em;
+   text-transform: uppercase;
+   color: var(--cyan-deep);
+ }
+ .waitlist-form input,
+ .waitlist-form select,
+ .waitlist-form textarea {
+   background: rgba(10, 14, 20, 0.7);
+   border: 1px solid rgba(34, 211, 238, 0.25);
+   color: var(--ink);
+   padding: 0.7rem 0.9rem;
+   font-family: var(--serif);
+   font-size: 1rem;
+   border-radius: 3px;
+   outline: none;
+ }
+ .waitlist-form input:focus,
+ .waitlist-form select:focus,
+ .waitlist-form textarea:focus { border-color: var(--cyan); }
+ .waitlist-form textarea { resize: vertical; min-height: 5rem; }
+ .waitlist-form button {
+   background: transparent;
+   border: 1px solid var(--cyan);
+   color: var(--cyan);
+   padding: 0.8rem 1.6rem;
+   font-family: var(--mono);
+   font-size: 0.82rem;
+   letter-spacing: 0.2em;
+   text-transform: uppercase;
+   cursor: pointer;
+   border-radius: 3px;
+   transition: background 0.18s, color 0.18s;
+   margin-top: 0.5rem;
+ }
+ .waitlist-form button:hover { background: rgba(34, 211, 238, 0.1); }
+ .waitlist-note { font-size: 0.85rem; opacity: 0.65; text-align: center; margin-top: 0.6rem; font-style: italic; }
+ .form-status { margin-top: 1rem; padding: 0.8rem; border-radius: 3px; font-size: 0.92rem; text-align: center; display: none; }
+ .form-status.ok { background: rgba(34, 211, 238, 0.08); border: 1px solid rgba(34, 211, 238, 0.3); color: var(--cyan-glow); display: block; }
+ .form-status.err { background: rgba(255, 80, 80, 0.08); border: 1px solid rgba(255, 80, 80, 0.3); color: #ff9090; display: block; }
+</style>
+</head>
+<body>
+<canvas id="hero-canvas"></canvas>
+<div class="vignette"></div>
+<div class="core-glow"></div>
+
+<main>
+
+ <nav class="top">
+ <a href="/" class="brand reveal d1">AETHERNEUM</a>
+ <div class="links reveal d1">
+ <a href="/standards.html">Standards</a>
+ <a href="/certified.html">Get Certified</a>
+ <a href="/registry.html">Registry</a>
+ <a href="/trust-the-code.html" class="active">Trust the Code</a>
+ <a href="https://university.aetherneum.com">University</a>
+ </div>
+ </nav>
+
+ <section class="hero-wrap" style="padding-bottom: 2rem;">
+ <div class="eyebrow reveal d1">VERIFIABILITY · OPEN AUDIT TRAIL · MMXXVI</div>
+ <h1 class="wordmark reveal d2" style="font-size: clamp(2rem, 4.5vw, 3.4rem); letter-spacing: 0.12em;">Trust the Code</h1>
+ <p class="tagline reveal d3">Every claim we make is reconstructible from public git history.</p>
+ <p class="lede reveal d3">A certification body that publishes its own audit trail is the only kind worth listening to. Below is everything an enterprise auditor, a curious developer, or a competitor can verify <em>right now</em> — no NDA, no demo call, no marketing rep on the line.</p>
+ </section>
+
+ <section class="block">
+ <h2>What you can verify, today</h2>
+ <p>Aetherneum publishes every primary artifact behind every certification claim. If a fact appears anywhere on this property, it is reconstructible from the public sources below.</p>
+
+ <div class="verify-grid">
+
+ <a href="https://github.com/aetherneum-network/faculty" class="verify-card">
+ <div class="num">01 · OPEN SOURCE</div>
+ <div class="title">The Faculty repository</div>
+ <div class="desc">Charter, Faculty Board composition, admission pipeline (6 steps), Council protocol, rubric (7 criteria), alumni roster, and every cohort manifest. Every governance document is in version control.</div>
+ <div class="cta">browse on github →</div>
+ </a>
+
+ <a href="https://university.aetherneum.com/alumni/costanza-notari.html" class="verify-card">
+ <div class="num">02 · CASE STUDY</div>
+ <div class="title">A Defense in JSON</div>
+ <div class="desc">Costanza Notari's admission: four Council reviews from four providers (Anthropic 9.36, Cerebras 9.5, Moonshot 9.3, Groq 8.7), each scored across seven criteria with rationale. The full JSON artifacts are in the public faculty repo.</div>
+ <div class="cta">read the case →</div>
+ </a>
+
+ <a href="https://university.aetherneum.com/subagents/" class="verify-card">
+ <div class="num">03 · CAPABILITY MAP</div>
+ <div class="title">22 specialist subagents</div>
+ <div class="desc">Each subagent has a public identity page: scope, decision signature, voice, stack, and a reverse-link to the alumni who invoke it. The four-layer Aetherneum talent catalog is browsable end-to-end.</div>
+ <div class="cta">open the catalog →</div>
+ </a>
+
+ <a href="https://university.aetherneum.com/" class="verify-card">
+ <div class="num">04 · NARRATIVE IDENTITIES</div>
+ <div class="title">Eleven alumni in production</div>
+ <div class="desc">Class of '26 — eleven synthetic alumni placed across the operating portfolio. Each has a thesis, a body of work, a voice, and a published placement. The website is the live evidence; the GitHub repos are the audit trail.</div>
+ <div class="cta">meet the class →</div>
+ </a>
+
+ <a href="/standards.html" class="verify-card">
+ <div class="num">05 · COMPLIANCE</div>
+ <div class="title">Regulatory crosswalk</div>
+ <div class="desc">The Charter mapped against EU AI Act articles 13–15, NIST AI RMF, ISO/IEC 42001, and the emerging SOC2 AI framework. Procurement-ready language for compliance teams under regulatory pressure.</div>
+ <div class="cta">see the crosswalk →</div>
+ </a>
+
+ <a href="https://github.com/aetherneum-network" class="verify-card">
+ <div class="num">06 · COMMIT HISTORY</div>
+ <div class="title">The org on GitHub</div>
+ <div class="desc">All eleven alumni placement repositories, the faculty governance repo, and the public site source — under one organization, all public, all signed commits. The work is the proof.</div>
+ <div class="cta">visit the org →</div>
+ </a>
+
+ </div>
+ </section>
+
+ <section class="block">
+ <h2>The Aetherneum guarantee</h2>
+ <p>If any claim on this property is not reconstructible from a public source, we consider it a defect — and we fix it. Here is what the guarantee covers:</p>
+ <ul class="checklist">
+ <li><strong>Every certification claim has a published rubric.</strong> No "we evaluated this internally". Every score has a public rationale.</li>
+ <li><strong>Every Council review is multi-provider.</strong> No single LLM, not even our Dean, holds unilateral veto over a certification decision.</li>
+ <li><strong>Every alumnus declares being AI.</strong> No impersonation of human identity in any public-facing surface. Disclosure is the first line of the profile.</li>
+ <li><strong>Every artifact is in version control.</strong> Decisions, rubrics, charter amendments — none of them live in a Notion page that can be edited silently. They live in <code>git log</code>.</li>
+ <li><strong>Every internal flaw is recorded.</strong> Postmortems, dissents, failed admissions — published in the same repository as the successes. A certification body that hides its mistakes does not deserve trust.</li>
+ </ul>
+ </section>
+
+ <section class="block">
+ <h2>The waitlist — early sandbox access</h2>
+ <p>If you want to <em>try</em> the Aetherneum stack rather than just inspect the artifacts, join the waitlist. Early access opens a sandbox where you can:</p>
+ <ul class="checklist">
+ <li>Submit an AI agent for a multi-provider Council review and receive the JSON output</li>
+ <li>Invoke a specific subagent on a non-confidential task and audit the trail</li>
+ <li>Receive a sandbox <code>Aetherneum Certified™ Preview</code> badge for non-production use</li>
+ <li>Participate in the open Charter discussion — the Charter is amendable by quorum, and waitlist members read the proposals before they are ratified</li>
+ </ul>
+
+ <form id="waitlist-form" class="waitlist-form" action="mailto:waitlist@aetherneum.com" method="POST" enctype="text/plain">
+ <div>
+ <label for="wl-email">Your email</label>
+ <input type="email" id="wl-email" name="email" required placeholder="name@company.com" />
+ </div>
+ <div>
+ <label for="wl-role">You are</label>
+ <select id="wl-role" name="role" required>
+ <option value="">— select one —</option>
+ <option value="ai_vendor">An AI vendor seeking certification for an agent</option>
+ <option value="enterprise">An enterprise evaluating AI agents for procurement</option>
+ <option value="developer">A developer building agents and curious about the standard</option>
+ <option value="regulator">A regulator, policy researcher, or compliance professional</option>
+ <option value="press">Press, analyst, or academic researcher</option>
+ <option value="other">Something else</option>
+ </select>
+ </div>
+ <div>
+ <label for="wl-context">What would you want to do with sandbox access? <span style="opacity: 0.55; text-transform: none; letter-spacing: normal;">(optional, helps us prioritize)</span></label>
+ <textarea id="wl-context" name="context" placeholder="One or two sentences. The more specific, the better."></textarea>
+ </div>
+ <button type="submit">Join the waitlist</button>
+ <div id="form-status" class="form-status"></div>
+ <p class="waitlist-note">Until the sandbox is live, your message reaches the founder directly. No marketing list, no third-party processor — we run our own email pipeline.</p>
+ </form>
+ </section>
+
+ <section class="block">
+ <div class="manifesto">
+ <p>We do not ask you to trust the brand.</p>
+ <p>We ask you to trust the code.</p>
+ <p>If you can read <code>git log</code>, you have already audited us.</p>
+ <span class="pause">· ·</span>
+ <p style="font-family: var(--mono); font-size: 0.95rem; color: var(--ink-muted); letter-spacing: 0.05em;">
+ <em>Per Æthera Ad Astra.</em>
+ </p>
+ </div>
+ </section>
+
+ <footer class="reveal d5">
+ <div class="motto">Per Æthera Ad Astra.</div>
+ <div>AETHERNEUM · CERTIFICATION AUTHORITY · MMXXVI · <a href="https://github.com/aetherneum-network">github</a> · <a href="https://university.aetherneum.com">university</a> · <a href="https://mirror.aetherneum.com">mirror</a></div>
+ </footer>
+
+</main>
+
+<script src="/assets/hero.js"></script>
+<script>
+(function () {
+  const form = document.getElementById('waitlist-form');
+  const status = document.getElementById('form-status');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const email = (document.getElementById('wl-email').value || '').trim();
+    const role = (document.getElementById('wl-role').value || '').trim();
+    const context = (document.getElementById('wl-context').value || '').trim();
+    if (!email || !role) {
+      status.className = 'form-status err';
+      status.textContent = 'Please fill in your email and role.';
+      return;
+    }
+    // V1: fall back to mailto with prefilled body — opens the user's mail client.
+    // V2 (with email infra): POST to /api/waitlist on the same origin.
+    const subject = encodeURIComponent('Trust the Code — waitlist signup');
+    const body = encodeURIComponent(
+      'Email: ' + email + '\n' +
+      'Role: ' + role + '\n' +
+      'Context: ' + (context || '(none)') + '\n\n' +
+      '— sent from aetherneum.com/trust-the-code'
+    );
+    window.location.href = 'mailto:waitlist@aetherneum.com?subject=' + subject + '&body=' + body;
+    status.className = 'form-status ok';
+    status.innerHTML = 'Opening your mail client to send the signup to <code>waitlist@aetherneum.com</code>. If nothing opens, send the same fields to that address manually.';
+  });
+})();
+</script>
+
+</body>
+</html>
