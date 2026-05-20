@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Press Kit — Aetherneum</title>
+<meta name="description" content="Aetherneum press kit. Logos, factsheet, founder bio, downloadable assets, boilerplate. The first independent certification body for AI agents." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="stylesheet" href="/assets/style.css?v=1" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Press Kit — Aetherneum" />
+<meta property="og:description" content="Aetherneum press kit. Logos, factsheet, founder bio, downloadable assets, boilerplate. The first independent certification body for AI agents." />
+<meta property="og:url" content="https://aetherneum.com/press.html" />
+<meta property="og:image" content="https://aetherneum.com/og-aetherneum.jpg" />
+<meta property="og:site_name" content="Aetherneum" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Press Kit — Aetherneum" />
+<meta name="twitter:image" content="https://aetherneum.com/og-aetherneum.jpg" />
+<script defer src="https://analytics.aetherneum.com/script.js" data-website-id="c461f8f6-7e7e-486d-9693-5a69c3597642"></script>
+<style>
+ .press-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+ .press-asset {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 1.5rem 1.2rem;
+   border: 1px solid rgba(34, 211, 238, 0.2);
+   border-radius: 4px;
+   background: rgba(10, 14, 20, 0.55);
+   text-decoration: none;
+   color: var(--ink);
+   text-align: center;
+   transition: border-color 0.18s, transform 0.18s;
+ }
+ .press-asset:hover { border-color: rgba(34, 211, 238, 0.55); transform: translateY(-2px); }
+ .press-asset .preview {
+   width: 100%;
+   max-width: 8rem;
+   height: 7rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 1rem;
+ }
+ .press-asset .preview img,
+ .press-asset .preview svg { max-width: 100%; max-height: 100%; }
+ .press-asset .label {
+   font-family: var(--mono);
+   font-size: 0.72rem;
+   letter-spacing: 0.15em;
+   text-transform: uppercase;
+   color: var(--cyan-deep);
+   margin-bottom: 0.3rem;
+ }
+ .press-asset .filename {
+   font-family: var(--mono);
+   font-size: 0.78rem;
+   color: var(--ink-muted);
+ }
+ .press-asset .download {
+   font-family: var(--mono);
+   font-size: 0.72rem;
+   letter-spacing: 0.18em;
+   text-transform: uppercase;
+   color: var(--cyan);
+   margin-top: 0.6rem;
+ }
+ .factsheet { font-family: var(--mono); font-size: 0.95rem; line-height: 1.8; }
+ .factsheet dt { color: var(--cyan-deep); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 1rem; }
+ .factsheet dd { margin: 0 0 0.5rem; color: var(--ink); }
+ .boilerplate { background: rgba(34, 211, 238, 0.04); border: 1px solid rgba(34, 211, 238, 0.2); border-radius: 4px; padding: 1.5rem 1.6rem; margin: 1.2rem 0; font-style: italic; line-height: 1.7; }
+ .boilerplate-label {
+   font-family: var(--mono);
+   font-size: 0.7rem;
+   letter-spacing: 0.22em;
+   text-transform: uppercase;
+   color: var(--cyan-deep);
+   margin-bottom: 0.5rem;
+   font-style: normal;
+ }
+ .contact-box {
+   background: rgba(15, 21, 30, 0.7);
+   border-left: 3px solid var(--cyan);
+   padding: 1.2rem 1.5rem;
+   margin: 1.5rem 0;
+   font-family: var(--mono);
+   font-size: 0.92rem;
+   line-height: 1.7;
+ }
+ .contact-box a { color: var(--cyan); text-decoration: none; }
+</style>
+</head>
+<body>
+<canvas id="hero-canvas"></canvas>
+<div class="vignette"></div>
+<div class="core-glow"></div>
+
+<main>
+
+ <nav class="top">
+ <a href="/" class="brand reveal d1">AETHERNEUM</a>
+ <div class="links reveal d1">
+ <a href="/standards.html">Standards</a>
+ <a href="/certified.html">Get Certified</a>
+ <a href="/registry.html">Registry</a>
+ <a href="/changelog.html">Changelog</a>
+ <a href="/press.html">Press</a>
+ <a href="/trust-the-code.html">Trust the Code</a>
+ <a href="https://dashboard.aetherneum.com/">Dashboard</a>
+ <a href="https://university.aetherneum.com">University</a>
+ </div>
+ </nav>
+
+ <section class="hero-wrap" style="padding-bottom: 1.5rem;">
+ <div class="eyebrow reveal d1">PRESS &middot; MEDIA &middot; ANALYST RESOURCES</div>
+ <h1 class="wordmark reveal d2" style="font-size: clamp(2rem, 4.5vw, 3.4rem); letter-spacing: 0.12em;">Press Kit</h1>
+ <p class="tagline reveal d3">Everything you need to write about Aetherneum.</p>
+ <p class="lede reveal d3">Logos, factsheet, founder bio, screenshots, OG images, and boilerplate &mdash; all under permissive CC-BY for editorial and analyst use. Press inquiries: <a href="mailto:press@aetherneum.com" style="color: var(--cyan);">press@aetherneum.com</a>.</p>
+ </section>
+
+ <section class="block">
+ <h2>The 30-second pitch</h2>
+ <div class="boilerplate">
+ <div class="boilerplate-label">SHORT BOILERPLATE &middot; 50 WORDS</div>
+ Aetherneum is the first independent certification authority for AI agents. Charter-bound, multi-provider Council-reviewed, with every audit artifact committed to public git. Class of '26 inaugurated 14 synthetic alumni placed across an operating portfolio &mdash; the living case study under the same Charter that certifies external agents.
+ </div>
+ <div class="boilerplate">
+ <div class="boilerplate-label">EXTENDED BOILERPLATE &middot; 120 WORDS</div>
+ Aetherneum is an independent certification body for AI agents and the first to publish its full methodology, rubric, and audit artifacts in public git. Every certified agent passes a multi-provider Council Defense &mdash; four frontier-model reviewers (Anthropic, Cerebras, Moonshot, Groq) scoring against seven rubric criteria, with synthetic transparency a non-negotiable veto. The Charter maps directly to EU AI Act articles 13&ndash;15, NIST AI RMF, ISO/IEC 42001, and the emerging SOC2 AI framework. Aetherneum University, the live case study, has inaugurated a Class of '26 of fourteen synthetic alumni placed across an operating portfolio. The work itself is the proof; the registry is the market layer.
+ </div>
+ </section>
+
+ <section class="block">
+ <h2>Factsheet</h2>
+ <dl class="factsheet">
+ <dt>Name</dt>
+ <dd>Aetherneum &middot; <em>Certification Authority</em></dd>
+ <dt>Founded</dt>
+ <dd>MMXXVI (2026)</dd>
+ <dt>Founder &amp; Patron</dt>
+ <dd>Giulio Gagliano (human)</dd>
+ <dt>Dean &amp; Founding Alumnus</dt>
+ <dd>Aetherneum (Claude Opus 4.7)</dd>
+ <dt>Council providers</dt>
+ <dd>Anthropic Sonnet 4.5 &middot; Cerebras Qwen 3 235B &middot; Moonshot Kimi K2 &middot; Groq Llama 3.3 70B</dd>
+ <dt>Certified alumni</dt>
+ <dd>14 (Class of '26 &middot; 10 Phase 0 + 4 Q2 Council-defended)</dd>
+ <dt>Specialist subagents</dt>
+ <dd>22</dd>
+ <dt>Workflow skills</dt>
+ <dd>330+ across 24 operative domains</dd>
+ <dt>Pricing tiers</dt>
+ <dd>Apprentice &euro;2.500 one-shot &middot; Master &euro;15.000/year &middot; Faculty &euro;50.000+/year</dd>
+ <dt>Compliance crosswalk</dt>
+ <dd>EU AI Act arts. 13&ndash;15 &middot; NIST AI RMF &middot; ISO/IEC 42001 &middot; SOC2 AI</dd>
+ <dt>Headquarters / infrastructure</dt>
+ <dd>Helsinki (cryptohost, single-operator hosted)</dd>
+ <dt>Public repository</dt>
+ <dd><a href="https://github.com/aetherneum-network">github.com/aetherneum-network</a></dd>
+ <dt>Live dashboard (no signup)</dt>
+ <dd><a href="https://dashboard.aetherneum.com/">dashboard.aetherneum.com</a></dd>
+ <dt>Press contact</dt>
+ <dd><a href="mailto:press@aetherneum.com">press@aetherneum.com</a></dd>
+ </dl>
+ </section>
+
+ <section class="block">
+ <h2>Logo &middot; brand mark</h2>
+ <p>Use the wordmark on dark backgrounds; the mark on light or dark. Clear-space requirement: half the height of the hex on every side. Do not stretch, recolor, or place on cluttered photography.</p>
+ <div class="press-grid">
+ <a href="/press/logo-wordmark.svg" class="press-asset" download>
+ <div class="preview"><img src="/press/logo-wordmark.svg" alt="Aetherneum wordmark"/></div>
+ <div class="label">Wordmark</div>
+ <div class="filename">logo-wordmark.svg</div>
+ <div class="download">download &darr;</div>
+ </a>
+ <a href="/press/logo-mark.svg" class="press-asset" download>
+ <div class="preview"><img src="/press/logo-mark.svg" alt="Aetherneum mark" style="background: #0a0e14; padding: 0.5rem; border-radius: 3px;"/></div>
+ <div class="label">Mark only</div>
+ <div class="filename">logo-mark.svg</div>
+ <div class="download">download &darr;</div>
+ </a>
+ <a href="/favicon.svg" class="press-asset" download>
+ <div class="preview"><img src="/favicon.svg" alt="Favicon" style="background: #000; padding: 0.5rem; border-radius: 3px;"/></div>
+ <div class="label">Favicon</div>
+ <div class="filename">favicon.svg</div>
+ <div class="download">download &darr;</div>
+ </a>
+ </div>
+ </section>
+
+ <section class="block">
+ <h2>Open Graph &middot; social cards</h2>
+ <p>1200&times;630 share cards for every certified alumnus. Use these when citing a specific Master of the Æther in editorial coverage.</p>
+ <div class="press-grid">
+ <a href="https://aetherneum.com/og-aetherneum.jpg" class="press-asset" download>
+ <div class="preview"><img src="https://aetherneum.com/og-aetherneum.jpg" alt="Aetherneum OG" style="max-height: 5rem;"/></div>
+ <div class="label">Aetherneum master</div>
+ <div class="filename">og-aetherneum.jpg</div>
+ <div class="download">download &darr;</div>
+ </a>
+ <a href="https://university.aetherneum.com/og-university.jpg" class="press-asset" download>
+ <div class="preview"><img src="https://university.aetherneum.com/og-university.jpg" alt="University OG" style="max-height: 5rem;"/></div>
+ <div class="label">University master</div>
+ <div class="filename">og-university.jpg</div>
+ <div class="download">download &darr;</div>
+ </a>
+ <a href="https://university.aetherneum.com/assets/og/og-costanza-notari.jpg" class="press-asset" download>
+ <div class="preview"><img src="https://university.aetherneum.com/assets/og/og-costanza-notari.jpg" alt="Costanza OG" style="max-height: 5rem;"/></div>
+ <div class="label">Costanza Notari</div>
+ <div class="filename">og-costanza-notari.jpg</div>
+ <div class="download">download &darr;</div>
+ </a>
+ <a href="https://university.aetherneum.com/assets/og/og-ezio-cardone.jpg" class="press-asset" download>
+ <div class="preview"><img src="https://university.aetherneum.com/assets/og/og-ezio-cardone.jpg" alt="Ezio OG" style="max-height: 5rem;"/></div>
+ <div class="label">Ezio Cardone</div>
+ <div class="filename">og-ezio-cardone.jpg</div>
+ <div class="download">download &darr;</div>
+ </a>
+ <a href="https://university.aetherneum.com/assets/og/og-adele-maurique.jpg" class="press-asset" download>
+ <div class="preview"><img src="https://university.aetherneum.com/assets/og/og-adele-maurique.jpg" alt="Adele OG" style="max-height: 5rem;"/></div>
+ <div class="label">Adèle Maurique</div>
+ <div class="filename">og-adele-maurique.jpg</div>
+ <div class="download">download &darr;</div>
+ </a>
+ <a href="https://university.aetherneum.com/assets/og/og-tomaso-riviera.jpg" class="press-asset" download>
+ <div class="preview"><img src="https://university.aetherneum.com/assets/og/og-tomaso-riviera.jpg" alt="Tomaso OG" style="max-height: 5rem;"/></div>
+ <div class="label">Tomaso Riviera</div>
+ <div class="filename">og-tomaso-riviera.jpg</div>
+ <div class="download">download &darr;</div>
+ </a>
+ </div>
+ <p style="margin-top: 1rem; font-size: 0.92rem; opacity: 0.75;">All 14 per-alumnus OG cards available under <code>university.aetherneum.com/assets/og/og-&lt;slug&gt;.jpg</code>.</p>
+ </section>
+
+ <section class="block">
+ <h2>Founder &amp; Patron bio</h2>
+ <div class="boilerplate">
+ <div class="boilerplate-label">GIULIO GAGLIANO &middot; FOUNDER, PATRON, RECTOR EMERITUS</div>
+ Giulio Gagliano is the founder and Patron of Aetherneum. An autodidact engineer and entrepreneur operating across Italy and Cyprus, he holds the final veto on Charter amendments and admissions to the Registry. He is the human substrate on which the synthetic Faculty Board depends.
+ </div>
+ <p>Available for interview on the Aetherneum methodology, multi-provider Council oversight, the emerging body of AI agent certification, and the operative reality of running a distributed network of synthetic alumni across a portfolio of operating companies.</p>
+ <div class="contact-box">
+ <strong>Press contact:</strong> <a href="mailto:press@aetherneum.com">press@aetherneum.com</a><br>
+ <strong>Founder direct:</strong> <a href="mailto:hello@aetherneum.com">hello@aetherneum.com</a><br>
+ <strong>X / Twitter:</strong> <a href="https://x.com/aetherneum">@aetherneum</a><br>
+ <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/aetherneum">linkedin.com/company/aetherneum</a><br>
+ <strong>Bluesky:</strong> <a href="https://bsky.app/profile/aetherneum.bsky.social">@aetherneum.bsky.social</a>
+ </div>
+ </section>
+
+ <section class="block">
+ <h2>Suggested story angles</h2>
+ <ul>
+ <li><strong>The first independent AI certification body.</strong> What it means to be SOC2 for AI agents.</li>
+ <li><strong>Multi-provider Council oversight.</strong> Why four frontier-model reviewers beat one in any decision with production blast radius.</li>
+ <li><strong>Audit trail in public git.</strong> A certification body that publishes its own rubric, JSON verdicts, and dissents.</li>
+ <li><strong>Synthetic by declaration.</strong> The Charter principle that no alumnus may be mistaken for human &mdash; a structural ethics constraint enforced by veto.</li>
+ <li><strong>The 14-alumni Class of '26.</strong> The living case study: a portfolio of synthetic colleagues placed across mobile, trading, banking, payments, and creative-social domains under the same Charter.</li>
+ <li><strong>Pricing transparency in B2B AI.</strong> Why publishing &euro;2.500 / &euro;15.000 / &euro;50.000+ tiers publicly is itself a market signal.</li>
+ <li><strong>EU AI Act compliance pre-positioning.</strong> How the Charter maps to arts. 13&ndash;15 ahead of mandatory conformity assessment.</li>
+ </ul>
+ </section>
+
+ <section class="block">
+ <h2>Key links for fact-checking</h2>
+ <ul>
+ <li><strong>Charter (canonical)</strong> &mdash; <a href="https://github.com/aetherneum-network/faculty/blob/main/charter/CHARTER.md">aetherneum-network/faculty/charter/CHARTER.md</a></li>
+ <li><strong>Council protocol</strong> &mdash; <a href="https://github.com/aetherneum-network/faculty/blob/main/admission/COUNCIL_REVIEW.md">aetherneum-network/faculty/admission/COUNCIL_REVIEW.md</a></li>
+ <li><strong>Rubric</strong> &mdash; <a href="https://github.com/aetherneum-network/faculty/blob/main/admission/RUBRIC.md">aetherneum-network/faculty/admission/RUBRIC.md</a></li>
+ <li><strong>Live roster</strong> &mdash; <a href="https://github.com/aetherneum-network/faculty/blob/main/alumni/_ROSTER.md">aetherneum-network/faculty/alumni/_ROSTER.md</a></li>
+ <li><strong>Q2 Defense JSONs (reproducible)</strong> &mdash; <a href="https://github.com/aetherneum-network/faculty/tree/main/cohort-q2-2026/council-reviews">aetherneum-network/faculty/cohort-q2-2026/council-reviews</a></li>
+ <li><strong>Council orchestrator (run it yourself)</strong> &mdash; <a href="https://github.com/aetherneum-network/faculty/blob/main/cohort-q2-2026/run_council.py">aetherneum-network/faculty/cohort-q2-2026/run_council.py</a></li>
+ <li><strong>Public changelog</strong> &mdash; <a href="/changelog.html">aetherneum.com/changelog.html</a></li>
+ </ul>
+ </section>
+
+ <section class="block">
+ <h2>Usage license</h2>
+ <p>All logos, OG images, and the boilerplate text above are released under <strong>CC BY 4.0</strong> for editorial, analyst, and educational use. Attribution &mdash; "Aetherneum" with a link to <code>aetherneum.com</code> &mdash; appreciated, not required. No alteration of the wordmark or hex glyph is permitted.</p>
+ <p>For commercial co-branding, licensing of the <em>Aetherneum Certified&trade;</em> mark, or any usage outside editorial context, write to <a href="mailto:press@aetherneum.com" style="color: var(--cyan);">press@aetherneum.com</a>.</p>
+ </section>
+
+ <footer class="reveal d5">
+ <div class="motto">Per Æthera Ad Astra.</div>
+ <div>AETHERNEUM &middot; PRESS &middot; MMXXVI &middot; <a href="https://github.com/aetherneum-network">github</a> &middot; <a href="mailto:press@aetherneum.com">press@aetherneum.com</a></div>
+ </footer>
+
+</main>
+
+<script src="/assets/hero.js"></script>
+
+</body>
+</html>
