@@ -1,76 +1,198 @@
-/* Aetherneum — shared stylesheet
-   Used by all pages on aetherneum.com (root brand pillar).
-   Visual identity: dark + cyan glow + EB Garamond serif + JetBrains Mono.
+/* Aetherneum — canonical chrome stylesheet
+   Shared visual identity across aetherneum.com (root) and
+   university.aetherneum.com (sub-pillar). DO NOT diverge these
+   tokens or chrome rules — regenerate via /unify-chrome.py.
 */
 :root {
-    --bg: #000000;
-    --bg-soft: #0a0e14;
-    --ink: #f8fafc;
-    --ink-muted: #94a3b8;
-    --ink-faint: #475569;
-    --cyan: #22d3ee;
-    --cyan-glow: #67e8f9;
-    --cyan-deep: #0e7490;
-    --serif: 'EB Garamond', Georgia, serif;
-    --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --bg: #000000;
+  --bg-soft: #0a0e14;
+  --bg-panel: rgba(10, 14, 20, 0.6);
+  --ink: #f8fafc;
+  --ink-muted: #94a3b8;
+  --ink-faint: #475569;
+  --ink-deeper: #334155;
+  --cyan: #22d3ee;
+  --cyan-glow: #67e8f9;
+  --cyan-deep: #0e7490;
+  --cyan-line: rgba(34, 211, 238, 0.18);
+  --cyan-line-soft: rgba(34, 211, 238, 0.08);
+  --serif: 'EB Garamond', Georgia, serif;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 }
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 html, body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--serif);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-    min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+  font-size: 17px;
+  line-height: 1.65;
 }
 body {
-    background: radial-gradient(ellipse at center top, #0a0e14 0%, #000 70%);
+  background: radial-gradient(ellipse at center top, #0a0e14 0%, #000 70%);
 }
 
+/* ───── Hero canvas (matrix-effect background) ───── */
 #hero-canvas {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 0;
-    pointer-events: none;
-    opacity: 0.4;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.38;
 }
 .vignette {
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.85) 100%);
-}
-main {
-    position: relative;
-    z-index: 2;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.85) 100%);
 }
 
-/* === NAVIGATION === */
+main {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ───── Navigation ───── */
 nav.top {
-    padding: 1.6rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: var(--mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
+  padding: 1.6rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border-bottom: 1px solid var(--cyan-line-soft);
 }
-nav.top .brand { color: var(--cyan); font-weight: 500; text-decoration: none; }
-nav.top .links a {
-    color: var(--ink-faint);
-    text-decoration: none;
-    margin-left: 1.8rem;
-    transition: color 0.3s ease;
+nav.top a { color: var(--ink-faint); text-decoration: none; transition: color 0.3s ease; }
+nav.top a:hover, nav.top a.active { color: var(--cyan); }
+nav.top .brand {
+  color: var(--cyan);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-decoration: none;
 }
-nav.top .links a:hover, nav.top .links a.active { color: var(--cyan); }
+nav.top .brand .sub {
+  color: var(--ink-faint);
+  margin-left: 0.5em;
+  font-weight: 400;
+}
+nav.top .links { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+
+@media (max-width: 720px) {
+  nav.top { padding: 1.2rem 1.5rem; flex-direction: column; gap: 0.8rem; }
+  nav.top .links { gap: 0.8rem; font-size: 0.66rem; }
+}
+
+/* ───── Footer ───── */
+footer {
+  padding: 3rem 3rem 2rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-align: center;
+  border-top: 1px solid var(--cyan-line-soft);
+  margin-top: 4rem;
+}
+footer a { color: var(--cyan-deep); text-decoration: none; transition: color 0.3s ease; }
+footer a:hover { color: var(--cyan); }
+footer .motto {
+  font-family: var(--serif);
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.75rem;
+}
+footer .footer-meta { line-height: 1.9; }
+footer .footer-links {
+  margin-top: 0.4rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+/* ───── Core glow ornament ───── */
+.core-glow {
+  position: fixed;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px; height: 6px;
+  background: var(--cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--cyan), 0 0 60px var(--cyan-glow), 0 0 120px rgba(34, 211, 238, 0.4);
+  animation: pulse 4s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+@keyframes pulse {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.6; }
+  50% { transform: translateX(-50%) scale(1.4); opacity: 1; }
+}
+
+/* ───── Reveal animation ───── */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: reveal 1.4s ease-out forwards;
+}
+.reveal.d1 { animation-delay: 0.15s; }
+.reveal.d2 { animation-delay: 0.45s; }
+.reveal.d3 { animation-delay: 0.85s; }
+.reveal.d4 { animation-delay: 1.3s; }
+.reveal.d5 { animation-delay: 1.8s; }
+@keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+
+/* ───── Shared eyebrow + wordmark + tagline + lede (hero patterns) ───── */
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cyan-deep);
+  margin-bottom: 1.2rem;
+}
+.wordmark {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--ink);
+  text-shadow: 0 0 40px rgba(34, 211, 238, 0.15);
+}
+.wordmark .ae { color: var(--cyan-glow); }
+.tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink-muted);
+  line-height: 1.5;
+  max-width: 44rem;
+  margin: 0 auto 1.8rem;
+}
+.lede {
+  font-family: var(--serif);
+  color: var(--ink-muted);
+  max-width: 38rem;
+  margin: 0 auto 2.5rem;
+  line-height: 1.65;
+}
+
+/* === END CANONICAL CHROME — page-specific styles follow === */
 
 /* === HERO === */
 .hero-wrap {
