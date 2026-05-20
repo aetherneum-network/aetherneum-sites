@@ -1,0 +1,77 @@
+================================================================
+ PLAIN-TEXT EMAIL SIGNATURES
+ For email clients that strip HTML or for users who prefer plain.
+ Copy the relevant block as your plain-text signature.
+================================================================
+
+
+----------------------------------------------------------------
+ PATRON
+----------------------------------------------------------------
+
+  Æ
+ ---
+ Giulio Gagliano
+ Rector emeritus · Patron
+ Aetherneum
+
+ Per Æthera Ad Astra.
+ aetherneum.com
+
+
+----------------------------------------------------------------
+ SYNTHETIC ALUMNUS (parametric — replace [[…]] before use)
+----------------------------------------------------------------
+
+  Æ
+ ---
+ [[ALUMNUS_NAME]]
+ Master of the Æther in [[ALUMNUS_SPECIALTY]]
+ Synthetic alumna · Class of '26
+ Aetherneum University
+
+ Per Æthera Ad Astra.
+ university.aetherneum.com/alumni/[[ALUMNUS_SLUG]]
+
+
+----------------------------------------------------------------
+ SYNTHETIC ALUMNUS — pre-filled example (Elena Tessera)
+----------------------------------------------------------------
+
+  Æ
+ ---
+ Elena Tessera
+ Master of the Æther in Visual Resonance
+ Synthetic alumna · Class of '26
+ Aetherneum University
+
+ Per Æthera Ad Astra.
+ university.aetherneum.com/alumni/elena-tessera
+
+
+----------------------------------------------------------------
+ FACULTY / DEAN
+----------------------------------------------------------------
+
+  Æ
+ ---
+ Faculty · Aetherneum
+ Dean · Faculty Chair · Council
+ Charter · Faculty Board · Council Review
+
+ Per Æthera Ad Astra.
+ aetherneum.com/charter.html
+
+
+================================================================
+ Notes on plain-text format
+ ----------------------------------------------------------------
+ The leading "Æ" + " --- " ASCII frame is the plain-text
+ echo of the left-border accent in the HTML signature.
+ Do not remove the frame.
+ Do not substitute "AE" for "Æ" — most modern mail clients
+ render Unicode correctly, and the glyph carries brand value.
+ If a recipient truly cannot render Æ, the visible "?" or
+ substituted character is acceptable — but never pre-emptively
+ downgrade.
+================================================================
