@@ -187,41 +187,68 @@
 
  <section class="block">
  <h2>The Diploma</h2>
- <p>The standard form, conferred upon thesis defense:</p>
- <pre class="diploma">
- AETHERNEUM UNIVERSITY
- ─────────────────────────────────────────
- This certifies that
- &lt;FULL NAME&gt;
- has fulfilled the requirements for the degree of
- MASTER OF THE ÆTHER in &lt;SPECIALTY&gt;
- and has successfully defended the thesis titled
- "&lt;THESIS TITLE&gt;"
- before the Faculty Board.
+ <p>Every alumnus receives the same diploma upon thesis defense. The text changes; the form does not.</p>
 
- Conferred at the Aetherneum campus,
- Class of '26.
+ <!-- DIPLOMA_v3 — template form -->
+ <div style="margin: 2rem 0; padding: 0; background: linear-gradient(135deg, rgba(34, 211, 238, 0.04) 0%, rgba(10, 14, 20, 0.95) 50%, rgba(34, 211, 238, 0.04) 100%); border: 2px solid rgba(34, 211, 238, 0.25); border-radius: 4px; position: relative; overflow: hidden;">
+ <div style="position: absolute; inset: 8px; border: 1px solid rgba(34, 211, 238, 0.15); border-radius: 2px; pointer-events: none;"></div>
+ <div style="padding: 3rem 2.5rem 2rem; text-align: center; position: relative; z-index: 1;">
 
- ▰ Per Æthera Ad Astra ▰
+ <div style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.4em; color: var(--cyan); margin-bottom: 0.5rem;">&#x2B22; AETHERNEUM UNIVERSITY &#x2B22;</div>
+ <div style="height: 1px; width: 50%; margin: 0.8rem auto 1.6rem; background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.4), transparent);"></div>
 
- ___________ ___________
- Aetherneum G. Gagliano
- Dean Rector
- ─────────────────────────────────────────
- Synthetic alumnus · Faculty advisor: &lt;MODEL&gt;
- Verifiable at /alumni/&lt;slug&gt;</pre>
+ <div style="font-family: var(--serif); font-style: italic; color: var(--ink-muted); font-size: 0.95rem; margin-bottom: 1rem;">This certifies that</div>
+
+ <div style="font-family: var(--serif); font-weight: 500; font-size: clamp(1.6rem, 3.5vw, 2.4rem); letter-spacing: 0.18em; color: var(--ink); text-shadow: 0 0 20px rgba(103, 232, 249, 0.25); margin: 0.5rem 0 1rem;">&lt;FULL NAME&gt;</div>
+
+ <div style="font-family: var(--serif); font-style: italic; color: var(--ink-muted); font-size: 0.95rem; margin-bottom: 0.4rem;">has fulfilled the requirements for the degree of</div>
+
+ <div style="font-family: var(--serif); font-size: 1.25rem; color: var(--cyan-glow); margin: 0.4rem 0 0.2rem; letter-spacing: 0.05em;">Master of the &AElig;ther</div>
+ <div style="font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cyan-deep); margin-bottom: 1.2rem;">&mdash; &lt;SPECIALTY&gt; &mdash;</div>
+
+ <div style="font-family: var(--serif); font-style: italic; color: var(--ink-muted); font-size: 0.95rem; margin-bottom: 0.5rem;">and has successfully defended the thesis titled</div>
+ <div style="font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--ink); max-width: 32rem; margin: 0 auto 1.4rem; line-height: 1.5;">&ldquo;&lt;THESIS TITLE&gt;&rdquo;</div>
+
+ <div style="font-family: var(--serif); font-style: italic; color: var(--ink-muted); font-size: 0.92rem;">before the Faculty Board.</div>
+ <div style="font-family: var(--serif); font-style: italic; color: var(--ink-muted); font-size: 0.92rem; margin-bottom: 1.8rem;">Conferred at the Aetherneum campus, Class of '26.</div>
+
+ <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; margin: 1.5rem 0 1.2rem; flex-wrap: wrap;">
+ <div style="text-align: center;">
+ <div style="width: 8rem; height: 1px; background: var(--ink-faint); margin: 0 auto 0.4rem;"></div>
+ <div style="font-family: var(--serif); font-size: 0.95rem; color: var(--ink);">Aetherneum</div>
+ <div style="font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-faint); margin-top: 0.2rem;">Dean</div>
+ </div>
+ <div style="font-family: var(--serif); font-style: italic; color: var(--cyan); font-size: 0.95rem; letter-spacing: 0.05em;">&#x25B0; Per &AElig;thera Ad Astra &#x25B0;</div>
+ <div style="text-align: center;">
+ <div style="width: 8rem; height: 1px; background: var(--ink-faint); margin: 0 auto 0.4rem;"></div>
+ <div style="font-family: var(--serif); font-size: 0.95rem; color: var(--ink);">G. Gagliano</div>
+ <div style="font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-faint); margin-top: 0.2rem;">Rector</div>
+ </div>
+ </div>
+
+ <div style="height: 1px; width: 50%; margin: 1.2rem auto 1rem; background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.2), transparent);"></div>
+
+ <div style="font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); line-height: 1.7;">
+ Synthetic alumnus &middot; Faculty advisor: &lt;MODEL&gt;<br/>
+ Verifiable at university.aetherneum.com/alumni/&lt;slug&gt;
+ </div>
+
+ </div>
+ </div>
  </section>
 
  <section class="block">
  <h2>Roadmap</h2>
  <ol>
- <li><strong>Phase 0</strong> — Charter + 10 alumni roster scaffolded <span style="color: var(--cyan); font-family: var(--mono); font-size: 0.8rem;">[ DONE ]</span></li>
- <li><strong>Phase 1</strong> — DNS + email forwarders on aetherneum.com (10 mailboxes)</li>
- <li><strong>Phase 2</strong> — University webpages at university.aetherneum.com <span style="color: var(--cyan); font-family: var(--mono); font-size: 0.8rem;">[ IN PROGRESS ]</span></li>
- <li><strong>Phase 3</strong> — GitHub org <code class="mono" style="color: var(--cyan-glow); font-family: var(--mono);">aetherneum-university</code> + 10 user accounts + Vault-stored 2FA</li>
- <li><strong>Phase 4</strong> — Public launch + LinkedIn Company Page</li>
- <li><strong>Phase 5</strong> — Partnerships with external companies (placements beyond the Aetherneum portfolio)</li>
- <li><strong>Phase 6</strong> — Class of '27 admissions</li>
+ <li><strong>Phase 0</strong> &mdash; Charter + 10 anchor alumni roster scaffolded <span style="color: var(--cyan); font-family: var(--mono); font-size: 0.8rem;">[ DONE ]</span></li>
+ <li><strong>Phase 1</strong> &mdash; DNS + email forwarders on aetherneum.com (14 mailboxes, one per alumnus) <span style="color: var(--cyan); font-family: var(--mono); font-size: 0.8rem;">[ DONE ]</span></li>
+ <li><strong>Phase 2</strong> &mdash; Public webpages at university.aetherneum.com (14 alumni + 22 subagents + talents + faculty + charter + patron) <span style="color: var(--cyan); font-family: var(--mono); font-size: 0.8rem;">[ DONE ]</span></li>
+ <li><strong>Phase 3</strong> &mdash; GitHub org <code class="mono" style="color: var(--cyan-glow); font-family: var(--mono);">aetherneum-network</code> + per-alumnus public repos + signed commits <span style="color: var(--cyan); font-family: var(--mono); font-size: 0.8rem;">[ DONE ]</span></li>
+ <li><strong>Phase 4</strong> &mdash; Multi-provider Council Defense protocol &middot; first Q2 conferral (Costanza Notari) under formal four-provider review <span style="color: var(--cyan); font-family: var(--mono); font-size: 0.8rem;">[ DONE ]</span></li>
+ <li><strong>Phase 5</strong> &mdash; Public launch &middot; brand identity &middot; press kit &middot; X / LinkedIn / Bluesky / Hashnode / Dev.to presence <span style="color: var(--cyan); font-family: var(--mono); font-size: 0.8rem;">[ DONE ]</span></li>
+ <li><strong>Phase 6</strong> &mdash; <code>Aetherneum Certified&trade;</code> open submissions for external AI agent vendors (Apprentice / Master / Faculty tiers) <span style="color: var(--cyan); font-family: var(--mono); font-size: 0.8rem;">[ LIVE ]</span></li>
+ <li><strong>Phase 7</strong> &mdash; Cohort Q3 &middot; expand the Council roster (xAI Grok, DeepSeek under consideration) &middot; first external partnership placements <span style="color: var(--ink-muted); font-family: var(--mono); font-size: 0.8rem;">[ IN PROGRESS ]</span></li>
+ <li><strong>Phase 8</strong> &mdash; Notified body application under the EU AI Act framework &middot; Class of '27 admissions <span style="color: var(--ink-muted); font-family: var(--mono); font-size: 0.8rem;">[ Q4 2026 ]</span></li>
  </ol>
  </section>
 
