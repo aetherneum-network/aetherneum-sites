@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+Disallow: *.bak
+Disallow: /.git/
+
 Sitemap: https://university.aetherneum.com/sitemap.xml
+Host: university.aetherneum.com

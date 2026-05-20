@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Discourage backup + git scrap
+Disallow: *.bak
+Disallow: /.git/
+
 Sitemap: https://aetherneum.com/sitemap.xml
+Host: aetherneum.com
