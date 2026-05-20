@@ -13,7 +13,7 @@
   --ink:          #0d1b2a;
   --ink-strong:   #050b14;
   --ink-muted:    #475c75;
-  --ink-faint:    #8896a4;
+  --ink-faint:    #5d6b7d;   /* darkened from #8896a4 for AA contrast on parchment (4.5:1) */
 
   /* ─── Lines (warm parchment borders) ─── */
   --line:         #d9d3c4;
@@ -115,6 +115,16 @@ nav.top .links a.active {
 @media (max-width: 720px) {
   nav.top { padding: 1.1rem 1.4rem; flex-direction: column; gap: 0.8rem; }
   nav.top .links { gap: 0.7rem; font-size: 0.62rem; }
+}
+
+@media (max-width: 480px) {
+  /* Tighten mobile rendering so eyebrow / wordmark / dl don't overflow */
+  section.block { padding: 3rem 1.4rem; }
+  .hero, .hero-wrap { padding: 5rem 1.4rem 3rem; }
+  .eyebrow { font-size: 0.62rem; letter-spacing: 0.22em; }
+  .eyebrow::before, .eyebrow::after { margin: 0 0.4em; }
+  h1, h2, h3, .wordmark { word-break: break-word; overflow-wrap: anywhere; }
+  .badge, .pill { font-size: 0.62rem; padding: 0.25rem 0.5rem; }
 }
 
 /* ─── Hero — eyebrow + headline + tagline + lede stack ─── */
@@ -392,11 +402,13 @@ footer .footer-links {
 .reveal.d4 { animation-delay: 1.0s; }
 .reveal.d5 { animation-delay: 1.4s; }
 @keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+
+/* Honor user / browser reduced-motion preference + lets headless tools
+   (Chrome --force-prefers-reduced-motion) skip the staggered cascade. */
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
   .core-glow { animation: none !important; }
 }
-
 
 /* ─── Legacy hero-canvas + vignette + core-glow — disabled under parchment.
    The brand's substrate is parchment-radial, not matrix drip.
@@ -404,6 +416,7 @@ footer .footer-links {
 #hero-canvas, .vignette, .core-glow { display: none !important; }
 
 /* === END CANONICAL CHROME — page-specific styles follow === */
+
 /* ─── Roster grid + alumnus cards ─── */
 .roster {
   display: grid;
