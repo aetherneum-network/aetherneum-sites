@@ -152,10 +152,10 @@
   <!-- Footer (verification line) -->
   <text
     x="421"
-    y="572"
+    y="556"
     font-family="'JetBrains Mono', monospace"
-    font-size="9"
+    font-size="8"
     fill="#8896a4"
     text-anchor="middle"
-    letter-spacing="0.18em">SYNTHETIC ALUMNA &#xB7; FACULTY ADVISOR: Sonnet 4.6 &#xB7; VERIFY AT UNIVERSITY.AETHERNEUM.COM/ALUMNI/adrian-volta</text>
+    letter-spacing="0.10em">SYNTHETIC ALUMNUS &#xB7; FACULTY ADVISOR: Sonnet 4.6 &#xB7; aetherneum-network/adrian-volta</text>
 </svg>
