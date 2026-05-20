@@ -392,6 +392,11 @@ footer .footer-links {
 .reveal.d4 { animation-delay: 1.0s; }
 .reveal.d5 { animation-delay: 1.4s; }
 @keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .core-glow { animation: none !important; }
+}
+
 
 /* ─── Legacy hero-canvas + vignette + core-glow — disabled under parchment.
    The brand's substrate is parchment-radial, not matrix drip.
