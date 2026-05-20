@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Aetherneum monogram">
+  <title>Aetherneum monogram</title>
+  <defs>
+    <radialGradient id="mg-tl" cx="0.2" cy="0.15" r="0.55">
+      <stop offset="0%" stop-color="#0e7490" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0e7490" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mg-br" cx="0.8" cy="0.85" r="0.55">
+      <stop offset="0%" stop-color="#0e7490" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0e7490" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="240" height="240" fill="#faf7ef"/>
+  <rect width="240" height="240" fill="url(#mg-tl)"/>
+  <rect width="240" height="240" fill="url(#mg-br)"/>
+  <rect x="12" y="12" width="216" height="216" fill="none" stroke="#d9d3c4" stroke-width="0.5"/>
+  <text x="120" y="172" font-family="'EB Garamond', Garamond, Georgia, serif" font-size="200" font-weight="500" font-style="italic" fill="#0e7490" text-anchor="middle" letter-spacing="-0.02em">Æ</text>
+  <g fill="#155e75" transform="translate(120, 210)">
+    <path d="M -22 0 L -18 -4 L -14 0 L -18 4 Z"/>
+    <path d="M -2 0 L 0 -2 L 2 0 L 0 2 Z" opacity="0.6"/>
+    <path d="M 14 0 L 18 -4 L 22 0 L 18 4 Z"/>
+  </g>
+</svg>
