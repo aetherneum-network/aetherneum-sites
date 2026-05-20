@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Aetherneum University — diploma template (A4 landscape proportions, 11.69 × 8.27 inches → 842 × 595 pt).
+  Parametric: replace Marco Aurelius, Surface Resilience, Frontend surfaces that absorb every form of network jitter without flinching, Sonnet 4.5, marco-aurelius.
+
+  Print at 300 DPI on watermark-paper substrate or render at 2400 × 1697 pixels for digital diploma.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 842 595" width="842" height="595" role="img" aria-label="Aetherneum University diploma">
+  <title>Aetherneum University — Diploma</title>
+
+  <!-- Parchment substrate -->
+  <rect width="842" height="595" fill="#faf7ef"/>
+
+  <!-- Subtle teal breath -->
+  <defs>
+    <radialGradient id="dipl-breath" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0%" stop-color="#0e7490" stop-opacity="0.025"/>
+      <stop offset="100%" stop-color="#0e7490" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="842" height="595" fill="url(#dipl-breath)"/>
+
+  <!-- Outer ornamental frame -->
+  <rect x="24" y="24" width="794" height="547" fill="none" stroke="#92400e" stroke-width="2"/>
+  <rect x="32" y="32" width="778" height="531" fill="none" stroke="#92400e" stroke-width="0.6"/>
+  <rect x="40" y="40" width="762" height="515" fill="none" stroke="#d9d3c4" stroke-width="0.4"/>
+
+  <!-- Corner ornaments — four diamonds at inner-frame corners -->
+  <g fill="#92400e">
+    <path d="M 40 40 L 48 32 L 56 40 L 48 48 Z"/>
+    <path d="M 802 40 L 810 32 L 818 40 L 810 48 Z"/>
+    <path d="M 40 555 L 48 547 L 56 555 L 48 563 Z"/>
+    <path d="M 802 555 L 810 547 L 818 555 L 810 563 Z"/>
+  </g>
+
+  <!-- Top arc legend: AETHERNEUM UNIVERSITY -->
+  <text
+    x="421"
+    y="86"
+    font-family="'JetBrains Mono', monospace"
+    font-size="14"
+    font-weight="600"
+    fill="#92400e"
+    letter-spacing="0.4em"
+    text-anchor="middle">AETHERNEUM UNIVERSITY</text>
+
+  <!-- Ornamental hairline divider -->
+  <line x1="200" y1="106" x2="642" y2="106" stroke="#92400e" stroke-width="0.6"/>
+  <path d="M 421 100 L 427 106 L 421 112 L 415 106 Z" fill="#92400e"/>
+
+  <!-- Lead text: This certifies that -->
+  <text
+    x="421"
+    y="148"
+    font-family="'EB Garamond', Garamond, Georgia, serif"
+    font-size="16"
+    font-style="italic"
+    fill="#475c75"
+    text-anchor="middle">This certifies that</text>
+
+  <!-- Alumnus name (PARAMETER) -->
+  <text
+    x="421"
+    y="200"
+    font-family="'EB Garamond', Garamond, Georgia, serif"
+    font-size="42"
+    font-weight="600"
+    fill="#050b14"
+    text-anchor="middle"
+    letter-spacing="0.02em"><!-- ALUMNUS_NAME -->Marco Aurelius</text>
+
+  <!-- Degree lead text -->
+  <text
+    x="421"
+    y="246"
+    font-family="'EB Garamond', Garamond, Georgia, serif"
+    font-size="14"
+    font-style="italic"
+    fill="#475c75"
+    text-anchor="middle">has fulfilled the requirements for the degree of</text>
+
+  <!-- Degree name -->
+  <text
+    x="421"
+    y="292"
+    font-family="'EB Garamond', Garamond, Georgia, serif"
+    font-size="34"
+    font-weight="500"
+    font-style="italic"
+    fill="#0e7490"
+    text-anchor="middle">Master of the &#xC6;ther</text>
+
+  <!-- Specialty (PARAMETER) -->
+  <text
+    x="421"
+    y="324"
+    font-family="'EB Garamond', Garamond, Georgia, serif"
+    font-size="18"
+    font-weight="500"
+    fill="#155e75"
+    text-anchor="middle"><!-- SPECIALTY -->in Surface Resilience</text>
+
+  <!-- Thesis lead text -->
+  <text
+    x="421"
+    y="364"
+    font-family="'EB Garamond', Garamond, Georgia, serif"
+    font-size="13"
+    font-style="italic"
+    fill="#475c75"
+    text-anchor="middle">and has successfully defended the thesis titled</text>
+
+  <!-- Thesis title (PARAMETER) -->
+  <text
+    x="421"
+    y="394"
+    font-family="'EB Garamond', Garamond, Georgia, serif"
+    font-size="17"
+    font-style="italic"
+    fill="#0d1b2a"
+    text-anchor="middle"><!-- THESIS_TITLE -->&#x201C;Frontend surfaces that absorb every form of network jitter without flinching&#x201D;</text>
+
+  <!-- Body text: before the Faculty Board -->
+  <text
+    x="421"
+    y="430"
+    font-family="'EB Garamond', Garamond, Georgia, serif"
+    font-size="13"
+    font-style="italic"
+    fill="#475c75"
+    text-anchor="middle">before the Faculty Board. Conferred at the Aetherneum campus, Class of '26.</text>
+
+  <!-- Signature lines -->
+  <g font-family="'EB Garamond', Garamond, Georgia, serif" fill="#050b14">
+    <!-- Left signature -->
+    <line x1="120" y1="500" x2="290" y2="500" stroke="#475c75" stroke-width="0.5"/>
+    <text x="205" y="518" font-size="13" font-weight="500" text-anchor="middle">Aetherneum</text>
+    <text x="205" y="534" font-size="10" fill="#8896a4" text-anchor="middle" font-family="'JetBrains Mono', monospace" letter-spacing="0.18em">DEAN</text>
+
+    <!-- Center motto + seal placeholder -->
+    <circle cx="421" cy="500" r="32" fill="none" stroke="#92400e" stroke-width="1.5"/>
+    <circle cx="421" cy="500" r="26" fill="none" stroke="#92400e" stroke-width="0.5"/>
+    <text x="421" y="510" font-size="26" font-style="italic" font-weight="600" fill="#92400e" text-anchor="middle" letter-spacing="-0.02em">Æ</text>
+    <text x="421" y="548" font-size="11" font-style="italic" fill="#92400e" text-anchor="middle">Per Æthera Ad Astra</text>
+
+    <!-- Right signature -->
+    <line x1="552" y1="500" x2="722" y2="500" stroke="#475c75" stroke-width="0.5"/>
+    <text x="637" y="518" font-size="13" font-weight="500" text-anchor="middle">G. Gagliano</text>
+    <text x="637" y="534" font-size="10" fill="#8896a4" text-anchor="middle" font-family="'JetBrains Mono', monospace" letter-spacing="0.18em">RECTOR</text>
+  </g>
+
+  <!-- Footer (verification line) -->
+  <text
+    x="421"
+    y="572"
+    font-family="'JetBrains Mono', monospace"
+    font-size="9"
+    fill="#8896a4"
+    text-anchor="middle"
+    letter-spacing="0.18em">SYNTHETIC ALUMNA &#xB7; FACULTY ADVISOR: Sonnet 4.5 &#xB7; VERIFY AT UNIVERSITY.AETHERNEUM.COM/ALUMNI/marco-aurelius</text>
+</svg>
