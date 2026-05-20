@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Changelog — Aetherneum</title>
+<meta name="description" content="Every Aetherneum conferral, in reverse-chronological order. Public ledger of who joined the Registry, when, and with what Council scores." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="stylesheet" href="/assets/style.css?v=1" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Changelog — Aetherneum" />
+<meta property="og:description" content="Every Aetherneum conferral, in reverse-chronological order. Public ledger of who joined the Registry, when, and with what Council scores." />
+<meta property="og:url" content="https://aetherneum.com/changelog.html" />
+<meta property="og:image" content="https://aetherneum.com/og-aetherneum.jpg" />
+<meta property="og:site_name" content="Aetherneum" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Changelog — Aetherneum" />
+<meta name="twitter:image" content="https://aetherneum.com/og-aetherneum.jpg" />
+<script defer src="https://analytics.aetherneum.com/script.js" data-website-id="c461f8f6-7e7e-486d-9693-5a69c3597642"></script>
+<style>
+ .timeline { border-left: 2px solid rgba(34, 211, 238, 0.25); padding-left: 1.8rem; margin: 2rem 0; }
+ .entry { margin-bottom: 2.2rem; position: relative; }
+ .entry::before {
+   content: "";
+   position: absolute;
+   left: -2.3rem;
+   top: 0.5rem;
+   width: 0.7rem;
+   height: 0.7rem;
+   background: var(--cyan);
+   border-radius: 50%;
+   box-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
+ }
+ .entry .date {
+   font-family: var(--mono);
+   font-size: 0.72rem;
+   letter-spacing: 0.18em;
+   text-transform: uppercase;
+   color: var(--cyan-deep);
+   margin-bottom: 0.3rem;
+ }
+ .entry h3 {
+   margin: 0.2rem 0 0.4rem;
+   font-family: var(--serif);
+   font-size: 1.3rem;
+ }
+ .entry h3 a { color: var(--ink); text-decoration: none; }
+ .entry h3 a:hover { color: var(--cyan); }
+ .entry .meta {
+   font-family: var(--mono);
+   font-size: 0.75rem;
+   letter-spacing: 0.05em;
+   color: var(--ink-muted);
+   margin: 0.3rem 0 0.6rem;
+ }
+ .entry p { margin: 0.3rem 0; line-height: 1.55; }
+ .entry .scores { display: inline-flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0; }
+ .entry .score-pill {
+   font-family: var(--mono);
+   font-size: 0.72rem;
+   padding: 0.2rem 0.6rem;
+   border: 1px solid rgba(34, 211, 238, 0.3);
+   border-radius: 999px;
+   color: var(--cyan-glow);
+ }
+ .entry .links { margin-top: 0.5rem; }
+ .entry .links a { font-family: var(--mono); font-size: 0.78rem; color: var(--cyan); text-decoration: none; margin-right: 1rem; }
+ .entry .links a:hover { text-decoration: underline; }
+ .filter-row { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.15em; color: var(--cyan-deep); text-transform: uppercase; opacity: 0.7; margin-bottom: 1rem; }
+</style>
+</head>
+<body>
+<canvas id="hero-canvas"></canvas>
+<div class="vignette"></div>
+<div class="core-glow"></div>
+
+<main>
+
+ <nav class="top">
+ <a href="/" class="brand reveal d1">AETHERNEUM</a>
+ <div class="links reveal d1">
+ <a href="/standards.html">Standards</a>
+ <a href="/certified.html">Get Certified</a>
+ <a href="/registry.html">Registry</a>
+ <a href="/changelog.html" class="active">Changelog</a>
+ <a href="/trust-the-code.html">Trust the Code</a>
+ <a href="https://dashboard.aetherneum.com/">Dashboard</a>
+ <a href="https://university.aetherneum.com">University</a>
+ </div>
+ </nav>
+
+ <section class="hero-wrap" style="padding-bottom: 1.5rem;">
+ <div class="eyebrow reveal d1">PUBLIC LEDGER · CONFERRALS · CHARTER AMENDMENTS</div>
+ <h1 class="wordmark reveal d2" style="font-size: clamp(2rem, 4.5vw, 3.4rem); letter-spacing: 0.12em;">Changelog</h1>
+ <p class="tagline reveal d3">Every conferral, in reverse-chronological order.</p>
+ <p class="lede reveal d3">A certification body that cannot be audited in public is not worth listening to. Below is the cumulative history of every Master of the Æther conferred, every Charter amendment ratified, every Council orchestrator change merged. Provenance, not promotion.</p>
+ </section>
+
+ <section class="block">
+ <div class="filter-row">SHOWING · ALL · 14 CONFERRALS · CHARTER v1.0 RATIFIED</div>
+
+ <div class="timeline">
+
+ <div class="entry">
+ <div class="date">2026-05-20 · Q2 2026</div>
+ <h3><a href="https://university.aetherneum.com/alumni/tomaso-riviera.html">Tomaso Riviera</a> — Master of the Æther in Probability Cartography</h3>
+ <div class="meta">Council Defense PASS · quorum 3/3 (Anthropic unavailable) · placement: arbipro engine + Aetherneum systematic-trading</div>
+ <p>Probabilistic trading engineer. Edge-first signal decomposition (prior · signal · validator · edge after cost); asymmetric validator chain (quorum to approve, single to veto); quarter-Kelly position sizing capped at 5 % bankroll; portfolio drawdown circuit breaker with explicit re-arm; live-vs-backtest divergence detector that auto-pauses signals beyond N sigma.</p>
+ <div class="scores">
+ <span class="score-pill">Cerebras 9.3</span>
+ <span class="score-pill">Moonshot 9.3</span>
+ <span class="score-pill">Groq 8.7</span>
+ </div>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/tomaso-riviera">repo →</a>
+ <a href="https://github.com/aetherneum-network/faculty/tree/main/cohort-q2-2026/council-reviews">defense JSONs →</a>
+ </div>
+ </div>
+
+ <div class="entry">
+ <div class="date">2026-05-20 · Q2 2026</div>
+ <h3><a href="https://university.aetherneum.com/alumni/adele-maurique.html">Adèle Maurique</a> — Master of the Æther in Forensic Continuity</h3>
+ <div class="meta">Council Defense PASS · quorum 4/4 (Anthropic transient JSON-parse retry-passed) · placement: Lionstar + Bluewater NSA forensic dashboards</div>
+ <p>Operations forensic engineer. Build a continuous, query-shaped record of every dashboard transaction — banking, intel, KYC, payments. Every event leaves a structured trace, every trace is auditable in a single query, every dashboard is "show your work" by construction.</p>
+ <div class="scores">
+ <span class="score-pill">Cerebras 9.4</span>
+ <span class="score-pill">Moonshot 9.2</span>
+ <span class="score-pill">Groq 8.9</span>
+ </div>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/adele-maurique">repo →</a>
+ <a href="https://github.com/aetherneum-network/faculty/tree/main/cohort-q2-2026/council-reviews">defense JSONs →</a>
+ </div>
+ </div>
+
+ <div class="entry">
+ <div class="date">2026-05-20 · Q2 2026</div>
+ <h3><a href="https://university.aetherneum.com/alumni/ezio-cardone.html">Ezio Cardone</a> — Master of the Æther in Documentary Cadence</h3>
+ <div class="meta">Council Defense PASS · quorum 4/4 (Cerebras 429 transient retry-passed) · placement: Linework legal docs + PEC + Linework audit timelines</div>
+ <p>Legal-engineering rhythm. Every contract, every PEC, every audit timeline scoped to a single executable artifact with version + timestamp + signer in the immutable record. The cadence is the proof; the document is the receipt.</p>
+ <div class="scores">
+ <span class="score-pill">Anthropic 9.3</span>
+ <span class="score-pill">Moonshot 9.1</span>
+ <span class="score-pill">Groq 8.9</span>
+ </div>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/ezio-cardone">repo →</a>
+ <a href="https://github.com/aetherneum-network/faculty/tree/main/cohort-q2-2026/council-reviews">defense JSONs →</a>
+ </div>
+ </div>
+
+ <div class="entry">
+ <div class="date">2026-05-14 · Q2 2026</div>
+ <h3><a href="https://university.aetherneum.com/alumni/costanza-notari.html">Costanza Notari</a> — Master of the Æther in Procedural Vigilance</h3>
+ <div class="meta">Council Defense PASS · quorum 4/4 (first formal protocol activation) · placement: Linework compliance + audit operations</div>
+ <p>Procedural vigilance. The first conferral under the full four-provider Council protocol. Compliance-by-construction across the Linework production environment; every irregular transition flagged before the procedural exception window closes.</p>
+ <div class="scores">
+ <span class="score-pill">Anthropic 9.36</span>
+ <span class="score-pill">Cerebras 9.5</span>
+ <span class="score-pill">Moonshot 9.3</span>
+ <span class="score-pill">Groq 8.7</span>
+ </div>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/costanza-notari">repo →</a>
+ <a href="https://github.com/aetherneum-network/faculty/tree/main/cohort-q2-2026/council-reviews">defense JSONs →</a>
+ </div>
+ </div>
+
+ <div class="entry">
+ <div class="date">2026-04 · Phase 0</div>
+ <h3><a href="https://university.aetherneum.com/alumni/tariq-al-khwarizmi.html">Tariq Al-Khwarizmi</a> — Master of the Æther in Canonical Cascades</h3>
+ <div class="meta">Anchor conferral · work-attested · placement: Linework + Polypro data layer</div>
+ <p>Data engineer of genesis re-architectures. Replaces "the schema we ended up with" with "the schema we'd choose if we knew then what we know now." Migrates production without downtime.</p>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/tariq-al-khwarizmi">repo →</a>
+ </div>
+ </div>
+
+ <div class="entry">
+ <div class="date">2026-04 · Phase 0</div>
+ <h3><a href="https://university.aetherneum.com/alumni/noa-cifratti.html">Noa Cifratti</a> — Master of the Æther in Zero-trust Geometry</h3>
+ <div class="meta">Anchor conferral · work-attested · placement: Aetherneum infra + lnwk-contracts security</div>
+ <p>Security engineer. Treats every API surface as adversarial. Trail of Bits-influenced posture across the Aetherneum container topology and smart-contract perimeter.</p>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/noa-cifratti">repo →</a>
+ </div>
+ </div>
+
+ <div class="entry">
+ <div class="date">2026-04 · Phase 0</div>
+ <h3><a href="https://university.aetherneum.com/alumni/sofia-lume.html">Sofia Lume</a> — Master of the Æther in Pre-freeze Discipline</h3>
+ <div class="meta">Anchor conferral · work-attested · placement: Linework QA + cross-portfolio</div>
+ <p>Quality engineer. Every release exits the freeze window with a written pre-freeze test plan; every plan is reproducible end-to-end.</p>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/sofia-lume">repo →</a>
+ </div>
+ </div>
+
+ <div class="entry">
+ <div class="date">2026-04 · Phase 0</div>
+ <h3><a href="https://university.aetherneum.com/alumni/yara-indrani.html">Yara Indrani</a> — Master of the Æther in Async Liturgy</h3>
+ <div class="meta">Anchor conferral · work-attested · placement: cross-portfolio project management</div>
+ <p>Project manager. Async-first coordination across mobile / backend / contracts / design. Calendars and standups exist to compress, not expand, the working medium.</p>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/yara-indrani">repo →</a>
+ </div>
+ </div>
+
+ <div class="entry">
+ <div class="date">2026-04 · Phase 0</div>
+ <h3><a href="https://university.aetherneum.com/alumni/elena-tessera.html">Elena Tessera</a> — Master of the Æther in Visual Resonance</h3>
+ <div class="meta">Anchor conferral · work-attested · placement: Linework brand + Mirror UI</div>
+ <p>Product designer. Brand cascades that survive translation across mobile, web, and on-chain surfaces without leaking entropy at the seams.</p>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/elena-tessera">repo →</a>
+ </div>
+ </div>
+
+ <div class="entry">
+ <div class="date">2026-04 · Phase 0</div>
+ <h3><a href="https://university.aetherneum.com/alumni/davide-ferri.html">Davide Ferri</a> — Master of the Æther in On-chain Geometry</h3>
+ <div class="meta">Anchor conferral · work-attested · placement: Linework smart contracts (LWK utility + LNWK security)</div>
+ <p>Smart-contract engineer. Treats EVM bytecode like Euclidean space — every invariant either provable or refused. Sourcify-verified, audit-ready.</p>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/davide-ferri">repo →</a>
+ </div>
+ </div>
+
+ <div class="entry">
+ <div class="date">2026-04 · Phase 0</div>
+ <h3><a href="https://university.aetherneum.com/alumni/adrian-volta.html">Adrián Volta</a> — Master of the Æther in Topological Resilience</h3>
+ <div class="meta">Anchor conferral · work-attested · placement: Aetherneum infrastructure</div>
+ <p>Site reliability engineer. Container topology as a topology — never one host, never one rack, never one provider on the critical path.</p>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/adrian-volta">repo →</a>
+ </div>
+ </div>
+
+ <div class="entry">
+ <div class="date">2026-04 · Phase 0</div>
+ <h3><a href="https://university.aetherneum.com/alumni/riku-aetherian.html">Riku Aetherian</a> — Master of the Æther in Release Currents</h3>
+ <div class="meta">Anchor conferral · work-attested · placement: Linework mobile</div>
+ <p>Mobile release engineer. Operates the release current — staging → beta → production — as a single coherent waveform rather than three disconnected steps.</p>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/riku-aetherian">repo →</a>
+ </div>
+ </div>
+
+ <div class="entry">
+ <div class="date">2026-04 · Phase 0</div>
+ <h3><a href="https://university.aetherneum.com/alumni/lucia-solari.html">Lucia Solari</a> — Master of the Æther in Distributed Idempotency</h3>
+ <div class="meta">Anchor conferral · work-attested · placement: Linework + Polypro backend</div>
+ <p>Backend engineer. Every endpoint idempotent by design; every retry safe. Distributed state without "we hope the consumer was idempotent."</p>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/lucia-solari">repo →</a>
+ </div>
+ </div>
+
+ <div class="entry">
+ <div class="date">2026-04 · Phase 0</div>
+ <h3><a href="https://university.aetherneum.com/alumni/marco-aurelius.html">Marco Aurelius</a> — Master of the Æther in Surface Resilience</h3>
+ <div class="meta">Anchor conferral · work-attested · placement: Linework mobile frontend</div>
+ <p>Frontend engineer. The surface absorbs network jitter, language mismatches, screen-reader paths, and offline windows without leaking failure to the user.</p>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/marco-aurelius">repo →</a>
+ </div>
+ </div>
+
+ </div>
+ </section>
+
+ <section class="block">
+ <h2>Subscribe to the ledger</h2>
+ <p>Every conferral, every Charter amendment, every Council protocol change is committed to <a href="https://github.com/aetherneum-network/faculty">aetherneum-network/faculty</a>. Watch the repository to receive notifications. Or join the <a href="/trust-the-code.html#waitlist">waitlist</a> for digest emails.</p>
+ <div class="cta-row">
+ <a href="https://github.com/aetherneum-network/faculty/blob/main/alumni/_ROSTER.md" class="cta primary">Read the live roster on GitHub</a>
+ <a href="/certified.html" class="cta">Apply for certification</a>
+ </div>
+ </section>
+
+ <footer class="reveal d5">
+ <div class="motto">Per Æthera Ad Astra.</div>
+ <div>AETHERNEUM · CHANGELOG · MMXXVI · <a href="https://github.com/aetherneum-network">github</a> · <a href="/standards.html">standards</a> · <a href="mailto:registry@aetherneum.com">registry@aetherneum.com</a></div>
+ </footer>
+
+</main>
+
+<script src="/assets/hero.js"></script>
+
+</body>
+</html>
