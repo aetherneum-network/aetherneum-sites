@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 100">
-  <!-- Aetherneum wordmark · pure typography, EB Garamond, letter-spacing 0.12em -->
+  <!-- Aetherneum wordmark on light bg · inverted color -->
   <text x="300" y="68"
         text-anchor="middle"
         font-family="'EB Garamond', Garamond, 'Times New Roman', serif"
         font-weight="500"
         font-size="62"
         letter-spacing="7"
-        fill="#22d3ee">ÆTHERNEUM</text>
+        fill="#0e7490">ÆTHERNEUM</text>
 </svg>
