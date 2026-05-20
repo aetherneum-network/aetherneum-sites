@@ -1,0 +1,82 @@
+name: deploy-aether-sites
+
+# Auto-deploy aether-sites to cryptohost on push to main.
+#
+# REQUIRED GitHub Secrets (set under Settings → Secrets → Actions):
+#   - CRYPTOHOST_SSH_KEY     : the private key (no passphrase) that
+#                              corresponds to /c/Users/aethe/.ssh/cryptohost_nopass
+#   - CRYPTOHOST_HOST        : "37.27.113.165"
+#   - CRYPTOHOST_USER        : "aetherneum"
+#   - CRYPTOHOST_KNOWN_HOSTS : output of `ssh-keyscan 37.27.113.165 | head -1`
+#                              (one line, the ed25519 fingerprint)
+#
+# Until those secrets exist, this workflow stays inert — the on/push trigger
+# fires but the deploy step exits 0 with "secrets missing, skipping deploy".
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Gate — ensure secrets are configured
+        id: gate
+        env:
+          KEY: ${{ secrets.CRYPTOHOST_SSH_KEY }}
+          HOST: ${{ secrets.CRYPTOHOST_HOST }}
+          USER: ${{ secrets.CRYPTOHOST_USER }}
+          KNOWN: ${{ secrets.CRYPTOHOST_KNOWN_HOSTS }}
+        run: |
+          if [ -z "$KEY" ] || [ -z "$HOST" ] || [ -z "$USER" ] || [ -z "$KNOWN" ]; then
+            echo "Required secrets not set — workflow will skip deploy."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "All secrets present — will deploy."
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup SSH
+        if: steps.gate.outputs.skip == 'false'
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.CRYPTOHOST_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          echo "${{ secrets.CRYPTOHOST_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Deploy via scp + nginx reload
+        if: steps.gate.outputs.skip == 'false'
+        env:
+          HOST: ${{ secrets.CRYPTOHOST_HOST }}
+          USER: ${{ secrets.CRYPTOHOST_USER }}
+        run: |
+          STAGING="/tmp/aether-staging-gh-${GITHUB_RUN_ID}"
+          ssh -i ~/.ssh/id_ed25519 "$USER@$HOST" "mkdir -p $STAGING"
+          scp -i ~/.ssh/id_ed25519 -rq aetherneum-com university-aetherneum-com "$USER@$HOST:$STAGING/"
+          ssh -i ~/.ssh/id_ed25519 "$USER@$HOST" "
+            sudo cp -a $STAGING/aetherneum-com/.            /opt/aetherneum/sites/aetherneum-com/ &&
+            sudo cp -a $STAGING/university-aetherneum-com/. /opt/aetherneum/sites/university-aetherneum-com/ &&
+            sudo chown -R aetherneum:aetherneum /opt/aetherneum/sites/ &&
+            sudo docker exec aetherneum-sites nginx -s reload &&
+            rm -rf $STAGING &&
+            echo 'OK'
+          "
+
+      - name: Summary
+        run: |
+          echo "## Deploy summary" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.gate.outputs.skip }}" = "true" ]; then
+            echo "⏭ Skipped — secrets not configured" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ Deployed to cryptohost · nginx reloaded" >> $GITHUB_STEP_SUMMARY
+          fi
