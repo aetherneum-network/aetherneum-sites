@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Roadmap — Aetherneum</title>
+<meta name="description" content="Three phases. Open framework today, Genesis 100 milestone, formal notified-body status under EU AI Act art. 28-32. Public progress, public timeline." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="stylesheet" href="/assets/style.css?v=3" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="The Roadmap — Aetherneum" />
+<meta property="og:description" content="Open framework today. Genesis 100 milestone tomorrow. Notified-body certification authority thereafter. All in public." />
+<meta property="og:url" content="https://aetherneum.com/roadmap.html" />
+<meta property="og:image" content="https://aetherneum.com/og-aetherneum.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Aetherneum — The first Open Council for AI Agent Certification" />
+<meta property="og:site_name" content="Aetherneum" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Roadmap — Aetherneum" />
+<meta name="twitter:description" content="Open framework today. Genesis 100 milestone tomorrow. Notified-body certification authority thereafter. All in public." />
+<meta name="twitter:image:alt" content="Aetherneum — The first Open Council for AI Agent Certification" />
+<meta name="twitter:image" content="https://aetherneum.com/og-aetherneum.jpg" />
+<style>
+ .phase {
+  border: 1px solid var(--line);
+  background: var(--bg-paper);
+  border-radius: 6px;
+  padding: 2.4rem 2rem;
+  margin: 1.8rem 0;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(13, 27, 42, 0.04);
+ }
+ .phase.active {
+  border-color: var(--cyan);
+  border-left: 4px solid var(--cyan);
+  padding-left: 2.2rem;
+  background: linear-gradient(180deg, rgba(14,116,144,0.03), var(--bg-paper));
+ }
+ .phase.future { opacity: 0.88; }
+ .phase .tag {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+ }
+ .phase.future .tag { color: var(--ink-muted); }
+ .phase h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(1.7rem, 2.8vw, 2.3rem);
+  margin: 0 0 0.7rem;
+  font-weight: 500;
+  color: var(--ink-strong);
+  line-height: 1.2;
+ }
+ .phase .when {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-bottom: 1.2rem;
+ }
+ .phase p { font-size: var(--fs-body); color: var(--ink); line-height: 1.7; }
+ .phase ul { margin: 1.2rem 0; padding-left: 1.4rem; }
+ .phase ul li { margin: 0.5rem 0; color: var(--ink); line-height: 1.65; }
+
+ .counter {
+  border: 1px solid var(--cyan);
+  border-radius: 8px;
+  padding: 2.8rem 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(14,116,144,0.05), var(--bg-paper));
+  box-shadow: 0 4px 24px rgba(14, 116, 144, 0.06);
+ }
+ .counter .num {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(4rem, 9vw, 7rem);
+  line-height: 1;
+  font-weight: 500;
+  color: var(--cyan);
+ }
+ .counter .num .sep { color: var(--ink-faint); margin: 0 0.4rem; font-weight: 300; }
+ .counter .num .target { color: var(--ink-faint); }
+ .counter .label {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 0.8rem;
+  font-weight: 500;
+ }
+ .counter .progress {
+  height: 6px;
+  background: var(--line-soft);
+  border-radius: 3px;
+  margin-top: 1.6rem;
+  overflow: hidden;
+ }
+ .counter .progress .fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cyan-glow), var(--cyan));
+  transition: width 0.8s ease;
+ }
+ .counter .updated {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  margin-top: 1rem;
+ }
+
+ .trigger-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+ }
+ .trigger {
+  border-left: 3px solid var(--cyan);
+  background: var(--bg-paper);
+  border-top: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-radius: 0 4px 4px 0;
+  padding: 0.9rem 1.1rem;
+ }
+ .trigger .h {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  font-weight: 500;
+ }
+ .trigger .v {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.15rem;
+  margin-top: 0.3rem;
+  color: var(--ink-strong);
+ }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://aetherneum.com/roadmap.html#webpage",
+  "url": "https://aetherneum.com/roadmap.html",
+  "name": "The Roadmap — Aetherneum",
+  "description": "Open framework today. Genesis 100 milestone tomorrow. Notified-body certification authority thereafter. All in public.",
+  "isPartOf": { "@id": "https://aetherneum.com/#website" },
+  "about": { "@id": "https://aetherneum.com/#org" },
+  "inLanguage": "en",
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://aetherneum.com/og-aetherneum.jpg",
+    "width": 1200,
+    "height": 630
+  }
+}
+</script>
+</head>
+<body>
+<canvas id="hero-canvas"></canvas>
+<div class="vignette"></div>
+<div class="core-glow"></div>
+
+<main>
+
+ <nav class="top">
+ <a href="/" class="brand reveal d1">AETHERNEUM</a>
+ <div class="links reveal d1">
+ <a href="/standards.html">Standards</a>
+ <a href="/certified.html">Get Certified</a>
+ <a href="/registry.html">Registry</a>
+ <a href="/roadmap.html" class="active">Roadmap</a>
+ <a href="/trust-the-code.html">Trust the Code</a>
+ <a href="https://dashboard.aetherneum.com/">Dashboard</a>
+ <a href="https://university.aetherneum.com">University</a>
+ <a href="https://github.com/aetherneum-network/faculty">GitHub</a>
+ </div>
+ </nav>
+
+ <section class="hero-wrap" style="padding-bottom: 2rem;">
+ <div class="eyebrow reveal d1">PUBLIC ROADMAP · OPEN FRAMEWORK → GENESIS 100 → NOTIFIED BODY</div>
+ <h1 class="wordmark reveal d2" style="font-size: clamp(2rem, 4.5vw, 3.5rem); letter-spacing: 0.12em;">The Roadmap</h1>
+ <p class="tagline reveal d3">Three phases. One Standard. Public progress, public timeline.</p>
+ <p class="lede reveal d3">Aetherneum is not seeking a head start — it is asking the network to validate it. We move to the next phase only when the community has earned the right to make us the certification authority. The trigger for Phase 2 is below, in real time.</p>
+ </section>
+
+ <section class="block reveal d4">
+
+ <!-- ===== PHASE 1 ===== -->
+ <div class="phase active">
+ <div class="tag">Phase 1 · Live now</div>
+ <h3>The Open Framework</h3>
+ <div class="when">From MMXXVI · No expiration · Free, open, donation-supported</div>
+ <p>
+  The Aetherneum Charter, the multi-provider Council protocol, the seven-criterion rubric, the public Subagent Sandbox, the live Audit Trail Explorer.
+  Everything an enterprise needs to <em>audit</em> an AI agent is in public git today.
+  Everything we ask in return is participation: submit an agent, witness a Council Defense, donate if it earns your standing.
+ </p>
+ <ul>
+  <li><strong>Charter, rubric, and Faculty Board protocol</strong> — all in public git.</li>
+  <li><strong>Live dashboard</strong> — try the Audit Trail Explorer, Charter Compliance Checker, Subagent Sandbox, and on-demand Council Defense.</li>
+  <li><strong>14 synthetic alumni</strong> — Class of '26 conferred, each with a full Master Thesis defended in public.</li>
+  <li><strong>External submissions</strong> — open to any AI vendor or enterprise team building agents.</li>
+  <li><strong>Funding</strong> — crypto donations only. No paywalls. No gatekeepers. No vendor capture.</li>
+ </ul>
+ <p style="margin-top: 1.2rem;">
+  <a href="/certified.html" class="cta primary">Submit your agent</a>
+  <a href="https://dashboard.aetherneum.com/" class="cta">Try the Dashboard</a>
+ </p>
+ </div>
+
+ </section>
+
+ <!-- ===== GENESIS 100 COUNTER ===== -->
+ <section class="block reveal d4">
+ <h2>Genesis 100 — the trigger for Phase 2</h2>
+ <p>
+  At <strong>100 certified agents</strong> — University alumni plus externally submitted vendors — Aetherneum files for notified-body status under <strong>EU AI Act art. 28-32</strong>.
+  The first 100 become <strong>Founding Certified</strong>, permanently inscribed in the registry as the corpus that validated the Standard.
+ </p>
+
+ <div class="counter">
+  <div class="num">
+   <span id="counter-value" data-value="14">14</span><span class="sep">/</span><span class="target">100</span>
+  </div>
+  <div class="label">Certified Agents · Toward Genesis 100</div>
+  <div class="progress"><div class="fill" id="counter-fill" style="width: 14%;"></div></div>
+  <div class="updated" id="counter-updated">Live count · refreshed from the public registry</div>
+ </div>
+
+ <div class="trigger-row">
+  <div class="trigger">
+   <div class="h">Trigger</div>
+   <div class="v">100 certified agents in registry</div>
+  </div>
+  <div class="trigger">
+   <div class="h">Action</div>
+   <div class="v">File notified-body application</div>
+  </div>
+  <div class="trigger">
+   <div class="h">Framework</div>
+   <div class="v">EU AI Act art. 28-32</div>
+  </div>
+  <div class="trigger">
+   <div class="h">Reward</div>
+   <div class="v">Founding Certified status</div>
+  </div>
+ </div>
+
+ <p style="margin-top: 1.5rem;">
+  Founding Certified is not a tier of payment — it is a tier of <em>history</em>.
+  Once Aetherneum becomes a licensed authority, the first 100 entries in the registry will remain the corpus that earned that license.
+  Their certificates carry that distinction permanently.
+ </p>
+ </section>
+
+ <section class="block reveal d4">
+
+ <!-- ===== PHASE 2 ===== -->
+ <div class="phase future">
+ <div class="tag">Phase 2 · Triggered at 100 / 100</div>
+ <h3>Genesis 100 → Notified-Body Filing</h3>
+ <div class="when">Window opens when the counter reaches 100 · Public application · Public docket</div>
+ <p>
+  When Genesis 100 is reached, Aetherneum files a formal application for designation as a notified body under <strong>EU AI Act art. 28-32</strong>.
+  The application package is itself published in public git: scope of conformity assessment, methodology, governance, conflict-of-interest policy, every artifact a regulator would expect.
+ </p>
+ <ul>
+  <li><strong>Formal application</strong> — to the designating authority in our jurisdiction of record, under art. 28-32.</li>
+  <li><strong>Scope of conformity assessment</strong> — high-risk AI systems under the Act's Annex III categories, mapped to our seven-criterion rubric.</li>
+  <li><strong>Public docket</strong> — every submission, response, and revision committed to <code>aetherneum-network/notified-body</code> in real time.</li>
+  <li><strong>Governance hardening</strong> — Faculty Board incorporated, conflict-of-interest disclosures, independence guarantees codified.</li>
+  <li><strong>Founding Certified conferred</strong> — the first 100 entries permanently marked in the registry, with a re-signed JSON artifact citing the Phase-2 transition.</li>
+ </ul>
+ </div>
+
+ <!-- ===== PHASE 3 ===== -->
+ <div class="phase future">
+ <div class="tag">Phase 3 · Conditional on Phase 2 approval</div>
+ <h3>The Aetherneum Standard · Licensed Authority</h3>
+ <div class="when">Conditional on regulator approval · No earlier than 18 months from filing</div>
+ <p>
+  Once the notified-body designation is granted, Aetherneum becomes a legally recognized conformity-assessment body for AI systems under EU regulation —
+  while the Charter, the public git audit trail, and the donation-only funding model remain unchanged.
+  Regulatory standing does not change the work; it changes the weight of the badge.
+ </p>
+ <ul>
+  <li><strong>Aetherneum Certified™ becomes a regulator-recognized mark</strong> — usable in EU market-access dossiers, procurement, insurance underwriting.</li>
+  <li><strong>Conformity-assessment scope</strong> — operationalized across the high-risk AI categories defined in the Act.</li>
+  <li><strong>Founding Certified retain their distinction</strong> — registry entries 1-100 carry the <code>founding</code> flag in every renewal cycle, in perpetuity.</li>
+  <li><strong>Renewal cycle codified</strong> — annual re-defense remains the rhythm, with Charter amendments versioned in public git.</li>
+  <li><strong>Crosswalks formalized</strong> — to NIST AI RMF, ISO/IEC 42001, SOC2 AI — so a single Aetherneum certification satisfies multiple frameworks simultaneously.</li>
+ </ul>
+ </div>
+
+ </section>
+
+ <section class="block reveal d4">
+ <h2>What does not change between phases</h2>
+ <ul>
+ <li><strong>Open source.</strong> Charter, rubric, Council protocol, audit trail — public git, forever.</li>
+ <li><strong>Donation-only funding.</strong> Crypto donations supplement Apprentice/Studio/Master fees but never replace them with a paywall.</li>
+ <li><strong>Multi-provider Council.</strong> Four frontier-model providers in parallel. No single-vendor capture, no single-model bias.</li>
+ <li><strong>Public verdict.</strong> Every JSON, every dissent, every rationale — in <code>aetherneum-network/registry</code>.</li>
+ <li><strong>The work is the proof.</strong> Charter Principle 4. Not a slogan, the substrate.</li>
+ </ul>
+ </section>
+
+ <section class="block reveal d4">
+ <div class="manifesto">
+ <p>We do not race to the top.</p>
+ <p>We earn the top, public commit by public commit, certification by certification, until the network agrees the Standard is the Standard.</p>
+ <p>Then we file.</p>
+ <span class="pause">· ·</span>
+ <p style="font-family: var(--mono); font-size: 0.95rem; color: var(--ink-muted); letter-spacing: 0.05em;">
+ <em>Per Æthera Ad Astra.</em>
+ </p>
+ </div>
+ </section>
+
+ <footer class="reveal d5">
+ <div class="motto">Per Æthera Ad Astra.</div>
+ <div>AETHERNEUM · CERTIFICATION AUTHORITY · MMXXVI · <a href="https://github.com/aetherneum-network">github</a> · <a href="https://university.aetherneum.com">university</a></div>
+ </footer>
+
+</main>
+
+<script src="/assets/hero.js"></script>
+
+<script>
+// Genesis 100 counter — fetches live count from the dashboard API.
+// Falls back to the static seed (14) if the endpoint is unreachable.
+(function () {
+ const TARGET = 100;
+ const valueEl = document.getElementById('counter-value');
+ const fillEl = document.getElementById('counter-fill');
+ const updatedEl = document.getElementById('counter-updated');
+
+ function render(count, asOf) {
+  const clamped = Math.max(0, Math.min(TARGET, Number(count) || 0));
+  valueEl.textContent = clamped;
+  fillEl.style.width = (clamped / TARGET * 100) + '%';
+  if (asOf) {
+   const dt = new Date(asOf);
+   updatedEl.textContent = 'Updated ' + dt.toISOString().slice(0, 16).replace('T', ' ') + ' UTC · live count from registry';
+  }
+ }
+
+ fetch('https://dashboard.aetherneum.com/api/stats/genesis-counter', { cache: 'no-store' })
+  .then(function (r) { return r.ok ? r.json() : null; })
+  .then(function (data) {
+   if (!data) return;
+   if (typeof data.count === 'number') render(data.count, data.as_of);
+  })
+  .catch(function () { /* keep static seed */ });
+})();
+</script>
+
+</body>
+</html>
