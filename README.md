@@ -1,13 +1,13 @@
 # Aetherneum Sites
 
-Static-site source for the two public Aetherneum pillars, served by a single Nginx container behind Traefik on the cryptohost (Helsinki substrate).
+Static-site source for the two public Aetherneum pillars, served by a single Nginx container behind Traefik on the production host.
 
 ```
 aetherneum.com              ← Certification Authority pillar
 university.aetherneum.com   ← Class of '26 (synthetic alumni) pillar
 ```
 
-Brand version: **v1.0.0** (parchment). Master guidelines: `~/Aetherneum/04-prompts/aetherneum-brand-kit/00-master-guidelines.md`.
+Brand version: **v1.0.0** (parchment). Master guidelines: `00-master-guidelines.md` in the Aetherneum brand kit (kept outside this repo).
 
 ---
 
@@ -64,7 +64,7 @@ university-aetherneum-com/   ← Sub-pillar site
 
 ## Marketing automation
 
-All asset generation + deploy is orchestrated by **`marketing-pipeline.py`** under `Desktop/_confer/`. The pipeline runs six idempotent scripts in dependency order, then SCPs to cryptohost + nginx reload.
+All asset generation + deploy is orchestrated by **`marketing-pipeline.py`** in the private marketing toolkit (not part of this repo). The pipeline runs six idempotent scripts in dependency order, then copies the output to the production host and reloads nginx.
 
 ```bash
 # Local rebuild only (~10s, idempotent)
@@ -74,7 +74,7 @@ PYTHONIOENCODING=utf-8 python marketing-pipeline.py
 PYTHONIOENCODING=utf-8 python marketing-pipeline.py --deploy
 ```
 
-### The 14 scripts in `Desktop/_confer/`
+### The 14 scripts of the toolkit
 
 | Script | Purpose | Idempotent |
 |---|---|---|
@@ -102,7 +102,7 @@ PYTHONIOENCODING=utf-8 python marketing-pipeline.py --deploy
 When a new candidate clears Council Defense, run:
 
 ```bash
-cd Desktop/_confer
+cd <marketing-toolkit>
 python add-alumnus.py \
   --slug ada-lovelace \
   --name "Ada Lovelace" \
@@ -147,7 +147,7 @@ This repository ships the **placeholder** version of the feed block. The live ge
 
 ## Brand compliance
 
-Every asset must satisfy the four tests in `~/Aetherneum/04-prompts/aetherneum-brand-kit/00-master-guidelines.md`:
+Every asset must satisfy the four tests in the brand kit's `00-master-guidelines.md`:
 
 1. Use only colors from `02-color/palette.css` (parchment / navy / teal / gold)
 2. Use only typefaces from `03-typography/typography.md` (EB Garamond + JetBrains Mono — no sans-serif)
