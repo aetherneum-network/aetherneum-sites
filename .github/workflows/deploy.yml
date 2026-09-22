@@ -1,14 +1,16 @@
 name: deploy-aether-sites
 
-# Auto-deploy aether-sites to cryptohost on push to main.
+# Auto-deploy aether-sites to the production host on push to main.
 #
 # REQUIRED GitHub Secrets (set under Settings → Secrets → Actions):
-#   - CRYPTOHOST_SSH_KEY     : the private key (no passphrase) that
-#                              corresponds to /c/Users/aethe/.ssh/cryptohost_nopass
-#   - CRYPTOHOST_HOST        : "37.27.113.165"
-#   - CRYPTOHOST_USER        : "aetherneum"
-#   - CRYPTOHOST_KNOWN_HOSTS : output of `ssh-keyscan 37.27.113.165 | head -1`
+#   - CRYPTOHOST_SSH_KEY     : the private deploy key (no passphrase)
+#   - CRYPTOHOST_HOST        : the host address
+#   - CRYPTOHOST_USER        : the deploy user
+#   - CRYPTOHOST_KNOWN_HOSTS : output of `ssh-keyscan <host> | head -1`
 #                              (one line, the ed25519 fingerprint)
+# REQUIRED GitHub Variables (set under Settings → Variables → Actions):
+#   - SITES_ROOT             : directory on the host that holds the two site folders
+#   - SITES_CONTAINER        : name of the nginx container to reload
 #
 # Until those secrets exist, this workflow stays inert — the on/push trigger
 # fires but the deploy step exits 0 with "secrets missing, skipping deploy".
@@ -36,9 +38,11 @@ jobs:
           HOST: ${{ secrets.CRYPTOHOST_HOST }}
           USER: ${{ secrets.CRYPTOHOST_USER }}
           KNOWN: ${{ secrets.CRYPTOHOST_KNOWN_HOSTS }}
+          ROOT: ${{ vars.SITES_ROOT }}
+          CONT: ${{ vars.SITES_CONTAINER }}
         run: |
-          if [ -z "$KEY" ] || [ -z "$HOST" ] || [ -z "$USER" ] || [ -z "$KNOWN" ]; then
-            echo "Required secrets not set — workflow will skip deploy."
+          if [ -z "$KEY" ] || [ -z "$HOST" ] || [ -z "$USER" ] || [ -z "$KNOWN" ] || [ -z "$ROOT" ] || [ -z "$CONT" ]; then
+            echo "Required secrets/variables not set — workflow will skip deploy."
             echo "skip=true" >> $GITHUB_OUTPUT
           else
             echo "All secrets present — will deploy."
@@ -59,15 +63,17 @@ jobs:
         env:
           HOST: ${{ secrets.CRYPTOHOST_HOST }}
           USER: ${{ secrets.CRYPTOHOST_USER }}
+          ROOT: ${{ vars.SITES_ROOT }}
+          CONT: ${{ vars.SITES_CONTAINER }}
         run: |
           STAGING="/tmp/aether-staging-gh-${GITHUB_RUN_ID}"
           ssh -i ~/.ssh/id_ed25519 "$USER@$HOST" "mkdir -p $STAGING"
           scp -i ~/.ssh/id_ed25519 -rq aetherneum-com university-aetherneum-com "$USER@$HOST:$STAGING/"
           ssh -i ~/.ssh/id_ed25519 "$USER@$HOST" "
-            sudo cp -a $STAGING/aetherneum-com/.            /opt/aetherneum/sites/aetherneum-com/ &&
-            sudo cp -a $STAGING/university-aetherneum-com/. /opt/aetherneum/sites/university-aetherneum-com/ &&
-            sudo chown -R aetherneum:aetherneum /opt/aetherneum/sites/ &&
-            sudo docker exec aetherneum-sites nginx -s reload &&
+            sudo cp -a $STAGING/aetherneum-com/.            $ROOT/aetherneum-com/ &&
+            sudo cp -a $STAGING/university-aetherneum-com/. $ROOT/university-aetherneum-com/ &&
+            sudo chown -R $USER:$USER $ROOT/ &&
+            sudo docker exec $CONT nginx -s reload &&
             rm -rf $STAGING &&
             echo 'OK'
           "
@@ -78,5 +84,5 @@ jobs:
           if [ "${{ steps.gate.outputs.skip }}" = "true" ]; then
             echo "⏭ Skipped — secrets not configured" >> $GITHUB_STEP_SUMMARY
           else
-            echo "✅ Deployed to cryptohost · nginx reloaded" >> $GITHUB_STEP_SUMMARY
+            echo "✅ Deployed · nginx reloaded" >> $GITHUB_STEP_SUMMARY
           fi
