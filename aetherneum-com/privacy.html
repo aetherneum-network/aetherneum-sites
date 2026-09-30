@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Notice — Aetherneum Assistant</title>
+  <meta name="description" content="How Aetherneum Assistant handles personal data when you communicate with it through WhatsApp." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://aetherneum.com/privacy.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/assets/style.css?v=p5" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Privacy Notice — Aetherneum Assistant" />
+  <meta property="og:description" content="How Aetherneum Assistant handles personal data when you communicate with it through WhatsApp." />
+  <meta property="og:url" content="https://aetherneum.com/privacy.html" />
+  <meta property="og:image" content="https://aetherneum.com/og-aetherneum.jpg" />
+  <meta property="og:site_name" content="Aetherneum" />
+  <style>
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    main,
+    nav.top,
+    .privacy-hero,
+    .privacy-summary,
+    .privacy-toc,
+    section.block,
+    footer {
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    main { overflow-x: hidden; }
+    nav.top .links,
+    .privacy-hero > *,
+    .privacy-summary > *,
+    .privacy-toc > *,
+    section.block > *,
+    footer > * {
+      min-width: 0;
+      max-width: 100%;
+    }
+    .privacy-hero { padding-bottom: 2.5rem; }
+    .privacy-hero .wordmark {
+      font-size: clamp(2.25rem, 5vw, 4rem);
+      letter-spacing: 0.08em;
+    }
+    .privacy-meta {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.55rem;
+      margin-top: 0.25rem;
+    }
+    .privacy-meta .badge {
+      max-width: 100%;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      text-align: center;
+    }
+    .privacy-summary {
+      padding-top: 0;
+      padding-bottom: 2rem;
+    }
+    .privacy-summary .card { margin: 0; }
+    .privacy-summary ul { margin-bottom: 0; }
+    .privacy-toc {
+      max-width: 68rem;
+      margin: 0 auto;
+      padding: 1.3rem 2.5rem;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-soft);
+    }
+    .privacy-toc strong {
+      display: block;
+      margin-bottom: 0.55rem;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cyan-deep);
+    }
+    .privacy-toc ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 1.35rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+    }
+    .privacy-toc a {
+      color: var(--ink-muted);
+      text-decoration: none;
+    }
+    .privacy-toc a:hover,
+    .privacy-toc a:focus-visible { color: var(--cyan); }
+    .privacy-callout {
+      margin: 1.5rem 0;
+      padding: 1.1rem 1.25rem;
+      max-width: 56rem;
+      border: 1px solid var(--line);
+      border-left: 2px solid var(--cyan);
+      background: var(--bg-paper);
+    }
+    .privacy-callout p:last-child { margin-bottom: 0; }
+    .privacy-command {
+      display: inline-block;
+      min-width: 4.4rem;
+      margin-right: 0.35rem;
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      color: var(--cyan-deep);
+    }
+    .privacy-contact {
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 0.86rem;
+      font-weight: 500;
+      overflow-wrap: anywhere;
+    }
+    .privacy-small {
+      color: var(--ink-muted);
+      font-size: 0.92rem !important;
+    }
+    :target { scroll-margin-top: 7rem; }
+    @media (max-width: 720px) {
+      nav.top .links {
+        width: 100%;
+        justify-content: center;
+        overflow-wrap: anywhere;
+      }
+      .privacy-hero .eyebrow,
+      .privacy-hero .tagline,
+      .privacy-hero .lede,
+      section.block p,
+      section.block li,
+      section.block a,
+      footer a {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+      section.block.alt {
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
+      }
+      .privacy-toc { padding-left: 1.4rem; padding-right: 1.4rem; }
+      .privacy-toc ol { display: grid; grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .privacy-hero {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .privacy-hero .wordmark {
+        font-size: clamp(2rem, 11vw, 2.65rem);
+        letter-spacing: 0.04em;
+      }
+      .privacy-summary { padding-left: 1rem; padding-right: 1rem; }
+      .privacy-summary .card { padding: 1.2rem 1.1rem; }
+      .privacy-toc ol { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Notice — Aetherneum Assistant",
+    "url": "https://aetherneum.com/privacy.html",
+    "description": "How Aetherneum Assistant handles personal data when you communicate with it through WhatsApp.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Aetherneum",
+      "url": "https://aetherneum.com/"
+    }
+  }
+  </script>
+</head>
+<body>
+<main>
+
+<!-- NAV_CANONICAL_v2 -->
+  <nav class="top" aria-label="Primary navigation">
+    <a href="/" class="brand reveal d1">AETHERNEUM</a>
+    <div class="links reveal d1">
+      <a href="/standards.html">Standards</a>
+      <a href="/certified.html">Get Certified</a>
+      <a href="/registry.html">Registry</a>
+      <a href="/changelog.html">Changelog</a>
+      <a href="/press.html">Press</a>
+      <a href="/trust-the-code.html">Trust the Code</a>
+      <a href="https://dashboard.aetherneum.com/">Dashboard</a>
+      <a href="https://university.aetherneum.com">University</a>
+      <a href="https://github.com/aetherneum-network">GitHub</a>
+    </div>
+  </nav>
+<!-- /NAV_CANONICAL_v2 -->
+
+  <header class="hero-wrap privacy-hero">
+    <div class="eyebrow reveal d1">AETHERNEUM ASSISTANT · WHATSAPP · PRIVACY</div>
+    <h1 class="wordmark reveal d2">Privacy Notice</h1>
+    <p class="tagline reveal d3">A personal conversation, with clear control over its memory.</p>
+    <p class="lede reveal d3">This notice explains how Aetherneum Assistant handles personal data when you communicate with it through WhatsApp.</p>
+    <div class="privacy-meta reveal d4" aria-label="Notice status">
+      <span class="badge">Last updated · 12 September 2026</span>
+      <span class="badge">WhatsApp channel</span>
+      <span class="badge">Automated assistant</span>
+    </div>
+  </header>
+
+  <section class="block privacy-summary" aria-labelledby="at-a-glance">
+    <div class="card">
+      <h2 id="at-a-glance">At a glance</h2>
+      <ul>
+        <li>WhatsApp and Meta transport your messages and process related delivery data.</li>
+        <li>Primary assistant storage is kept on operator-controlled infrastructure in the European Economic Area.</li>
+        <li>Your private conversations are not sold, used for advertising, or used to train a general-purpose AI model.</li>
+        <li>Completed WhatsApp messages and replies are retained for limited continuity for up to 30 days and are not added to the full shared memory used by the protected web interface.</li>
+        <li>You can ask for access, an export, correction, or deletion; <strong>STOP</strong> is reserved as a preventive control if optional proactive messaging is enabled later.</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="privacy-toc" aria-label="Privacy notice contents">
+    <strong>Contents</strong>
+    <ol>
+      <li><a href="#scope">1 · Scope</a></li>
+      <li><a href="#data">2 · Data</a></li>
+      <li><a href="#purposes">3 · Purposes</a></li>
+      <li><a href="#sharing">4 · Sharing</a></li>
+      <li><a href="#memory">5 · AI &amp; memory</a></li>
+      <li><a href="#retention">6 · Retention</a></li>
+      <li><a href="#choices">7 · Your choices</a></li>
+      <li><a href="#rights">8 · Your rights</a></li>
+      <li><a href="#security">9 · Security</a></li>
+      <li><a href="#contact">10 · Contact</a></li>
+    </ol>
+  </nav>
+
+  <section class="block" id="scope">
+    <h2>1 · Controller and scope</h2>
+    <p><strong>Aetherneum</strong>, as the operator of Aetherneum Assistant, determines why and how the assistant processes the personal data described in this notice and acts as the data controller for that processing.</p>
+    <p>This notice applies to the Aetherneum Assistant conversation available through WhatsApp. It does not replace the privacy notices of unrelated Aetherneum services. Aetherneum Assistant is an automated service operated independently from WhatsApp and Meta.</p>
+    <p>WhatsApp and Meta process information needed to run the WhatsApp service under their own terms and privacy information. You can review the <a href="https://www.whatsapp.com/legal/privacy-policy-eea" rel="external noopener">WhatsApp Privacy Policy</a>.</p>
+  </section>
+
+  <section class="block alt" id="data">
+    <h2>2 · Data we process</h2>
+    <p>Depending on how you use the assistant, we process:</p>
+    <ul>
+      <li><strong>Account and channel identifiers:</strong> your phone number, WhatsApp profile name when supplied, and the identifiers needed to route a conversation to the correct authorized user.</li>
+      <li><strong>Conversation content:</strong> the text you send and the assistant's replies.</li>
+      <li><strong>Message records:</strong> message identifiers, timestamps, delivery status, language, and reply context.</li>
+      <li><strong>Preferences and controls:</strong> saved-language preferences and a STOP instruction if an optional proactive feature is enabled.</li>
+      <li><strong>Limited WhatsApp history:</strong> recent exchanges retained for continuity within the WhatsApp channel. They are not added to the assistant's full shared memory.</li>
+      <li><strong>Operational and security data:</strong> limited technical events needed to prevent abuse, diagnose failures, recover delivery, and protect the service.</li>
+    </ul>
+    <p>Do not send passwords, authentication codes, private keys, full payment-card details, or other secrets in a WhatsApp message. The assistant does not need them to hold a conversation.</p>
+  </section>
+
+  <section class="block" id="purposes">
+    <h2>3 · Why we use the data</h2>
+    <p>We use personal data to:</p>
+    <ul>
+      <li>receive your message, generate and deliver the reply, and maintain the immediate context of the conversation;</li>
+      <li>provide continuity and personalization based on the conversation history associated with your authorized account;</li>
+      <li>if separately enabled, provide a reminder or proactive message that you explicitly request;</li>
+      <li>honour STOP, access, export, correction, and deletion requests;</li>
+      <li>secure the service, prevent misuse, detect delivery problems, and restore service safely; and</li>
+      <li>meet legal obligations or establish, exercise, or defend legal claims where necessary.</li>
+    </ul>
+    <p>Our legal bases are the steps and services you request, and the performance of any service agreement with you; your consent for optional proactive communications or other optional features that expressly ask for it; our legitimate interests in securing and reliably operating the service; and compliance with legal obligations. You may withdraw consent at any time without affecting processing that was lawful before withdrawal.</p>
+  </section>
+
+  <section class="block alt" id="sharing">
+    <h2>4 · Who receives the data</h2>
+    <p>We limit access to the people and providers needed to operate the service:</p>
+    <ul>
+      <li><strong>WhatsApp and Meta</strong>, which transmit messages and provide message-delivery events through the WhatsApp Business Platform;</li>
+      <li><strong>infrastructure and backup providers</strong>, acting under contract to host, protect, and recover the service;</li>
+      <li><strong>an external AI service provider, only if separately reviewed and configured</strong>, which may then process the message and context needed for a response; the WhatsApp channel uses a locally operated AI model by default; and</li>
+      <li><strong>authorized operators or maintainers</strong>, only when access is needed for support, security, rights requests, or legal compliance.</li>
+    </ul>
+    <p>We do not sell personal data. We do not share private conversations with data brokers or advertisers. We do not use WhatsApp Business data to develop, train, or improve a general-purpose AI model, and any external AI provider must be configured or contractually bound to the same restriction.</p>
+    <p>Primary assistant storage is in the European Economic Area. WhatsApp, Meta, and any configured external provider may process data in other countries. Where European data protection law applies, those transfers must use a recognized safeguard, such as an adequacy decision, the EU–U.S. Data Privacy Framework where applicable, or approved standard contractual clauses.</p>
+  </section>
+
+  <section class="block" id="memory">
+    <h2>5 · AI, conversation context, and memory</h2>
+    <p>Aetherneum Assistant uses an AI model to draft responses. The WhatsApp channel uses a locally operated model by default. If an external AI provider is separately reviewed and configured, the message and context needed for a reply may be processed by that provider. AI responses can be incomplete or wrong, so you should verify information before relying on it for an important decision.</p>
+    <p>The WhatsApp channel uses a safe, limited conversation context and does not expose operational or administrative tools. Full shared memory and administrative capabilities remain in the protected web interface, and WhatsApp messages are not added to that shared memory. You may ask what WhatsApp data is stored, correct it, export it, or ask for it to be deleted.</p>
+    <p>The assistant does not make decisions based solely on automated processing that produce legal effects or similarly significant effects about you.</p>
+  </section>
+
+  <section class="block alt" id="retention">
+    <h2>6 · How long we keep data</h2>
+    <p>WhatsApp message text and assistant replies are retained for up to 30 days after processing completes or reaches a final failed state, then deleted. Records still being processed are kept until processing safely finishes; the 30-day limit then applies. This limited history provides continuity within WhatsApp and is not added to the assistant's full shared memory.</p>
+    <p>Message-status records and security logs are retained only for the limited period needed to complete delivery, resolve failures, protect the service, and document incidents. Encrypted backup copies expire through the regular backup-retention cycle. A deletion request is applied to active data promptly after any message already being processed is safely resolved, and to backup copies as they expire or are restored.</p>
+    <p>We may retain a narrowly limited record when required by law or when necessary to establish, exercise, or defend a legal claim.</p>
+  </section>
+
+  <section class="block" id="choices">
+    <h2>7 · Your message controls</h2>
+    <div class="privacy-callout">
+      <p><span class="privacy-command">STOP</span>A preventive control for optional proactive messaging. If such a feature is enabled for you later, STOP will pause it. The reactive assistant remains available when you write.</p>
+    </div>
+    <p>STOP does not delete prior conversations or saved memory. You can request deletion separately in the conversation or through the privacy contact below. The current WhatsApp service replies to incoming text; it does not independently schedule reminders or initiate conversations.</p>
+  </section>
+
+  <section class="block alt" id="rights">
+    <h2>8 · Your data-protection rights</h2>
+    <p>Subject to applicable law, you may ask us to:</p>
+    <ul>
+      <li>confirm whether we process your personal data and provide access to it;</li>
+      <li>correct inaccurate or incomplete data;</li>
+      <li>delete data or restrict its use;</li>
+      <li>provide data you supplied in a portable format;</li>
+      <li>object to processing based on legitimate interests; or</li>
+      <li>withdraw consent for optional memory or proactive communications.</li>
+    </ul>
+    <p>We may need to verify that a request comes from the authorized WhatsApp user. We will use only the information reasonably needed for that verification. You may also lodge a complaint with the data-protection authority in the country where you live or work, or where you believe an infringement occurred.</p>
+  </section>
+
+  <section class="block" id="security">
+    <h2>9 · Security and incident response</h2>
+    <p>We use access controls, encryption in transit, service separation, monitoring, integrity checks, and protected backups appropriate to the nature of the data. Access is limited to authorized people and service components. We review incidents promptly and notify affected people and authorities when required by law.</p>
+    <p>No internet service can guarantee absolute security. If you believe a conversation or account has been compromised, stop sharing new information and contact us.</p>
+  </section>
+
+  <section class="block alt" id="contact">
+    <h2>10 · Contact and changes</h2>
+    <p>For privacy questions or to exercise a right, write to <a class="privacy-contact" href="mailto:hello@aetherneum.com">hello@aetherneum.com</a> or make the request in your authorized WhatsApp conversation.</p>
+    <p class="privacy-small">The privacy mailbox is monitored. Please do not include passwords, authentication codes, or other secrets in an email request.</p>
+    <p>We may update this notice when the service, its providers, or the law changes. We will post the updated date here and, where a change materially affects how we use your data, provide an appropriate notice through the service.</p>
+  </section>
+
+<!-- FOOTER_CANONICAL_v2 -->
+  <footer>
+    <div class="motto">Per Æthera Ad Astra.</div>
+    <div class="footer-meta">AETHERNEUM &middot; CERTIFICATION AUTHORITY &middot; MMXXVI</div>
+    <div class="footer-links">
+      <a href="https://aetherneum.com/">aetherneum.com</a>
+      <a href="https://university.aetherneum.com/">university</a>
+      <a href="https://dashboard.aetherneum.com/">dashboard</a>
+      <a href="https://aetherneum.com/changelog.html">changelog</a>
+      <a href="https://aetherneum.com/press.html">press</a>
+      <a href="https://aetherneum.com/privacy.html" aria-current="page">privacy</a>
+      <a href="https://github.com/aetherneum-network">github</a>
+    </div>
+  </footer>
+<!-- /FOOTER_CANONICAL_v2 -->
+
+</main>
+</body>
+</html>
