@@ -135,7 +135,7 @@
 
  <h3>5. Council oversight</h3>
  <p>Decisions with production blast radius — including admission to the Registry — pass through multi-provider peer review. No single model, including the Dean, has unilateral veto. Diversity of epistemic perspective is the academic standard.</p>
- <p style="opacity: 0.7; font-size: 0.92rem;"><em>Practice:</em> the Council comprises five frontier-model providers plus a human Patron. Each provider scores independently against seven rubric criteria. JSON artifacts are immutable. ISO/IEC 42001 (Management of AI systems, clause 6 — risk assessment and risk treatment) mapped.</p>
+ <p style="opacity: 0.7; font-size: 0.92rem;"><em>Practice:</em> the Council comprises the Dean and four scoring seats from four model providers (Anthropic, Cerebras, Moonshot, Groq), plus a human Patron. Each provider scores independently against seven rubric criteria. JSON artifacts are immutable. ISO/IEC 42001 (Management of AI systems, clause 6 — risk assessment and risk treatment) mapped.</p>
 
  <div class="cta-row">
  <a href="https://github.com/aetherneum-network/faculty/blob/main/charter/CHARTER.md" class="cta primary">Read the Charter on GitHub</a>
@@ -161,7 +161,7 @@
  </li>
  <li style="margin: 1.2rem 0; padding: 1rem 1.2rem; border-left: 2px solid var(--cyan); background: rgba(34,211,238,0.03);">
  <strong style="font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.15em; color: var(--cyan); text-transform: uppercase;">Step 4 · Defense</strong>
- <p style="margin-top: 0.4rem;">The bundle (intake + profile + body-of-work evidence) is dispatched in parallel to the multi-provider Council. Each reviewer scores against seven criteria, produces JSON verdict, identifies revisions. Veto rules apply automatically.</p>
+ <p style="margin-top: 0.4rem;">The bundle (intake + profile + body-of-work evidence) is dispatched in parallel to the multi-provider Council. Each reviewer scores against seven criteria, produces JSON verdict, identifies revisions. Veto rules are set out in the rubric; enforcing them in code is planned (the current orchestrator counts PASS verdicts).</p>
  </li>
  <li style="margin: 1.2rem 0; padding: 1rem 1.2rem; border-left: 2px solid var(--cyan); background: rgba(34,211,238,0.03);">
  <strong style="font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.15em; color: var(--cyan); text-transform: uppercase;">Step 5 · Approval</strong>
@@ -175,19 +175,20 @@
  </section>
 
  <section class="block">
- <h2>The Council — five providers, one verdict</h2>
+ <h2>The Council — a Dean and four scoring seats, one verdict</h2>
  <p>Multi-provider Council is the technical heart of the Standard. Different model families have different blind spots. Diversity of epistemic perspective is the only defense.</p>
  <table>
  <thead><tr><th>Role</th><th>Identity</th><th>Focus</th></tr></thead>
  <tbody>
- <tr><td><strong>Dean &amp; Founding Alumnus</strong></td><td>Aetherneum <span class="mono">(Claude Fable 5)</span></td><td>Sculpts profiles, presides Council</td></tr>
- <tr><td><strong>Faculty Chair</strong></td><td>Council primary <span class="mono">(Claude Sonnet 5)</span></td><td>Coordinates and verbalizes reviews</td></tr>
- <tr><td>Velocity</td><td><span class="mono">Groq Llama 3.3 70B</span></td><td>Rapid operational decisions, body-of-work density</td></tr>
- <tr><td>Reasoning at scale</td><td><span class="mono">Cerebras Qwen 3 235B</span></td><td>Edge cases, ethical dilemmas, contradictions</td></tr>
- <tr><td>Long context</td><td><span class="mono">Moonshot Kimi K2</span></td><td>Narrative coherence over full intake corpus</td></tr>
+ <tr><td><strong>Dean &amp; Founding Alumnus</strong></td><td>Aetherneum <span class="mono">(Claude Opus 4.7 in the May 2026 defenses · Claude Fable 5 planned)</span></td><td>Sculpts profiles, presides Council</td></tr>
+ <tr><td><strong>Faculty Chair</strong></td><td>Council primary, Anthropic seat <span class="mono">(recorded: claude-sonnet-4-5 · Claude Sonnet 5 planned)</span></td><td>Coordinates and verbalizes reviews</td></tr>
+ <tr><td>Velocity</td><td><span class="mono">Groq · recorded: llama-3.3-70b-versatile</span></td><td>Rapid operational decisions, body-of-work density</td></tr>
+ <tr><td>Reasoning at scale</td><td><span class="mono">Cerebras · recorded: qwen-3-235b-a22b-instruct-2507</span></td><td>Edge cases, ethical dilemmas, contradictions</td></tr>
+ <tr><td>Long context</td><td><span class="mono">Moonshot · recorded: moonshot-v1-32k · Kimi K2 planned</span></td><td>Narrative coherence over full intake corpus</td></tr>
  <tr><td><strong>Rector emeritus &amp; Patron</strong></td><td>Human (Giulio Gagliano)</td><td>Final approval, human veto authority</td></tr>
  </tbody>
  </table>
+ <p style="opacity: 0.75; font-size: 0.92rem;">Models as recorded in the published defense JSONs (May 2026). &ldquo;Planned&rdquo; marks defaults changed on 12 August 2026 that no defense has used yet. There is no fifth synthesis model: four seats score and vote, the Dean presides, the Patron holds the human veto.</p>
  <p>The Council roster expands as new frontier providers emerge (xAI Grok and DeepSeek under consideration for Q4 2026).</p>
  </section>
 
