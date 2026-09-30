@@ -862,3 +862,39 @@ section a[style*="cyan-glow"] {
   margin: 1.5rem 0;
   max-width: 36rem;
 }
+
+/* ─── SYNTHETIC_MARKER_v1 (added 2026-09-30) ─────────────────────────────
+   Visible synthetic-nature marker on every alumnus avatar, thumbnails included.
+   Markup: <span class="synthetic-avatar"><img …></span>.
+   Port to the brand kit / unify-chrome.py before the next chrome regen. */
+.synthetic-avatar {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  flex-shrink: 0;
+}
+.synthetic-avatar::after {
+  content: "SYNTHETIC";
+  position: absolute;
+  left: 50%;
+  bottom: -0.3em;
+  transform: translateX(-50%);
+  padding: 0.3em 0.5em 0.25em;
+  font-family: var(--mono);
+  font-size: 0.45rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  color: var(--bg-paper);
+  background: var(--ink-strong);
+  border: 1px solid var(--bg-paper);
+  border-radius: 2px;
+  pointer-events: none;
+}
+.roster .alumnus-card .synthetic-avatar { align-self: flex-start; margin-bottom: 0.7rem; }
+.roster .alumnus-card .synthetic-avatar .avatar-frame { margin-bottom: 0; }
+.roster .alumnus-card .synthetic-avatar::after { font-size: 0.56rem; }
+.profile-hero .synthetic-avatar { display: block; width: fit-content; margin: 0 auto 1.5rem; }
+.profile-hero .synthetic-avatar .avatar-large { margin: 0; }
+.profile-hero .synthetic-avatar::after { font-size: 0.72rem; bottom: 0.15rem; }
