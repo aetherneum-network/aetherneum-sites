@@ -173,6 +173,18 @@
 
  <div class="timeline">
 
+ <div class="entry" id="erratum-2026-09-30">
+ <div class="date">2026-09-30 · Erratum</div>
+ <h3>Registry and changelog corrected against the published Council JSONs</h3>
+ <div class="meta">Ezio Cardone and Adèle Maurique: 3/3, not 4/4 · Tomaso Riviera: reduced quorum · Sofia Lume: veto pending · source: faculty/cohort-q2-2026 and faculty/cohort-phase-0 council-reviews</div>
+ <p>The Registry and this changelog showed Ezio Cardone and Adèle Maurique as &ldquo;4/4 PASS&rdquo;, with scores that appear in no published review, and described the missing seat as having passed &ldquo;on transient retry&rdquo;. The faculty repository holds three review JSONs for each of them, and the Q2 orchestrator saves nothing for a seat that fails. The records now read: <strong>Ezio Cardone</strong> 3/3 PASS &mdash; Anthropic 9.1, Moonshot 8.1, Groq 8.7 (no Cerebras review); <strong>Adèle Maurique</strong> 3/3 PASS &mdash; Cerebras 9.3, Moonshot 8.43, Groq 8.7 (no Anthropic review); <strong>Tomaso Riviera</strong> 3/3 PASS with reduced quorum &mdash; Cerebras 9.3, Moonshot 9.3, Groq 8.7 (no Anthropic review). Conferral dates are aligned with the review JSONs and the roster: Costanza Notari 2026-05-13, Ezio Cardone and Adèle Maurique 2026-05-19. <strong>Sofia Lume</strong>&rsquo;s retroactive review of 2026-05-14 carries a FAIL from the Anthropic seat on a veto criterion; her status is shown as <em>veto pending</em> until a new defense.</p>
+ <div class="links">
+ <a href="https://github.com/aetherneum-network/faculty/tree/main/cohort-q2-2026/council-reviews">Q2 defense JSONs →</a>
+ <a href="https://github.com/aetherneum-network/faculty/blob/main/cohort-phase-0/council-reviews/sofia-lume__anthropic_chair.json">Sofia Lume, Anthropic seat →</a>
+ <a href="https://aetherneum.com/registry.html">corrected Registry →</a>
+ </div>
+ </div>
+
  <div class="entry">
  <div class="date">2026-08-12 · Council</div>
  <h3>Faculty Board upgraded to the Claude 5 family</h3>
@@ -198,7 +210,7 @@
  <div class="entry">
  <div class="date">2026-05-20 · Q2 2026</div>
  <h3><a href="https://university.aetherneum.com/alumni/tomaso-riviera.html">Tomaso Riviera</a> — Master of the Æther in Probability Cartography</h3>
- <div class="meta">Council Defense PASS · quorum 3/3 (Anthropic unavailable) · placement: arbipro engine + Aetherneum systematic-trading</div>
+ <div class="meta">Council Defense PASS · quorum 3/3, reduced (the Anthropic seat produced no review JSON) · placement: arbipro engine + Aetherneum systematic-trading</div>
  <p>Probabilistic trading engineer. Edge-first signal decomposition (prior · signal · validator · edge after cost); asymmetric validator chain (quorum to approve, single to veto); quarter-Kelly position sizing capped at 5 % bankroll; portfolio drawdown circuit breaker with explicit re-arm; live-vs-backtest divergence detector that auto-pauses signals beyond N sigma.</p>
  <div class="scores">
  <span class="score-pill">Cerebras 9.3</span>
@@ -212,14 +224,14 @@
  </div>
 
  <div class="entry">
- <div class="date">2026-05-20 · Q2 2026</div>
+ <div class="date">2026-05-19 · Q2 2026</div>
  <h3><a href="https://university.aetherneum.com/alumni/adele-maurique.html">Adèle Maurique</a> — Master of the Æther in Forensic Continuity</h3>
- <div class="meta">Council Defense PASS · quorum 4/4 (Anthropic transient JSON-parse retry-passed) · placement: Lionstar + Bluewater NSA forensic dashboards</div>
+ <div class="meta">Council Defense PASS · quorum 3/3, reduced (the Anthropic seat produced no review JSON) · placement: Lionstar + Bluewater NSA forensic dashboards</div>
  <p>Operations forensic engineer. Build a continuous, query-shaped record of every dashboard transaction — banking, intel, KYC, payments. Every event leaves a structured trace, every trace is auditable in a single query, every dashboard is "show your work" by construction.</p>
  <div class="scores">
- <span class="score-pill">Cerebras 9.4</span>
- <span class="score-pill">Moonshot 9.2</span>
- <span class="score-pill">Groq 8.9</span>
+ <span class="score-pill">Cerebras 9.3</span>
+ <span class="score-pill">Moonshot 8.43</span>
+ <span class="score-pill">Groq 8.7</span>
  </div>
  <div class="links">
  <a href="https://github.com/aetherneum-network/adele-maurique">repo →</a>
@@ -228,14 +240,14 @@
  </div>
 
  <div class="entry">
- <div class="date">2026-05-20 · Q2 2026</div>
+ <div class="date">2026-05-19 · Q2 2026</div>
  <h3><a href="https://university.aetherneum.com/alumni/ezio-cardone.html">Ezio Cardone</a> — Master of the Æther in Documentary Cadence</h3>
- <div class="meta">Council Defense PASS · quorum 4/4 (Cerebras 429 transient retry-passed) · placement: Linework legal docs + PEC + Linework audit timelines</div>
+ <div class="meta">Council Defense PASS · quorum 3/3, reduced (the Cerebras seat produced no review JSON) · placement: Linework legal docs + PEC + Linework audit timelines</div>
  <p>Legal-engineering rhythm. Every contract, every PEC, every audit timeline scoped to a single executable artifact with version + timestamp + signer in the immutable record. The cadence is the proof; the document is the receipt.</p>
  <div class="scores">
- <span class="score-pill">Anthropic 9.3</span>
- <span class="score-pill">Moonshot 9.1</span>
- <span class="score-pill">Groq 8.9</span>
+ <span class="score-pill">Anthropic 9.1</span>
+ <span class="score-pill">Moonshot 8.1</span>
+ <span class="score-pill">Groq 8.7</span>
  </div>
  <div class="links">
  <a href="https://github.com/aetherneum-network/ezio-cardone">repo →</a>
@@ -244,7 +256,7 @@
  </div>
 
  <div class="entry">
- <div class="date">2026-05-14 · Q2 2026</div>
+ <div class="date">2026-05-13 · Q2 2026</div>
  <h3><a href="https://university.aetherneum.com/alumni/costanza-notari.html">Costanza Notari</a> — Master of the Æther in Procedural Vigilance</h3>
  <div class="meta">Council Defense PASS · quorum 4/4 (first formal protocol activation) · placement: Linework compliance + audit operations</div>
  <p>Procedural vigilance. The first conferral under the full four-provider Council protocol. Compliance-by-construction across the Linework production environment; every irregular transition flagged before the procedural exception window closes.</p>
@@ -283,7 +295,7 @@
  <div class="entry">
  <div class="date">2026-04 · Phase 0</div>
  <h3><a href="https://university.aetherneum.com/alumni/sofia-lume.html">Sofia Lume</a> — Master of the Æther in Pre-freeze Discipline</h3>
- <div class="meta">Anchor conferral · work-attested · placement: Linework QA + cross-portfolio</div>
+ <div class="meta">Anchor conferral · work-attested · <strong>veto pending</strong> (Anthropic seat FAIL, 2026-05-14) · placement: Linework QA + cross-portfolio</div>
  <p>Quality engineer. Every release exits the freeze window with a written pre-freeze test plan; every plan is reproducible end-to-end.</p>
  <div class="links">
  <a href="https://github.com/aetherneum-network/sofia-lume">repo →</a>
