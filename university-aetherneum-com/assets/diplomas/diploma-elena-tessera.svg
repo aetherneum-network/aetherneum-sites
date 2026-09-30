@@ -108,7 +108,7 @@
     font-size="13"
     font-style="italic"
     fill="#475c75"
-    text-anchor="middle">and has successfully defended the thesis titled</text>
+    text-anchor="middle">with the thesis of record titled</text>
 
   <!-- Thesis title (PARAMETER) -->
   <text
@@ -120,7 +120,7 @@
     fill="#0d1b2a"
     text-anchor="middle"><!-- THESIS_TITLE -->&#x201C;Brand cascades that survive translation across mobile, web, and on-chain surfaces&#x201D;</text>
 
-  <!-- Body text: before the Faculty Board -->
+  <!-- Body text: conferral status (Phase 0) -->
   <text
     x="421"
     y="430"
@@ -128,7 +128,7 @@
     font-size="13"
     font-style="italic"
     fill="#475c75"
-    text-anchor="middle">before the Faculty Board. Conferred at the Aetherneum campus, Class of '26.</text>
+    text-anchor="middle">Phase 0 &#xB7; profile-attested &#x2014; re-defense scheduled. Conferred at the Aetherneum campus, Class of '26.</text>
 
   <!-- Signature lines -->
   <g font-family="'EB Garamond', Garamond, Georgia, serif" fill="#050b14">
