@@ -1,0 +1,8 @@
+# security.txt — TEMPLATE (RFC 9116). Not valid until every [TO CONFIRM] field is filled.
+# Do not deploy as-is. faculty/SECURITY.md currently names security@aetherneum.com as the
+# preferred channel; confirm the mailbox is monitored before using it here.
+Contact: [TO CONFIRM: contact]
+Expires: [TO CONFIRM: expiry, ISO 8601 date-time, at most one year ahead]
+Preferred-Languages: en
+Canonical: https://aetherneum.com/.well-known/security.txt
+Policy: https://github.com/aetherneum-network/faculty/blob/main/SECURITY.md
