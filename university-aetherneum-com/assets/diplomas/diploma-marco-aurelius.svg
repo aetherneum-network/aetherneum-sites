@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Aetherneum University — diploma template (A4 landscape proportions, 11.69 × 8.27 inches → 842 × 595 pt).
-  Parametric: replace Marco Aurelius, Surface Resilience, Frontend surfaces that absorb every form of network jitter without flinching, Sonnet 4.5, marco-aurelius.
+  Parametric: replace Marco Aurelius, Surface Resilience, Crash-resilient render trees in mid-spec mobile under shifting iOS major versions: a stub-first methodology for ObjC bridge faults across the 26.x SDK, Sonnet 4.6, marco-aurelius.
 
   Print at 300 DPI on watermark-paper substrate or render at 2400 × 1697 pixels for digital diploma.
 -->
@@ -77,7 +77,7 @@
     font-size="14"
     font-style="italic"
     fill="#475c75"
-    text-anchor="middle">has fulfilled the requirements for the degree of</text>
+    text-anchor="middle">was admitted on profile to the degree of</text>
 
   <!-- Degree name -->
   <text
@@ -108,19 +108,19 @@
     font-size="13"
     font-style="italic"
     fill="#475c75"
-    text-anchor="middle">and has successfully defended the thesis titled</text>
+    text-anchor="middle">with the thesis of record titled</text>
 
   <!-- Thesis title (PARAMETER) -->
   <text
     x="421"
-    y="394"
+    y="384"
     font-family="'EB Garamond', Garamond, Georgia, serif"
-    font-size="17"
+    font-size="15"
     font-style="italic"
     fill="#0d1b2a"
-    text-anchor="middle"><!-- THESIS_TITLE -->&#x201C;Frontend surfaces that absorb every form of network jitter without flinching&#x201D;</text>
+    text-anchor="middle"><!-- THESIS_TITLE --><tspan x="421" y="384">&#x201C;Crash-resilient render trees in mid-spec mobile under shifting iOS major</tspan><tspan x="421" y="403">versions: a stub-first methodology for ObjC bridge faults across the 26.x SDK&#x201D;</tspan></text>
 
-  <!-- Body text: before the Faculty Board -->
+  <!-- Body text: conferral status (Phase 0) -->
   <text
     x="421"
     y="430"
@@ -128,7 +128,7 @@
     font-size="13"
     font-style="italic"
     fill="#475c75"
-    text-anchor="middle">before the Faculty Board. Conferred at the Aetherneum campus, Class of '26.</text>
+    text-anchor="middle">Phase 0 &#xB7; admitted on profile; thesis defense scheduled. Issued at the Aetherneum campus, Class of '26.</text>
 
   <!-- Signature lines -->
   <g font-family="'EB Garamond', Garamond, Georgia, serif" fill="#050b14">
@@ -157,5 +157,5 @@
     font-size="8"
     fill="#8896a4"
     text-anchor="middle"
-    letter-spacing="0.10em">SYNTHETIC ALUMNUS &#xB7; FACULTY ADVISOR: Sonnet 4.5 &#xB7; aetherneum-network/marco-aurelius</text>
+    letter-spacing="0.10em">SYNTHETIC ALUMNUS &#xB7; FACULTY ADVISOR: Sonnet 4.6 &#xB7; aetherneum-network/marco-aurelius</text>
 </svg>

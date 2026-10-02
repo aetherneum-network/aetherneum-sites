@@ -1,7 +1,7 @@
 /* Aetherneum — canonical chrome stylesheet
    Brand v1.0.0 (parchment palette · MMXXVI)
    Source: Aetherneum brand kit v1.0.0 (kept outside this repo)
-   DO NOT diverge tokens or chrome rules — regenerate via unify-chrome.py.
+   DO NOT diverge tokens or chrome rules — this block is generated.
 */
 :root {
   /* ─── Surfaces (parchment) ─── */
@@ -917,3 +917,12 @@ footer .footer-links {
   padding: 1rem 1.2rem;
   text-align: left;
 }
+
+/* ─── SCORECARD_v1 (added 2026-10) ────────────────────────────────────────
+   Status label of an alumnus in the Registry. The label is generated between
+   the ALUMNUS_STATUS markers; it is a .badge, muted unless certified. */
+.badge.status { display: inline-block; line-height: 1.4; white-space: nowrap; vertical-align: middle; }
+.badge.status:not(.status-certified) { color: var(--ink-muted); border-color: var(--ink-faint); background: transparent; }
+/* In a table the label is a plain caption under the name: no pill, and it may
+   break at the hyphen, so a table that is already tight is not made wider. */
+td .badge.status { display: block; margin: 0.15rem 0 0; padding: 0; border: 0; background: none; white-space: normal; }

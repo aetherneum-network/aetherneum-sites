@@ -1,7 +1,7 @@
 /* Aetherneum — canonical chrome stylesheet
    Brand v1.0.0 (parchment palette · MMXXVI)
    Source: Aetherneum brand kit v1.0.0 (kept outside this repo)
-   DO NOT diverge tokens or chrome rules — regenerate via unify-chrome.py.
+   DO NOT diverge tokens or chrome rules — this block is generated.
 */
 :root {
   /* ─── Surfaces (parchment) ─── */
@@ -861,4 +861,118 @@ section a[style*="cyan-glow"] {
   overflow-x: auto;
   margin: 1.5rem 0;
   max-width: 36rem;
+}
+
+/* ─── SYNTHETIC_MARKER_v1 (added 2026-09-30) ─────────────────────────────
+   Visible synthetic-nature marker on every alumnus avatar, thumbnails included.
+   Markup: <span class="synthetic-avatar"><img …></span>. */
+.synthetic-avatar {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  flex-shrink: 0;
+}
+.synthetic-avatar::after {
+  content: "SYNTHETIC";
+  position: absolute;
+  left: 50%;
+  bottom: -0.3em;
+  transform: translateX(-50%);
+  padding: 0.3em 0.5em 0.25em;
+  font-family: var(--mono);
+  font-size: 0.45rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  color: var(--bg-paper);
+  background: var(--ink-strong);
+  border: 1px solid var(--bg-paper);
+  border-radius: 2px;
+  pointer-events: none;
+}
+.roster .alumnus-card .synthetic-avatar { align-self: flex-start; margin-bottom: 0.7rem; }
+.roster .alumnus-card .synthetic-avatar .avatar-frame { margin-bottom: 0; }
+.roster .alumnus-card .synthetic-avatar::after { font-size: 0.56rem; }
+.profile-hero .synthetic-avatar { display: block; width: fit-content; margin: 0 auto 1.5rem; }
+.profile-hero .synthetic-avatar .avatar-large { margin: 0; }
+.profile-hero .synthetic-avatar::after { font-size: 0.72rem; bottom: 0.15rem; }
+
+/* ─── SCORECARD_v1 (added 2026-10) ────────────────────────────────────────
+   Status label of an alumnus (listings and alumnus page) and the scorecard
+   block on the alumnus page. Both are generated between their markers
+   (ALUMNUS_STATUS, SCORECARD_GENERATED). The label is a .badge, muted unless
+   certified; the headline numbers reuse .profile-meta. */
+.badge.status { display: inline-block; line-height: 1.4; white-space: nowrap; vertical-align: middle; }
+.badge.status:not(.status-certified) { color: var(--ink-muted); border-color: var(--ink-faint); background: transparent; }
+.alumnus-card .badge.status { align-self: flex-start; margin-top: 0.5rem; }
+/* In a table the label is a plain caption under the name: no pill, and it may
+   break at the hyphen, so a table that is already tight is not made wider. */
+td .badge.status { display: block; margin: 0.15rem 0 0; padding: 0; border: 0; background: none; white-space: normal; }
+.scorecard-status .badge.status { margin-right: 0.5rem; }
+.scorecard .profile-meta { margin: 1.5rem 0; }
+.scorecard code { overflow-wrap: anywhere; }
+.scorecard .scorecard-written { font-size: 0.95rem; color: var(--ink-muted); font-style: italic; margin-bottom: 0; }
+.profile-section .scorecard-runs { margin: 1.5rem 0; border-collapse: collapse; }
+.scorecard-runs caption {
+  caption-side: top;
+  text-align: left;
+  font-style: italic;
+  color: var(--ink-muted);
+  padding: 0 0.6rem 0.6rem;
+}
+.profile-section .scorecard-runs th,
+.profile-section .scorecard-runs td { padding: 0.5rem; }
+.profile-section .scorecard-runs th { width: auto; }
+.profile-section .scorecard-runs thead th {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  vertical-align: bottom;
+  border-bottom: 1px solid var(--line);
+}
+.profile-section .scorecard-runs thead th:first-child { width: 6.5rem; }
+.profile-section .scorecard-runs thead th:nth-child(2) { width: 25%; }
+.profile-section .scorecard-runs thead th:last-child { width: 33%; }
+.profile-section .scorecard-runs tbody th { letter-spacing: 0.06em; color: var(--ink); }
+.scorecard-runs tbody th .note { white-space: nowrap; }
+.scorecard-runs tr.headline th,
+.scorecard-runs tr.headline td { background: var(--bg-soft); }
+.scorecard-runs .note {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.4;
+  color: var(--ink-muted);
+}
+.scorecard-runs ul { list-style: none; padding: 0; margin: 0; font-size: 0.95rem; line-height: 1.45; }
+.scorecard-runs li { margin: 0; }
+@media (max-width: 720px) {
+  /* One run per block: the column headings move next to each value. */
+  .scorecard-runs,
+  .scorecard-runs caption,
+  .scorecard-runs tbody,
+  .scorecard-runs tr,
+  .scorecard-runs th,
+  .scorecard-runs td { display: block; }
+  .scorecard-runs thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .scorecard-runs caption { padding: 0 0 0.6rem; }
+  .scorecard-runs tbody tr { padding: 0.8rem 0.7rem; border-top: 1px solid var(--line); }
+  .profile-section table.scorecard-runs tbody tr th,
+  .profile-section table.scorecard-runs tbody tr td { padding: 0.2rem 0; border-bottom: none; background: none; }
+  .scorecard-runs tbody th .note { display: inline; margin-left: 0.5rem; }
+  .scorecard-runs tbody td::before {
+    content: attr(data-label);
+    display: inline-block;
+    min-width: 8.5rem;
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .scorecard-runs tr.headline { background: var(--bg-soft); }
 }

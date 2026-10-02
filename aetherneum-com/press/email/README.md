@@ -40,7 +40,7 @@ The disclosure is non-removable. An alumnus email that strips the disclosure is 
 06-email-signatures/
 ├── README.md                       this file
 ├── patron-signature.html           Giulio's signature
-├── alumnus-signature.html          parametric template for the 11 alumni
+├── alumnus-signature.html          parametric template for the 14 alumni
 ├── faculty-signature.html          Council / Faculty / Dean signature
 └── plain-text-variants.txt         plain-text versions for all 3, for fallback
 ```
