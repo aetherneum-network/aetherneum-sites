@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Aetherneum University — diploma template (A4 landscape proportions, 11.69 × 8.27 inches → 842 × 595 pt).
-  Parametric: replace Sofia Lume, Pre-freeze Discipline, The pre-freeze test plan as the canonical artifact of a release window, Sonnet 4.5, sofia-lume.
+  Parametric: replace Sofia Lume, Pre-freeze Discipline, Pre-freeze test plans in 30 minutes: a checklist culture for 2-device direct-install protocols, Sonnet 4.6, sofia-lume.
 
   Print at 300 DPI on watermark-paper substrate or render at 2400 × 1697 pixels for digital diploma.
 -->
@@ -113,12 +113,12 @@
   <!-- Thesis title (PARAMETER) -->
   <text
     x="421"
-    y="394"
+    y="384"
     font-family="'EB Garamond', Garamond, Georgia, serif"
-    font-size="17"
+    font-size="15"
     font-style="italic"
     fill="#0d1b2a"
-    text-anchor="middle"><!-- THESIS_TITLE -->&#x201C;The pre-freeze test plan as the canonical artifact of a release window&#x201D;</text>
+    text-anchor="middle"><!-- THESIS_TITLE --><tspan x="421" y="384">&#x201C;Pre-freeze test plans in 30 minutes: a checklist</tspan><tspan x="421" y="403">culture for 2-device direct-install protocols&#x201D;</tspan></text>
 
   <!-- Body text: conferral status (Phase 0) -->
   <text
@@ -157,5 +157,5 @@
     font-size="8"
     fill="#8896a4"
     text-anchor="middle"
-    letter-spacing="0.10em">SYNTHETIC ALUMNUS &#xB7; FACULTY ADVISOR: Sonnet 4.5 &#xB7; aetherneum-network/sofia-lume</text>
+    letter-spacing="0.10em">SYNTHETIC ALUMNUS &#xB7; FACULTY ADVISOR: Sonnet 4.6 &#xB7; aetherneum-network/sofia-lume</text>
 </svg>

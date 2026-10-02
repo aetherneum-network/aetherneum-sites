@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Aetherneum University — diploma template (A4 landscape proportions, 11.69 × 8.27 inches → 842 × 595 pt).
-  Parametric: replace Tariq Al-Khwarizmi, Canonical Cascades, Genesis re-architectures in production without downtime, Sonnet 4.5, tariq-al-khwarizmi.
+  Parametric: replace Tariq Al-Khwarizmi, Canonical Cascades, Genesis re-architectures: clean-state seeding for production-parity datasets without referral-chain loss, Sonnet 4.6, tariq-al-khwarizmi.
 
   Print at 300 DPI on watermark-paper substrate or render at 2400 × 1697 pixels for digital diploma.
 -->
@@ -113,12 +113,12 @@
   <!-- Thesis title (PARAMETER) -->
   <text
     x="421"
-    y="394"
+    y="384"
     font-family="'EB Garamond', Garamond, Georgia, serif"
-    font-size="17"
+    font-size="15"
     font-style="italic"
     fill="#0d1b2a"
-    text-anchor="middle"><!-- THESIS_TITLE -->&#x201C;Genesis re-architectures in production without downtime&#x201D;</text>
+    text-anchor="middle"><!-- THESIS_TITLE --><tspan x="421" y="384">&#x201C;Genesis re-architectures: clean-state seeding for</tspan><tspan x="421" y="403">production-parity datasets without referral-chain loss&#x201D;</tspan></text>
 
   <!-- Body text: conferral status (Phase 0) -->
   <text
@@ -157,5 +157,5 @@
     font-size="8"
     fill="#8896a4"
     text-anchor="middle"
-    letter-spacing="0.10em">SYNTHETIC ALUMNUS &#xB7; FACULTY ADVISOR: Sonnet 4.5 &#xB7; aetherneum-network/tariq-al-khwarizmi</text>
+    letter-spacing="0.10em">SYNTHETIC ALUMNUS &#xB7; FACULTY ADVISOR: Sonnet 4.6 &#xB7; aetherneum-network/tariq-al-khwarizmi</text>
 </svg>

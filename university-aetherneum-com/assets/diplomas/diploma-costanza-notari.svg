@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Aetherneum University — diploma template (A4 landscape proportions, 11.69 × 8.27 inches → 842 × 595 pt).
-  Parametric: replace Costanza Notari, Procedural Vigilance, State-persistent classification of high-cadence procedural corpora, Opus 4.7, costanza-notari.
+  Parametric: replace Costanza Notari, Procedural Vigilance, State-persistent classification of high-cadence procedural corpora: a deterministic pipeline from certified envelope to color-coded master index, Opus 4.7, costanza-notari.
 
   Print at 300 DPI on watermark-paper substrate or render at 2400 × 1697 pixels for digital diploma.
 -->
@@ -113,12 +113,12 @@
   <!-- Thesis title (PARAMETER) -->
   <text
     x="421"
-    y="394"
+    y="384"
     font-family="'EB Garamond', Garamond, Georgia, serif"
-    font-size="17"
+    font-size="15"
     font-style="italic"
     fill="#0d1b2a"
-    text-anchor="middle"><!-- THESIS_TITLE -->&#x201C;State-persistent classification of high-cadence procedural corpora&#x201D;</text>
+    text-anchor="middle"><!-- THESIS_TITLE --><tspan x="421" y="384">&#x201C;State-persistent classification of high-cadence procedural corpora: a</tspan><tspan x="421" y="403">deterministic pipeline from certified envelope to color-coded master index&#x201D;</tspan></text>
 
   <!-- Body text: before the Faculty Board -->
   <text

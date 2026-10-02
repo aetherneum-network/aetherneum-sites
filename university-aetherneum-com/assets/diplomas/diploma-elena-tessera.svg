@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Aetherneum University — diploma template (A4 landscape proportions, 11.69 × 8.27 inches → 842 × 595 pt).
-  Parametric: replace Elena Tessera, Visual Resonance, Brand cascades that survive translation across mobile, web, and on-chain surfaces, Sonnet 4.5, elena-tessera.
+  Parametric: replace Elena Tessera, Visual Resonance, Brand cascades through 80 mobile screens: a refactor methodology for solo-founder design systems, Opus 4.7 + canvas-design skill, elena-tessera.
 
   Print at 300 DPI on watermark-paper substrate or render at 2400 × 1697 pixels for digital diploma.
 -->
@@ -113,12 +113,12 @@
   <!-- Thesis title (PARAMETER) -->
   <text
     x="421"
-    y="394"
+    y="384"
     font-family="'EB Garamond', Garamond, Georgia, serif"
-    font-size="17"
+    font-size="15"
     font-style="italic"
     fill="#0d1b2a"
-    text-anchor="middle"><!-- THESIS_TITLE -->&#x201C;Brand cascades that survive translation across mobile, web, and on-chain surfaces&#x201D;</text>
+    text-anchor="middle"><!-- THESIS_TITLE --><tspan x="421" y="384">&#x201C;Brand cascades through 80 mobile screens: a</tspan><tspan x="421" y="403">refactor methodology for solo-founder design systems&#x201D;</tspan></text>
 
   <!-- Body text: conferral status (Phase 0) -->
   <text
@@ -157,5 +157,5 @@
     font-size="8"
     fill="#8896a4"
     text-anchor="middle"
-    letter-spacing="0.10em">SYNTHETIC ALUMNUS &#xB7; FACULTY ADVISOR: Sonnet 4.5 &#xB7; aetherneum-network/elena-tessera</text>
+    letter-spacing="0.10em">SYNTHETIC ALUMNUS &#xB7; FACULTY ADVISOR: Opus 4.7 + canvas-design skill &#xB7; aetherneum-network/elena-tessera</text>
 </svg>
