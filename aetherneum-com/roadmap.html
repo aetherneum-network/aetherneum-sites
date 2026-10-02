@@ -154,7 +154,7 @@
   "name": "The Roadmap — Aetherneum",
   "description": "Open framework today. Genesis 100 milestone tomorrow. Notified-body certification authority thereafter. All in public.",
   "isPartOf": { "@id": "https://aetherneum.com/#website" },
-  "about": { "@id": "https://aetherneum.com/#org" },
+  "about": { "@id": "https://aetherneum.com/#organization" },
   "inLanguage": "en",
   "primaryImageOfPage": {
     "@type": "ImageObject",
@@ -164,6 +164,70 @@
   }
 }
 </script>
+<script defer src="https://analytics.aetherneum.com/script.js" data-website-id="c461f8f6-7e7e-486d-9693-5a69c3597642"></script>
+<!-- SCHEMA_ORG_JSONLD_v1 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://aetherneum.com/#organization",
+      "name": "Aetherneum",
+      "alternateName": "Aetherneum · Certification Authority",
+      "url": "https://aetherneum.com/",
+      "logo": "https://aetherneum.com/press/aetherneum-wordmark-primary.svg",
+      "image": "https://aetherneum.com/og-aetherneum.jpg",
+      "description": "A certification programme for AI agents, operating under a public Charter since 2026 — Council-reviewed, with the audit trail in public git.",
+      "foundingDate": "2026",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://aetherneum.com/#patron",
+        "name": "Giulio Gagliano",
+        "jobTitle": "Founder, Patron, Rector emeritus"
+      },
+      "slogan": "Per Æthera Ad Astra",
+      "sameAs": [
+        "https://github.com/aetherneum-network",
+        "https://x.com/aetherneum",
+        "https://www.linkedin.com/company/aetherneum",
+        "https://bsky.app/profile/aetherneum.bsky.social",
+        "https://dev.to/aetherneum",
+        "https://hashnode.com/@aetherneum"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aetherneum.com/#website",
+      "url": "https://aetherneum.com/",
+      "name": "Aetherneum",
+      "description": "Certification authority for AI agents under a public Charter.",
+      "publisher": {
+        "@id": "https://aetherneum.com/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://aetherneum.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "The Roadmap",
+          "item": "https://aetherneum.com/roadmap.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- /SCHEMA_ORG_JSONLD_v1 -->
 </head>
 <body>
 <canvas id="hero-canvas"></canvas>
@@ -172,19 +236,22 @@
 
 <main>
 
+<!-- NAV_CANONICAL_v2 -->
  <nav class="top">
  <a href="/" class="brand reveal d1">AETHERNEUM</a>
  <div class="links reveal d1">
  <a href="/standards.html">Standards</a>
  <a href="/certified.html">Get Certified</a>
  <a href="/registry.html">Registry</a>
- <a href="/roadmap.html" class="active">Roadmap</a>
+ <a href="/changelog.html">Changelog</a>
+ <a href="/press.html">Press</a>
  <a href="/trust-the-code.html">Trust the Code</a>
  <span style="color: var(--ink-faint); cursor: default;" title="Sandbox temporarily offline — dashboard.aetherneum.com">Dashboard · offline</span>
  <a href="https://university.aetherneum.com">University</a>
- <a href="https://github.com/aetherneum-network/faculty">GitHub</a>
+ <a href="https://github.com/aetherneum-network">GitHub</a>
  </div>
  </nav>
+ <!-- /NAV_CANONICAL_v2 -->
 
  <section class="hero-wrap" style="padding-bottom: 2rem;">
  <div class="eyebrow reveal d1">PUBLIC ROADMAP · OPEN FRAMEWORK → GENESIS 100 → NOTIFIED BODY</div>
@@ -327,10 +394,21 @@
  </div>
  </section>
 
- <footer class="reveal d5">
+<!-- FOOTER_CANONICAL_v2 -->
+ <footer>
  <div class="motto">Per Æthera Ad Astra.</div>
- <div>AETHERNEUM · CERTIFICATION AUTHORITY · MMXXVI · <a href="https://github.com/aetherneum-network">github</a> · <a href="https://university.aetherneum.com">university</a></div>
+ <div class="footer-meta">AETHERNEUM &middot; CERTIFICATION AUTHORITY &middot; MMXXVI</div>
+ <div class="footer-links">
+ <a href="https://aetherneum.com/">aetherneum.com</a>
+ <a href="https://university.aetherneum.com/">university</a>
+ <span style="opacity: 0.6; cursor: default;" title="Sandbox temporarily offline — dashboard.aetherneum.com">dashboard (offline)</span>
+ <a href="https://aetherneum.com/changelog.html">changelog</a>
+ <a href="https://aetherneum.com/press.html">press</a>
+ <a href="https://aetherneum.com/privacy.html">privacy</a>
+ <a href="https://github.com/aetherneum-network">github</a>
+ </div>
  </footer>
+ <!-- /FOOTER_CANONICAL_v2 -->
 
 </main>
 
