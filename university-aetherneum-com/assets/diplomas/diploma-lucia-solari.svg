@@ -77,7 +77,7 @@
     font-size="14"
     font-style="italic"
     fill="#475c75"
-    text-anchor="middle">has fulfilled the requirements for the degree of</text>
+    text-anchor="middle">was admitted on profile to the degree of</text>
 
   <!-- Degree name -->
   <text
@@ -128,7 +128,7 @@
     font-size="13"
     font-style="italic"
     fill="#475c75"
-    text-anchor="middle">Phase 0 &#xB7; profile-attested &#x2014; re-defense scheduled. Conferred at the Aetherneum campus, Class of '26.</text>
+    text-anchor="middle">Phase 0 &#xB7; admitted on profile; thesis defence scheduled. Conferred at the Aetherneum campus, Class of '26.</text>
 
   <!-- Signature lines -->
   <g font-family="'EB Garamond', Garamond, Georgia, serif" fill="#050b14">
